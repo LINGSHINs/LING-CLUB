@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>法律基础 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+.kw{color:var(--ac);font-weight:600}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>法律基础</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：《法律基础》通用教材、《民法典》、《公司法》、《商业银行法》、《劳动法》 */
+var CH=[
+{id:'ch1',name:'法理与宪法基础',src:'《法律基础》第1-2章',items:[
+ '法的特征：规范性、国家意志性、<span class="kw">国家强制性</span>、普遍性',
+ '我国法律渊源（效力从高到低）：<span class="kw">宪法 > 法律 > 行政法规 > 地方性法规/规章</span>',
+ '宪法基本原则：人民主权、基本人权、法治、权力制约',
+ '公民基本权利：平等权、政治权利、人身自由、社会经济权利（劳动权、受教育权既是权利也是义务）',
+ '国家机构：全国人大（最高国家权力机关）、国务院（最高行政机关）、监察委、法院、检察院']},
+{id:'ch2',name:'民法典·总则',src:'《民法典》总则编',items:[
+ '自然人民事行为能力：<span class="kw">完全（≥18岁或16-18以劳动收入为主要来源）、限制（8-18）、无（<8）</span>',
+ '法人分类：营利法人、非营利法人、特别法人',
+ '民事法律行为有效要件：行为人相应行为能力、意思表示真实、不违反法律强制性规定和公序良俗',
+ '诉讼时效：一般<span class="kw">3年</span>；最长20年；从知道或应当知道权利受损起算',
+ '代理：委托代理、法定代理；无权代理与表见代理']},
+{id:'ch3',name:'民法典·物权与合同',src:'《民法典》物权编、合同编',items:[
+ '物权三大原则：<span class="kw">物权法定、一物一权、公示公信</span>（不动产登记、动产交付）',
+ '所有权：占有、使用、收益、处分四项权能；善意取得制度',
+ '用益物权：土地承包经营权、建设用地使用权、居住权（民法典新增）、地役权',
+ '担保物权：抵押权（不转移占有）、质权（转移占有）、留置权（法定）',
+ '合同订立：要约与承诺；承诺生效时合同成立',
+ '合同效力：有效、无效、可撤销（重大误解、欺诈、胁迫、显失公平）、效力待定',
+ '<span class="kw">违约责任</span>：继续履行、赔偿损失、违约金；定金罚则（双倍返还/不退）']},
+{id:'ch4',name:'公司法与破产法',src:'《公司法》（2024新修）、《企业破产法》',items:[
+ '公司类型：有限责任公司（50人以下）vs 股份有限公司',
+ '注册资本：<span class="kw">认缴制</span>（新公司法要求5年内实缴到位）；股东以认缴出资额为限担责',
+ '公司治理：股东会（权力机构）、董事会（执行）、监事会（监督）；法定代表人',
+ '股东权利：分红权、表决权、知情权、优先认缴权；股东代表诉讼',
+ '一人公司：财产混同时股东<span class="kw">举证责任倒置</span>（法人人格否认）',
+ '破产原因：不能清偿到期债务+资不抵债/明显缺乏清偿能力；清偿顺序：职工债权→税款→普通债权']},
+{id:'ch5',name:'商业银行法与支付结算法规',src:'《商业银行法》《票据法》《支付结算办法》',items:[
+ '商业银行经营原则：安全性、流动性、效益性；<span class="kw">分业经营</span>原则',
+ '商业银行不得向关系人发放信用贷款；贷款审批审贷分离、分级审批',
+ '<span class="kw">票据行为</span>：出票、背书、承兑、保证；票据权利：付款请求权+追索权（时效2年/6个月/3个月）',
+ '票据记载事项：绝对必要记载事项欠缺则票据无效',
+ '本票（银行签发，见票即付）、支票（出票人签发，见票即付，10日提示付款）、汇票',
+ '挂失止付→公示催告→普通诉讼的票据丧失补救',
+ '人民币管理：禁止故意毁损人民币；反洗钱：客户身份识别、大额和可疑交易报告、身份资料与交易记录保存']},
+{id:'ch6',name:'劳动法与社保',src:'《劳动法》《劳动合同法》',items:[
+ '劳动合同建立劳动关系应<span class="kw">订立书面合同</span>（1个月内；超1个月不满1年未签→双倍工资）',
+ '合同期限：固定、无固定期限（连续满10年等应订立）、以完成任务为期限',
+ '试用期：3个月-1年≤1个月；1-3年≤2个月；3年以上/无固定≤6个月',
+ '解除：协商解除、劳动者单方（30日书面通知）、用人单位单方（过失性即时/非过失性30日）',
+ '经济补偿：N（每满1年1个月）；违法解除赔偿2N',
+ '工时：标准工时8h/日、44h/周；加班上限每日3h、每月36h；加班费150%/200%/300%',
+ '社保五险：养老、医疗、工伤、失业、生育（工伤与生育由单位缴纳）']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>

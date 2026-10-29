@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>通用能力 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+.kw{color:var(--ac);font-weight:600}
+.ex{background:var(--bg2);border-radius:10px;padding:10px 12px;margin-top:6px;font-size:13.5px;color:var(--tx2)}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>通用能力测验（行测）</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：公务员录用考试行测通识（言语/数量/判断/资料） */
+var CH=[
+{id:'ch1',name:'言语理解与表达',src:'行测·言语理解',items:[
+ '逻辑填空：看<span class="kw">语境提示词、关联词（转折/因果/递进）、感情色彩、语义轻重</span>',
+ '片段阅读·主旨概括：找主题词（高频词）+行文脉络（总分/分总/转折后是重点）',
+ '「但是、然而、却」之后是重点；「因此、所以」之后是结论',
+ '意图判断：区分「作者说的」与「作者想表达的」；合理引申不过度推断',
+ '细节理解：偷换概念、无中生有、时态偷换（将然/已然）、逻辑混乱四大陷阱',
+ '语句排序：先定首句（背景/定义/引出话题），再看代词、关联词捆绑']},
+{id:'ch2',name:'数量关系',src:'行测·数量关系',items:[
+ '常用技巧：<span class="kw">代入排除、特值法、比例法、整除特性</span>',
+ '工程问题：设总量为「1」或各时间的最小公倍数；合作效率相加',
+ '行程问题：<span class="kw">路程=速度×时间</span>；相遇路程和=速度和×时间；追及路程差=速度差×时间',
+ '利润问题：利润率=利润/成本；打折按售价算',
+ '排列组合：分类相加、分步相乘；排列（有序）A、组合（无序）C',
+ '概率：古典概率 P=满足数/总数；独立事件相乘',
+ '几何：等比放缩（边长×k，面积×k²，体积×k³）']},
+{id:'ch3',name:'判断推理',src:'行测·判断推理',items:[
+ '图形推理：位置（平移/旋转/翻转）、样式（叠加/遍历）、属性（对称/封闭/曲直）、数量（点线面角素）',
+ '定义判断：找「主体、客体、方式、目的、原因」要件，逐项对照',
+ '类比推理：先看词性关系（近义/反义/象征），再看逻辑关系（种属/组成/对应）',
+ '逻辑判断·翻译推理：<span class="kw">如果A那么B = A→B = ¬B→¬A</span>；只有A才B = B→A',
+ '递推推理：A→B，B→C ⇒ A→C；逆否等价：¬C→¬A',
+ '加强削弱：先找论点论据；削弱=切断联系/另有他因/否定前提；加强=搭桥/举例/排除他因',
+ '「所有A都是B」换位：有的B是A；「有的A是B」只能换出「有的B是A」']},
+{id:'ch4',name:'资料分析',src:'行测·资料分析',items:[
+ '核心概念：<span class="kw">基期量、现期量、增长率、增长量</span>；基期=现期/(1+r)',
+ '增长率 r 小量估算：基期≈现期×(1-r)（r<5%时误差极小）',
+ '增长量=现期×r/(1+r)（r=1/n 时，增长量≈现期/n）',
+ '比重：部分/整体；比重变化判断——部分增速>整体增速，比重上升',
+ '平均数增长率公式：(a-b)/(1+b)',
+ '隔年增长率=r1+r2+r1×r2',
+ '速算：<span class="kw">首数法（商的首位）、有效数字法、特征数字（12.5%=1/8）</span>']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>

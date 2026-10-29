@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>会计 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+.kw{color:var(--ac);font-weight:600}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>会计（基础会计）</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：《基础会计学》（东北财经大学出版社）、《会计学原理》、企业会计准则 */
+var CH=[
+{id:'ch1',name:'总论：会计基本概念',src:'《基础会计学》第1章',items:[
+ '会计的职能：<span class="kw">核算（基本职能）与监督</span>',
+ '会计四大基本假设：<span class="kw">会计主体、持续经营、会计分期、货币计量</span>',
+ '会计信息质量要求：可靠性、相关性、可理解性、可比性、实质重于形式、重要性、谨慎性、及时性',
+ '<span class="kw">权责发生制</span>vs收付实现制：权责发生制以权利义务发生确认收入费用（企业会计用）',
+ '会计要素六大类：资产、负债、所有者权益（反映财务状况）；收入、费用、利润（反映经营成果）']},
+{id:'ch2',name:'会计等式与复式记账',src:'《基础会计学》第2-3章',items:[
+ '基本会计等式：<span class="kw">资产 = 负债 + 所有者权益</span>',
+ '扩展等式：资产 = 负债 + 所有者权益 + (收入 - 费用)',
+ '借贷记账法规则：<span class="kw">「资产、费用增加记借方；负债、所有者权益、收入增加记贷方」</span>',
+ '记账规则：有借必有贷，借贷必相等',
+ '试算平衡：发生额平衡 + 余额平衡，但试算平衡不能发现全部错误（漏记、重记、方向相同金额相等的错误查不出）']},
+{id:'ch3',name:'会计科目与账户',src:'《基础会计学》第4章',items:[
+ '会计科目按经济内容分类：资产类、负债类、共同类、所有者权益类、成本类、损益类',
+ '账户四个金额要素：<span class="kw">期初余额、本期增加额、本期减少额、期末余额</span>',
+ '期末余额 = 期初余额 + 本期增加发生额 - 本期减少发生额',
+ '总分类科目（一级）与明细科目；总账统驭明细账']},
+{id:'ch4',name:'主要经济业务核算',src:'《基础会计学》第5-7章',items:[
+ '筹资：接受投资→借记银行存款，贷记实收资本/股本；借款→短期/长期借款',
+ '采购：材料成本=买价+采购费用；增值税进项税额单独核算（一般纳税人）',
+ '生产：<span class="kw">直接材料、直接人工、制造费用</span>归集；制造费用按一定标准分配计入产品成本',
+ '销售：确认收入（借应收账款/银行存款，贷主营业务收入+销项税）；结转成本',
+ '利润形成：营业利润=营业收入-营业成本-税金及附加-期间费用；<span class="kw">利润总额=营业利润+营业外收入-营业外支出</span>；净利润=利润总额-所得税费用',
+ '利润分配顺序：弥补亏损→提取法定盈余公积（10%）→提取任意盈余公积→向投资者分配']},
+{id:'ch5',name:'会计凭证与账簿',src:'《基础会计学》第8-9章',items:[
+ '原始凭证：来源分外来/自制；审核真实性、合法性、合理性、完整性、正确性',
+ '记账凭证：收款凭证、付款凭证、转账凭证',
+ '账簿分类：序时账（日记账）、分类账（总账/明细账）、备查账',
+ '错账更正方法：<span class="kw">划线更正法、红字更正法、补充登记法</span>（划线用于结账前笔误；红字用于科目错误或金额多记；补充用于金额少记）',
+ '对账内容：账证核对、账账核对、账实核对、账表核对',
+ '结账与账簿启用规则']},
+{id:'ch6',name:'财产清查',src:'《基础会计学》第10章',items:[
+ '清查分类：全面/局部清查；定期/不定期清查',
+ '<span class="kw">银行存款余额调节表</span>：企业账面余额 vs 银行对账单余额，调整未达账项（企业已收银行未收、企业已付银行未付、银行已收企业未收、银行已付企业未付）',
+ '调节后余额相等仅是核对，不能作为记账依据',
+ '存货盘存制度：<span class="kw">永续盘存制（账面随时结出）vs 实地盘存制（期末倒挤）</span>',
+ '现金清查：实地盘点；长款/短款通过「待处理财产损溢」处理']},
+{id:'ch7',name:'财务报表',src:'《基础会计学》第11章、《企业会计准则》',items:[
+ '四大报表：<span class="kw">资产负债表（时点/静态）、利润表（时期/动态）、现金流量表、所有者权益变动表</span>',
+ '资产负债表结构：资产=流动性排列；「资产=负债+所有者权益」结构',
+ '利润表三步结构：营业利润→利润总额→净利润',
+ '现金流量表三大活动：<span class="kw">经营活动、投资活动、筹资活动</span>',
+ '报表附注的作用；资产负债表日后事项']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>

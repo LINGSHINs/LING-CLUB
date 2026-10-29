@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>经济学 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+.kw{color:var(--ac);font-weight:600}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>经济学（微观+宏观）</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：高鸿业《西方经济学（微观部分/宏观部分）》、曼昆《经济学原理》 */
+var CH=[
+{id:'ch1',name:'供求与均衡价格（微观）',src:'高鸿业《西方经济学·微观》第2章',items:[
+ '需求规律：价格与需求量<span class="kw">反向变动</span>；供给规律：价格与供给量同向变动',
+ '影响需求的非价格因素：收入、偏好、相关商品价格（替代品/互补品）、预期、人口',
+ '均衡价格：供求相等时的价格；<span class="kw">支持价格（最低限价）>均衡价，限制价格（最高限价）<均衡价</span>',
+ '需求（供给）量的变动 vs 需求（供给）的变动：前者沿曲线移动，后者整条曲线移动']},
+{id:'ch2',name:'弹性理论',src:'高鸿业·微观 第3章',items:[
+ '需求价格弹性：<span class="kw">Ed>1 富有弹性（奢侈品）</span>，Ed<1 缺乏弹性（必需品）',
+ '弹性与总收入关系：富有弹性→降价增收；缺乏弹性→提价增收（谷贱伤农的原理）',
+ '需求收入弹性：正常品>0，劣等品<0，奢侈品>1',
+ '交叉弹性：替代品>0，互补品<0',
+ '供给弹性：短期小于长期']},
+{id:'ch3',name:'消费者行为理论',src:'高鸿业·微观 第4章',items:[
+ '基数效用论：<span class="kw">边际效用递减规律</span>；消费者均衡条件 MU1/P1=MU2/P2',
+ '序数效用论：无差异曲线（凸向原点、不相交）+ 预算线',
+ '消费者均衡：无差异曲线与预算线<span class="kw">相切点</span>（MRS=P1/P2）',
+ '价格消费线→需求曲线；收入消费线→恩格尔曲线；<span class="kw">恩格尔系数=食品支出/总支出</span>，越低越富裕',
+ '替代效应与收入效应：正常品两者同向，劣等品反向，吉芬品收入效应压倒替代效应']},
+{id:'ch4',name:'生产与成本理论',src:'高鸿业·微观 第5-6章',items:[
+ '短期生产三阶段；<span class="kw">边际报酬递减规律</span>（短期，技术不变）',
+ '规模报酬：递增/不变/递减（长期概念，所有要素同比例变动）',
+ '成本概念：机会成本、显成本/隐成本、经济利润=收益-总成本（含正常利润）',
+ '短期成本曲线：AVC、AC、MC 呈 U 型；<span class="kw">MC 交 AC、AVC 于最低点</span>',
+ '长期平均成本 LAC 包络线：规模经济→规模不经济']},
+{id:'ch5',name:'市场结构理论',src:'高鸿业·微观 第7-8章',items:[
+ '四种市场结构：完全竞争、垄断竞争、寡头、完全垄断（竞争程度递减）',
+ '完全竞争特征：大量买卖者、同质产品、自由进出、信息完全；厂商是<span class="kw">价格接受者</span>',
+ '完全竞争厂商短期均衡 P=MC；停止营业点 P<AVC',
+ '垄断：边际收益 MR<P；三级价格歧视；自然垄断',
+ '垄断竞争：产品差异化，非价格竞争；寡头：古诺模型、卡特尔、囚徒困境（博弈论）']},
+{id:'ch6',name:'国民收入核算（宏观）',src:'高鸿业·宏观 第1-2章',items:[
+ 'GDP：一国境内一定时期生产的<span class="kw">最终产品</span>的市场价值总和（地域概念；GNP 为国民概念）',
+ '核算方法：生产法、收入法、<span class="kw">支出法 GDP=C+I+G+NX</span>',
+ '计入 GDP 的条件：本期生产、最终产品、市场交易；二手房买卖只计中介费',
+ '名义GDP vs 实际GDP；GDP平减指数=名义/实际×100%',
+ '储蓄-投资恒等式：两部门 I=S；三部门 I=S+(T-G)；四部门 I=S+(T-G)+(M-X)']},
+{id:'ch7',name:'简单国民收入决定与乘数',src:'高鸿业·宏观 第3-4章',items:[
+ '凯恩斯消费理论：<span class="kw">边际消费倾向递减</span>；APC+APS=1，MPC+MPS=1',
+ '均衡收入：Y=C+I（两部门）；投资乘数 <span class="kw">k=1/(1-MPC)</span>',
+ '三部门乘数受税率影响；平衡预算乘数=1',
+ '节俭悖论：增加储蓄反而减少均衡收入（萧条时期）']},
+{id:'ch8',name:'IS-LM 与 AD-AS 模型',src:'高鸿业·宏观 第5-7章',items:[
+ 'IS 曲线：产品市场均衡，<span class="kw">向右下方倾斜</span>（利率升→投资降→收入降）',
+ 'LM 曲线：货币市场均衡，<span class="kw">向右上方倾斜</span>；凯恩斯区（水平）、中间区、古典区（垂直）',
+ '财政政策移动 IS；货币政策移动 LM；挤出效应：财政扩张→利率升→挤掉私人投资',
+ 'AD-AS：总需求曲线右下倾斜；AS 短期右上、长期垂直',
+ '政策组合：扩张财政+紧缩货币→利率大幅上升等']},
+{id:'ch9',name:'失业、通胀与经济周期',src:'高鸿业·宏观 第8-9章',items:[
+ '失业类型：<span class="kw">摩擦性、结构性、周期性、季节性</span>；自然失业率=摩擦+结构',
+ '奥肯定律：失业率每高于自然率1个百分点，GDP 约低2个百分点',
+ '通货膨胀成因与治理；失业与通胀：菲利普斯曲线',
+ '经济周期四阶段：繁荣、衰退、萧条、复苏',
+ '经济增长：哈罗德-多马模型、索洛模型（技术进步是长期增长根本源泉）']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>

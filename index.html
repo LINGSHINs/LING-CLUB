@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LING CLUB · 学习门户</title>
+<style>
+:root{
+  --bg:#fbfafa; --card:#fff; --bg2:#f3f1f1; --line:#eae2e2;
+  --tx:#2a2626; --tx2:#6b6060; --tx3:#a89898;
+  --ac:#d63a2e; --ac2:#e8645a; --ok:#2f9e4e;
+  --r:16px; --shadow:0 4px 20px rgba(160,40,30,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.65;padding-bottom:40px}
+.app{max-width:680px;margin:0 auto;padding:0 18px}
+@media (min-width:768px){.app{max-width:900px}}
+@media (min-width:1024px){.app{max-width:1080px}}
+header{padding:34px 4px 6px}
+h1{font-size:26px;font-weight:700;letter-spacing:.08em}
+h1 span{color:var(--ac)}
+.sub{color:var(--tx2);font-size:13px;margin-top:4px}
+.cd{margin:18px 4px 6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.cd b{font-size:15px}
+.cd .t{font-size:26px;font-weight:300;color:var(--ac);margin-top:2px;font-variant-numeric:tabular-nums}
+.cd p{font-size:12px;color:var(--tx3);margin-top:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+@media (min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}
+.subject{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 16px 14px;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:.15s}
+.subject:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(160,40,30,.14)}
+.subject .tag{display:inline-block;font-size:11px;font-weight:600;color:var(--ac);border:1px solid var(--ac);border-radius:6px;padding:1px 8px;letter-spacing:.05em}
+.subject b{display:block;font-size:16px;margin-top:10px}
+.subject span{display:block;font-size:12px;color:var(--tx2);margin-top:3px;line-height:1.5}
+.subject .pct{margin-top:10px;height:5px;background:var(--bg2);border-radius:99px;overflow:hidden}
+.subject .pct i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:99px}
+.subject .pt{font-size:11px;color:var(--tx3);margin-top:4px}
+.note{margin:26px 4px 0;background:var(--bg2);border-radius:var(--r);padding:14px 16px;font-size:13px;color:var(--tx2)}
+.note b{color:var(--ac)}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <h1>LING <span>CLUB</span></h1>
+  <div class="sub">个人学习门户 · 教材主干 · 考试 2026 年 4-6 月（待定）</div>
+</header>
+
+<div class="cd" id="cdCard">
+  <b>距离考试</b>
+  <div class="t" id="cdText">时间待定</div>
+  <p>考试时间确定后自动开始倒计时</p>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="note">
+  <b>使用说明</b>：每科点进去是教材章节主干 + 核心要点，后续逐步补充题目与练习。<br>
+  主干教材：高鸿业《西方经济学》/ 黄达《金融学》/ 《基础会计》/ 《市场营销学》/ 《法律基础》/ 《应用文写作》/ 行测通识。
+</div>
+</div>
+<script>
+var SUBJECTS=[
+ {id:'jinrong',  name:'金融学',      tag:'39.5分', desc:'货币·信用·银行·央行·金融市场监管',   pct:0},
+ {id:'kuaiji',   name:'会计',        tag:'14分',   desc:'基础会计：凭证·账簿·报表·分录',      pct:0},
+ {id:'jingji',   name:'经济学',      tag:'10.5分', desc:'微观+宏观：供求·弹性·GDP·IS-LM',    pct:0},
+ {id:'falv',     name:'法律基础',    tag:'10.5分', desc:'宪法·民法·公司法·劳动法·支付结算',  pct:0},
+ {id:'wenmi',    name:'文秘基础',    tag:'10.5分', desc:'应用文写作·公文格式·事务处理',      pct:0},
+ {id:'tongyong', name:'通用能力',    tag:'9分',    desc:'言语理解·数量关系·判断推理·资料分析',pct:0},
+ {id:'yingxiao', name:'市场营销',    tag:'6分',    desc:'4P·STP·消费者行为·渠道管理',        pct:0}
+];
+var g=document.getElementById('grid');
+SUBJECTS.forEach(function(s){
+  var a=document.createElement('a');
+  a.className='subject'; a.href=s.id+'.html';
+  a.innerHTML='<span class="tag">'+s.tag+'</span><b>'+s.name+'</b><span>'+s.desc+'</span>'+
+    '<div class="pct"><i style="width:'+(s.pct*100)+'%"></i></div><div class="pt">内容完成度 '+(s.pct*100).toFixed(0)+'%</div>';
+  g.appendChild(a);
+});
+function days(){
+  var el=document.getElementById('cdText');
+  if(!window.EXAM_DATE){el.textContent='时间待定';return}
+  var d=Math.ceil((new Date(window.EXAM_DATE)-new Date())/86400000);
+  el.textContent=d>0?('还有 '+d+' 天'):('已开考');
+}
+days(); setInterval(days,60000);
+</script>
+</body>
+</html>

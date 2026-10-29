@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>金融学 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px;letter-spacing:.03em}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+li b{color:var(--tx)}
+.kw{color:var(--ac);font-weight:600}
+@media (min-width:1024px){li{font-size:15.5px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>金融学</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：黄达《金融学》、易纲《货币银行学》、《商业银行经营管理学》、《中央银行学》 */
+var CH=[
+{id:'ch1',name:'货币与货币制度',src:'黄达《金融学》第1-2章',items:[
+ '货币的职能：<span class="kw">价值尺度、流通手段、支付手段、贮藏手段、世界货币</span>（马克思五大职能）',
+ '货币制度演变：银本位 → 金银复本位 → 金本位 → 不兑现信用货币制度',
+ '格雷欣法则：<span class="kw">劣币驱逐良币</span>——复本位制下实际价值高与低的货币同时流通时，良币被收藏熔化',
+ '我国货币层次：M0=流通中现金；<span class="kw">M1=M0+单位活期存款</span>；<span class="kw">M2=M1+准货币</span>（储蓄存款、单位定期存款等）',
+ '货币的本质：固定充当一般等价物的特殊商品（传统观点）']},
+{id:'ch2',name:'信用与利息',src:'黄达《金融学》第3-4章',items:[
+ '信用的形式：<span class="kw">商业信用、银行信用、国家信用、消费信用、国际信用</span>',
+ '银行信用特点：以货币形态提供、规模大、方向灵活，是现代信用的核心',
+ '利息的本质：借款人因使用借贷资金而支付给贷款人的报酬，是利润的一部分',
+ '利率分类：固定/浮动、名义/实际（实际利率=名义利率-通货膨胀率）、单利/复利',
+ '利率决定理论：马克思（平均利润率）、古典储蓄投资理论、凯恩斯<span class="kw">流动性偏好理论</span>、可贷资金理论',
+ '收益率曲线：正向（正常）、反向（倒挂，预示衰退）、水平；期限结构理论=预期理论+流动性溢价+市场分割']},
+{id:'ch3',name:'金融市场',src:'黄达《金融学》第5-8章',items:[
+ '金融市场分类：货币市场（≤1年）vs 资本市场（>1年）；发行市场（一级）vs 流通市场（二级）',
+ '货币市场工具：<span class="kw">同业拆借、回购协议、商业票据、大额可转让存单（CD）、国库券</span>',
+ '资本市场工具：股票、债券、证券投资基金',
+ '股票：普通股（有表决权、股息不固定）vs 优先股（股息固定优先、一般无表决权）',
+ '债券价格与利率<span class="kw">反向变动</span>；期限越长、票面利率越低，价格对利率越敏感（久期长）',
+ '有效市场假说：弱式（历史价格）、半强式（公开信息）、强式（所有信息）',
+ '金融衍生工具：远期、期货、期权（看涨/看跌）、互换']},
+{id:'ch4',name:'金融机构体系',src:'易纲《货币银行学》、商业银行经营管理学',items:[
+ '我国金融机构体系：中央银行（中国人民银行）→ 政策性银行（国开行、进出口行、农发行）→ 商业银行 → 非银行金融机构',
+ '商业银行三大基本职能：<span class="kw">信用中介、支付中介、信用创造</span>',
+ '商业银行经营原则：<span class="kw">安全性、流动性、盈利性</span>三性平衡（安全性优先）',
+ '存款货币创造：派生存款；简单存款乘数=1/法定准备金率',
+ '中间业务与表外业务：结算、代理、银行卡、担保承诺等，不占用或少占用资金'],
+},
+{id:'ch5',name:'中央银行与货币政策',src:'黄达《金融学》、《中央银行学》',items:[
+ '中央银行职能：发行的银行、银行的银行、<span class="kw">政府的银行</span>；最后贷款人',
+ '货币政策最终目标：<span class="kw">稳定物价、充分就业、经济增长、国际收支平衡</span>（四目标常冲突）',
+ '一般性货币政策工具（三大法宝）：<span class="kw">法定存款准备金率、再贴现、公开市场操作</span>',
+ '公开市场操作最灵活主动；准备金率威力最大但冲击大',
+ '选择性工具：消费者信用控制、证券市场信用控制、窗口指导',
+ '货币政策传导：政策工具 → 操作目标（基础货币/准备金）→ 中介目标（M2/利率）→ 最终目标',
+ '我国：稳健货币政策；结构性货币政策工具（MLF、PSL、再贷款再贴现）']},
+{id:'ch6',name:'货币供求与通货膨胀',src:'黄达《金融学》第12-14章',items:[
+ '货币需求理论：费雪方程 <span class="kw">MV=PT</span>；剑桥方程 M=kPY；凯恩斯流动性偏好（交易、预防、投机动机）',
+ '弗里德曼现代货币数量论：货币需求稳定，主张单一规则（按固定增长率供应货币）',
+ '通货膨胀类型：需求拉动型、成本推动型、供求混合型、结构型',
+ '通胀治理：紧缩货币财政、收入政策、指数化；<span class="kw">通货紧缩</span>的危害不亚于通胀',
+ '菲利普斯曲线：失业率与通胀率短期负相关；长期为垂直线（预期调整）']},
+{id:'ch7',name:'国际金融与金融监管',src:'黄达《金融学》第15-17章、金融监管学',items:[
+ '国际收支平衡表三大账户：<span class="kw">经常账户、资本与金融账户、误差与遗漏</span>',
+ '汇率制度：固定、浮动、联系汇率制；人民币实行以市场供求为基础、参考一篮子货币调节的有管理浮动',
+ '外汇储备的作用：平衡国际收支、干预外汇市场、增强本币信心',
+ '巴塞尔协议：<span class="kw">资本充足率≥8%</span>（核心资本≥4%）；巴III 引入流动性覆盖率、杠杆率',
+ '金融监管模式：机构监管、功能监管、目标监管；我国现行「一行一局一会」（央行、国家金融监督管理总局、证监会）',
+ '存款保险制度：50万元全额保障限额',
+ '金融风险：信用风险、市场风险、流动性风险、操作风险、声誉风险']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>

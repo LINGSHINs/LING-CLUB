@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>文秘基础 · LING CLUB</title>
+<style>
+:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75}
+.app{max-width:680px;margin:0 auto;padding:0 18px 50px}
+@media (min-width:768px){.app{max-width:860px}}
+.top{position:sticky;top:0;background:rgba(251,250,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.top-in{max-width:680px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+@media (min-width:768px){.top-in{max-width:860px}}
+.top a{color:var(--ac);text-decoration:none;font-size:14px}
+.top b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.chip{padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;color:var(--tx2);cursor:pointer;transition:.15s}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h3{font-size:16px;color:var(--ac);margin-bottom:8px}
+.card .src{font-size:11.5px;color:var(--tx3);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+ul{padding-left:20px;margin:6px 0}
+li{margin-bottom:5px;font-size:14.5px}
+.kw{color:var(--ac);font-weight:600}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in"><b>文秘基础知识</b><a href="index.html">&larr; 门户</a></div></div>
+<div class="app">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+/* 数据源：《秘书学概论》、《应用文写作》、《党政机关公文处理工作条例》(2012) */
+var CH=[
+{id:'ch1',name:'公文种类与格式',src:'《党政机关公文处理工作条例》(中办发〔2012〕14号)',items:[
+ '法定公文15种：<span class="kw">决议、决定、命令、公报、公告、通告、意见、通知、通报、报告、请示、批复、议案、函、纪要</span>',
+ '<span class="kw">请示与报告的区别</span>：请示需批复、一文一事、事前行文；报告不需批复、可一文多事、事后或事中行文',
+ '「函」用于不相隶属机关之间商洽工作、询问和答复问题；平行文',
+ '公文格式要素：版头（份号、密级、紧急程度、发文机关标志、发文字号、签发人）、主体（标题、主送机关、正文、附件、落款、附注）、版记（抄送机关、印发机关）',
+ '标题三要素：<span class="kw">发文机关+事由+文种</span>',
+ '成文日期：负责人签发日期；用阿拉伯数字',
+ '密级：绝密（最重要，期限≤30年）、机密（≤20年）、秘密（≤10年）',
+ '紧急程度：特急、加急']},
+{id:'ch2',name:'行文规则',src:'《党政机关公文处理工作条例》第四章',items:[
+ '行文方向：<span class="kw">上行文（请示、报告）、下行文（通知、批复、决定）、平行文（函）</span>',
+ '请示应一文一事；不得抄送下级机关；一般只主送一个上级机关',
+ '党委、政府不得向党委、政府的部门发布指令性公文；部门之间对问题未协商一致不得各自向下行文',
+ '越级行文原则：一般逐级行文，情况紧急特殊才可越级（抄送被越过机关）',
+ '联合行文：同级政府部门之间可以联合行文']},
+{id:'ch3',name:'常用事务文书',src:'《应用文写作》',items:[
+ '计划：标题+正文（目标、措施、步骤）三要素；「做什么—怎么做—何时完成」',
+ '总结：全面总结与专题总结；基本内容=情况回顾+成绩经验+问题教训+今后打算',
+ '调查报告：标题、前言、主体、结语；用事实说话',
+ '简报：报头（名称、期号、编发单位、日期）+正文+报尾',
+ '会议纪要：记载会议主要情况和议定事项；分<span class="kw">办公会议纪要、专题会议纪要</span>',
+ '求职信/个人简历、启事、声明、邀请函的写作要点']},
+{id:'ch4',name:'秘书实务与办事规范',src:'《秘书学概论》、《秘书实务》',items:[
+ '秘书工作三大属性：<span class="kw">辅助性、服务性、被动性与主动性统一</span>',
+ '秘书「三服务」：为领导服务、为各部门服务、为员工群众服务',
+ '会务工作流程：会前（通知、材料、场地、签到）→会中（记录、服务、突发处理）→会后（纪要、督办、归档）',
+ '印章管理：专人保管、用印登记；介绍信与印章同权管理',
+ '档案工作：收集→整理→鉴定→保管→利用；「文书立卷」遵循文件形成规律',
+ '保密制度：涉密文件登记签收、传阅范围控制、不得私自复制留存',
+ '接待礼仪与电话礼仪：三响之内接听、重要事项复述确认']}
+];
+var chips=document.getElementById('chips'),list=document.getElementById('list');
+CH.forEach(function(c,i){
+  var b=document.createElement('button');b.className='chip'+(i===0?' on':'');b.textContent=c.name;
+  b.onclick=function(){document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');render(i);location.hash=c.id;};
+  chips.appendChild(b);
+});
+function render(i){
+  var c=CH[i],h='';
+  c.items.forEach(function(t){h+='<li>'+t+'</li>'});
+  list.innerHTML='<div class="card"><h3>'+c.name+'</h3><ul>'+h+'</ul><div class="src">主干教材：'+c.src+'</div></div>';
+}
+var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
+render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+</script>
+</body>
+</html>
