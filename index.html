@@ -6,84 +6,166 @@
 <title>LING CLUB · 学习门户</title>
 <style>
 :root{
-  --bg:#fbfafa; --card:#fff; --bg2:#f3f1f1; --line:#eae2e2;
-  --tx:#2a2626; --tx2:#6b6060; --tx3:#a89898;
-  --ac:#d63a2e; --ac2:#e8645a; --ok:#2f9e4e;
-  --r:16px; --shadow:0 4px 20px rgba(160,40,30,.08);
+  --pink:#f9d3dc; --blue:#2563eb; --navy:#1e2a5e;
+  --skyc:#cdeaf7; --pinkc:#f9d9e3; --gray:#6b7280; --gray2:#9ca3af;
+  --cardsh:0 8px 24px rgba(30,42,94,.06); --floatsh:0 24px 60px rgba(30,42,94,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.65;padding-bottom:40px}
-.app{max-width:680px;margin:0 auto;padding:0 18px}
-@media (min-width:768px){.app{max-width:900px}}
-@media (min-width:1024px){.app{max-width:1080px}}
-header{padding:34px 4px 6px}
-h1{font-size:26px;font-weight:700;letter-spacing:.08em}
-h1 span{color:var(--ac)}
-.sub{color:var(--tx2);font-size:13px;margin-top:4px}
-.cd{margin:18px 4px 6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
-.cd b{font-size:15px}
-.cd .t{font-size:26px;font-weight:300;color:var(--ac);margin-top:2px;font-variant-numeric:tabular-nums}
-.cd p{font-size:12px;color:var(--tx3);margin-top:2px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
-@media (min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media (min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}
-.subject{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 16px 14px;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:.15s}
-.subject:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(160,40,30,.14)}
-.subject .tag{display:inline-block;font-size:11px;font-weight:600;color:var(--ac);border:1px solid var(--ac);border-radius:6px;padding:1px 8px;letter-spacing:.05em}
-.subject b{display:block;font-size:16px;margin-top:10px}
-.subject span{display:block;font-size:12px;color:var(--tx2);margin-top:3px;line-height:1.5}
-.subject .pct{margin-top:10px;height:5px;background:var(--bg2);border-radius:99px;overflow:hidden}
-.subject .pct i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:99px}
-.subject .pt{font-size:11px;color:var(--tx3);margin-top:4px}
-.note{margin:26px 4px 0;background:var(--bg2);border-radius:var(--r);padding:14px 16px;font-size:13px;color:var(--tx2)}
-.note b{color:var(--ac)}
+body{background:var(--pink);color:var(--navy);font-family:"PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+.shell{max-width:1180px;margin:0 auto;padding:26px 18px}
+@media (min-width:900px){.shell{padding:40px 28px}}
+.dash{background:#fff;border-radius:24px;box-shadow:var(--floatsh);overflow:hidden;display:flex;flex-direction:column}
+@media (min-width:900px){.dash{flex-direction:row;min-height:640px}}
+
+/* 侧边栏 */
+.side{background:#fff;border-bottom:1px solid #f1f3f6;padding:16px 14px;display:flex;flex-direction:row;align-items:center;gap:12px;overflow-x:auto}
+@media (min-width:900px){.side{flex-direction:column;width:200px;flex-shrink:0;border-bottom:none;border-right:1px solid #f1f3f6;padding:26px 16px;justify-content:space-between;overflow:visible}}
+.logorow{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0}
+.logorow b{font-size:15px;letter-spacing:.04em;white-space:nowrap}
+@media (max-width:899px){.logorow b{display:none}}
+.side nav{display:flex;gap:6px}
+@media (min-width:900px){.side nav{flex-direction:column;gap:4px;width:100%}}
+.nav-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;color:var(--gray2);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;transition:.15s}
+.nav-item svg{width:17px;height:17px;flex-shrink:0}
+.nav-item.on{color:var(--navy);background:#f1f3f6}
+.nav-item:hover{color:var(--navy)}
+.pro{display:none}
+@media (min-width:900px){.pro{display:block;background:linear-gradient(135deg,var(--blue),#4f83f5);border-radius:16px;padding:14px;color:#fff;font-size:12.5px;line-height:1.5}}
+.pro b{font-size:14px;display:block}
+.pro span{opacity:.85}
+
+/* 主区 */
+.main{flex:1;padding:24px 22px;min-width:0}
+@media (min-width:900px){.main{padding:32px 34px}}
+.hello{font-size:25px;font-weight:700}
+.hello small{display:block;font-size:13px;color:var(--gray);font-weight:400;margin-top:4px}
+.hello small b{color:var(--blue)}
+.examcard{margin-top:18px;background:var(--blue);border-radius:18px;padding:18px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;overflow:hidden}
+.examcard:after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)}
+.examcard b{font-size:17px;display:block}
+.examcard .t{font-size:24px;font-weight:300;font-variant-numeric:tabular-nums}
+.examcard p{font-size:11.5px;opacity:.85;max-width:220px}
+.examcard .r{position:relative;z-index:1;text-align:right}
+.sec{margin-top:26px}
+.sec h3{font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:space-between}
+.sec h3 a{font-size:12px;color:var(--gray);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.subj-grid{margin-top:14px;display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:560px){.subj-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.subj-grid{grid-template-columns:repeat(3,1fr)}}
+.subject{background:#fff;border-radius:16px;box-shadow:var(--cardsh);padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:.18s;position:relative}
+.subject:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,42,94,.12)}
+.subject .row{display:flex;align-items:center;justify-content:space-between}
+.subject .tag{font-size:10.5px;font-weight:700;color:var(--blue);background:#eaf1fe;border-radius:999px;padding:2px 10px;letter-spacing:.04em}
+.subject b{font-size:16.5px}
+.subject span{font-size:12px;color:var(--gray);line-height:1.5}
+.subject .pct{height:5px;background:#f1f3f6;border-radius:99px;overflow:hidden;margin-top:4px}
+.subject .pct i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#6b9af8);border-radius:99px;transition:width .6s}
+.subject .pt{font-size:11px;color:var(--gray2)}
+
+/* 右栏 */
+.right{display:none}
+@media (min-width:900px){.right{width:290px;flex-shrink:0;background:#f8f9fb;border-left:1px solid #f1f3f6;padding:26px 20px;display:flex;flex-direction:column;gap:14px}}
+.user{display:flex;align-items:center;gap:10px}
+.user .av{width:38px;height:38px;border-radius:50%;background:var(--pinkc);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy)}
+.user b{font-size:14px;display:block;line-height:1.2}
+.user span{font-size:11px;color:var(--gray)}
+.right .plan{margin-top:auto;background:#fff;border-radius:16px;padding:14px;box-shadow:var(--cardsh);font-size:12.5px;color:var(--gray)}
+.plan b{color:var(--navy);display:block;font-size:13px;margin-bottom:4px}
+.plan a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;font-size:12px}
+.stat2x2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fcard{border-radius:16px;padding:14px;font-size:12px;line-height:1.45;position:relative;overflow:hidden}
+.fcard b{font-size:15px;display:block;margin-bottom:3px}
+.fcard span{opacity:.8;font-size:11px}
+.fcard .geo{position:absolute;right:-12px;bottom:-12px;width:56px;height:56px;border-radius:50%;border:2px solid rgba(255,255,255,.35)}
+.fcard.navy{background:var(--navy);color:#fff}
+.fcard.white{background:#fff;color:var(--navy);box-shadow:var(--cardsh)}
+.fcard.pink{background:var(--pinkc);color:var(--navy)}
+.fcard.sky{background:var(--skyc);color:var(--navy)}
 </style>
 </head>
 <body>
-<div class="app">
-<header>
-  <h1>LING <span>CLUB</span></h1>
-  <div class="sub">个人学习门户 · 教材主干 · 考试 2026 年 4-6 月（待定）</div>
-</header>
+<div class="shell">
+<div class="dash">
 
-<div class="cd" id="cdCard">
-  <b>距离考试</b>
-  <div class="t" id="cdText">时间待定</div>
-  <p>考试时间确定后自动开始倒计时</p>
-</div>
+  <aside class="side">
+    <div class="logorow">
+      <div class="logo">LC</div>
+      <b>LING CLUB</b>
+    </div>
+    <nav>
+      <a class="nav-item on" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>总览</a>
+      <a class="nav-item" href="#subjects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V10M9 19V5M14 19v-8M19 19V8"/></svg>学科</a>
+      <a class="nav-item" href="#library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M9 7h7M9 11h7"/></svg>讲义库</a>
+      <a class="nav-item" href="#exam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>模拟考</a>
+    </nav>
+    <div class="pro"><b>材料持续更新中</b><span>发我讲义，转成沉浸式阅读页面</span></div>
+  </aside>
 
-<div class="grid" id="grid"></div>
+  <main class="main">
+    <div class="hello">你好，LING<small>备考进行中 · <b id="cdDays">--</b> 天后考试（2026 年 4-6 月，待定）</small></div>
 
-<div class="note">
-  <b>使用说明</b>：每科点进去是教材章节主干 + 核心要点，后续逐步补充题目与练习。<br>
-  主干教材：高鸿业《西方经济学》/ 黄达《金融学》/ 《基础会计》/ 《市场营销学》/ 《法律基础》/ 《应用文写作》/ 行测通识。
+    <div class="examcard" id="exam">
+      <div><b>考试倒计时</b><p>时间确定后自动开始精确倒计时（当前按 4 月 15 日预估）</p></div>
+      <div class="r"><div class="t" id="cdText">--</div></div>
+    </div>
+
+    <div class="sec" id="subjects">
+      <h3>学科 <a>共 7 科 · 按分值排序</a></h3>
+      <div class="subj-grid" id="grid"></div>
+    </div>
+  </main>
+
+  <aside class="right">
+    <div class="user">
+      <div class="av">L</div>
+      <div><b>LING</b><span>study plan · 2026</span></div>
+    </div>
+    <div class="stat2x2">
+      <div class="fcard navy"><b>金融 39.5</b><span>分值占比最大 · 主攻</span><i class="geo"></i></div>
+      <div class="fcard white"><b>会计 14</b><span>分录与报表是核心</span></div>
+      <div class="fcard pink"><b>经济 10.5</b><span>高鸿业微宏观</span></div>
+      <div class="fcard sky"><b>法律 10.5</b><span>民法典+支付结算</span><i class="geo"></i></div>
+    </div>
+    <div class="plan" id="library">
+      <b>学习方式</b>
+      每科页面为教材主干要点；后续上传的讲义将转成内嵌文字页，归入对应科目。
+      <a>材料直接发群里即可</a>
+    </div>
+  </aside>
+
 </div>
 </div>
 <script>
 var SUBJECTS=[
- {id:'jinrong',  name:'金融学',      tag:'39.5分', desc:'货币·信用·银行·央行·金融市场监管',   pct:0},
- {id:'kuaiji',   name:'会计',        tag:'14分',   desc:'基础会计：凭证·账簿·报表·分录',      pct:0},
- {id:'jingji',   name:'经济学',      tag:'10.5分', desc:'微观+宏观：供求·弹性·GDP·IS-LM',    pct:0},
- {id:'falv',     name:'法律基础',    tag:'10.5分', desc:'宪法·民法·公司法·劳动法·支付结算',  pct:0},
- {id:'wenmi',    name:'文秘基础',    tag:'10.5分', desc:'应用文写作·公文格式·事务处理',      pct:0},
- {id:'tongyong', name:'通用能力',    tag:'9分',    desc:'言语理解·数量关系·判断推理·资料分析',pct:0},
- {id:'yingxiao', name:'市场营销',    tag:'6分',    desc:'4P·STP·消费者行为·渠道管理',        pct:0}
+ {id:'jinrong',  name:'金融学',    tag:'39.5 分', desc:'货币·信用·金融市场·央行货币政策·国际金融与监管', pct:20},
+ {id:'kuaiji',   name:'会计',      tag:'14 分',   desc:'基础会计：等式复式记账·凭证账簿·财产清查·报表', pct:20},
+ {id:'jingji',   name:'经济学',    tag:'10.5 分', desc:'微观供求弹性·消费者生产者理论·宏观 IS-LM·AD-AS', pct:15},
+ {id:'falv',     name:'法律基础',  tag:'10.5 分', desc:'宪法·民法典·公司法·票据法·劳动法',            pct:15},
+ {id:'wenmi',    name:'文秘基础',  tag:'10.5 分', desc:'公文15种·行文规则·事务文书·秘书实务',          pct:10},
+ {id:'tongyong', name:'通用能力',  tag:'9 分',    desc:'言语理解·数量关系·判断推理·资料分析',          pct:10},
+ {id:'yingxiao', name:'市场营销',  tag:'6 分',    desc:'STP·4P·产品生命周期·定价渠道促销',            pct:15}
 ];
 var g=document.getElementById('grid');
 SUBJECTS.forEach(function(s){
   var a=document.createElement('a');
-  a.className='subject'; a.href=s.id+'.html';
-  a.innerHTML='<span class="tag">'+s.tag+'</span><b>'+s.name+'</b><span>'+s.desc+'</span>'+
-    '<div class="pct"><i style="width:'+(s.pct*100)+'%"></i></div><div class="pt">内容完成度 '+(s.pct*100).toFixed(0)+'%</div>';
+  a.className='subject';a.href=s.id+'.html';
+  a.innerHTML='<div class="row"><span class="tag">'+s.tag+'</span></div><b>'+s.name+'</b><span>'+s.desc+'</span>'+
+    '<div class="pct"><i style="width:'+s.pct+'%"></i></div><div class="pt">内容完成度 '+s.pct+'%</div>';
   g.appendChild(a);
 });
-function days(){
-  var el=document.getElementById('cdText');
-  if(!window.EXAM_DATE){el.textContent='时间待定';return}
-  var d=Math.ceil((new Date(window.EXAM_DATE)-new Date())/86400000);
-  el.textContent=d>0?('还有 '+d+' 天'):('已开考');
+/* EXAM_DATE 确定后填 'YYYY-MM-DDTHH:MM:SS+08:00'；null=未定 */
+var EXAM_DATE=null;
+function cd(){
+  var el=document.getElementById('cdText'),d=document.getElementById('cdDays');
+  if(!EXAM_DATE){el.textContent='时间待定';d.textContent='待定';return}
+  var t=new Date(EXAM_DATE)-new Date();
+  if(t<=0){el.textContent='已开考';d.textContent='0';return}
+  var dd=Math.floor(t/86400000),hh=Math.floor(t%86400000/3600000),mm=Math.floor(t%3600000/60000);
+  el.textContent=dd+' 天 '+(hh<10?'0':'')+hh+' 时 '+(mm<10?'0':'')+mm+' 分';
+  d.textContent=dd;
 }
-days(); setInterval(days,60000);
+cd();setInterval(cd,60000);
 </script>
 </body>
 </html>
