@@ -31,8 +31,24 @@ li b{color:var(--tx)}
 <body>
 <div class="top"><div class="top-in"><b>金融学</b><a href="index.html">&larr; 门户</a></div></div>
 <div class="app">
+<div class="modetabs" style="display:flex;gap:8px;margin:16px 0 4px">
+<button id="tabJc" class="tabbtn on" onclick="switchMode('jc')">教材主干</button>
+<button id="tabKg" class="tabbtn" onclick="switchMode('kg')">知识图谱 40 概念</button>
+</div>
+<style>
+.tabbtn{padding:9px 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--tx2);font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s}
+.tabbtn.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.kgcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.kgcard h4{font-size:15.5px;color:var(--ac);margin-bottom:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kgcard h4 .cat{font-size:10.5px;font-weight:600;color:#2563eb;background:#eaf1fe;border-radius:999px;padding:1px 9px}
+.kgcard h4 .w{font-size:10.5px;color:var(--tx3);font-weight:400}
+.kgcard p{font-size:14px;color:var(--tx);margin-bottom:6px}
+.kgcard .rel{font-size:12px;color:var(--tx2)}
+.kgcard .rel b{color:var(--ac);font-weight:600}
+</style>
 <div class="chips" id="chips"></div>
 <div id="list"></div>
+<div id="kgwrap" style="display:none"></div>
 </div>
 <script>
 /* 数据源：黄达《金融学》、易纲《货币银行学》、《商业银行经营管理学》、《中央银行学》 */
@@ -101,6 +117,33 @@ function render(i){
 }
 var idx=location.hash?(CH.findIndex(function(c){return location.hash==='#'+c.id})):0;
 render(idx<0?0:idx);if(idx>0)chips.children[idx].classList.add('on'),chips.children[0].classList.remove('on');
+
+/* ===== 知识图谱 ===== */
+var KG=[{"cat": "宏观金融", "name": "货币政策", "desc": "货币政策是由中央银行制定的旨在调控货币供应量和信贷规模的政策，目标包括稳定物价、促进就业和经济增长。", "rel": ["存款准备金率", "公开市场操作", "再贷款", "中期借贷便利", "商业银行", "银行间市场", "财政政策"], "w": 30}, {"cat": "宏观金融", "name": "财政政策", "desc": "财政政策是政府通过调整财政收支规模和结构，影响总需求、总供给和国民收入分配的宏观经济政策。", "rel": ["货币政策", "外汇储备", "人民币汇率"], "w": 28}, {"cat": "央行工具", "name": "存款准备金率", "desc": "存款准备金率是中央银行要求商业银行按照其存款总额的一定比例在中央银行缴纳的准备金占其存款的比率。", "rel": ["货币政策", "商业银行", "银行间市场"], "w": 20}, {"cat": "央行工具", "name": "公开市场操作", "desc": "公开市场操作是中央银行通过在金融市场上买卖国债等有价证券来调节市场流动性的货币政策工具。", "rel": ["货币政策", "银行间市场", "债券"], "w": 18}, {"cat": "央行工具", "name": "再贷款", "desc": "再贷款是中央银行向商业银行提供的贷款，是中央银行调节货币供应量的重要手段之一。", "rel": ["货币政策", "商业银行"], "w": 15}, {"cat": "央行工具", "name": "中期借贷便利", "desc": "中期借贷便利(MLF)是中央银行创设的提供中期基础货币的货币政策工具，对象为符合条件的银行。", "rel": ["货币政策", "商业银行", "银行间市场"], "w": 15}, {"cat": "国际金融", "name": "外汇储备", "desc": "外汇储备是一国政府保有的以外币表示的资产，是国际流动性和国际支付的来源。", "rel": ["财政政策", "人民币汇率", "国际收支平衡", "外汇市场"], "w": 25}, {"cat": "国际金融", "name": "人民币汇率", "desc": "人民币汇率是人民币与其他货币的兑换比率，是国际贸易和投资的重要参考指标。", "rel": ["财政政策", "外汇储备", "国际收支平衡", "外汇市场", "期货"], "w": 26}, {"cat": "国际金融", "name": "国际收支平衡", "desc": "国际收支平衡表是记录一国与世界其他国家在一定时期内的全部经济交易的统计报表。", "rel": ["外汇储备", "人民币汇率", "外汇市场"], "w": 20}, {"cat": "金融机构", "name": "商业银行", "desc": "商业银行是指依法接受公众存款、发放贷款、办理结算等业务的金融机构。", "rel": ["货币政策", "存款准备金率", "再贷款", "中期借贷便利", "保险公司", "银行间市场", "债券", "流动性风险", "资本充足率", "杠杆率", "流动性覆盖率"], "w": 35}, {"cat": "金融机构", "name": "投资银行", "desc": "投资银行是专门从事证券发行、承销和交易等投资业务的金融机构。", "rel": ["证券交易所", "股票", "债券", "资产证券化"], "w": 30}, {"cat": "金融机构", "name": "保险公司", "desc": "保险公司是经营保险业务的金融机构，通过收取保费提供风险保障服务。", "rel": ["商业银行", "信用风险", "市场风险", "流动性风险"], "w": 28}, {"cat": "金融市场", "name": "证券交易所", "desc": "证券交易所是证券集中交易的场所，为证券的发行和交易提供设施和服务。", "rel": ["投资银行", "股票", "期货", "期权"], "w": 32}, {"cat": "金融市场", "name": "银行间市场", "desc": "银行间市场是金融机构之间进行货币、债券等金融产品交易的市场。", "rel": ["货币政策", "存款准备金率", "公开市场操作", "中期借贷便利", "商业银行", "债券", "互换"], "w": 30}, {"cat": "金融市场", "name": "外汇市场", "desc": "外汇市场是不同货币之间进行交易的市场，是全球最大的金融市场。", "rel": ["外汇储备", "人民币汇率", "国际收支平衡", "期货", "互换"], "w": 28}, {"cat": "金融产品", "name": "股票", "desc": "股票是股份公司发行的所有权凭证，持有者按持股比例享有公司的收益和参与公司决策的权利。", "rel": ["投资银行", "证券交易所", "市场风险", "量化投资", "价值投资", "指数投资"], "w": 30}, {"cat": "金融产品", "name": "债券", "desc": "债券是债务人发行的、承诺按约定条件偿付利息并到期偿还本金的有价证券。", "rel": ["公开市场操作", "商业银行", "投资银行", "银行间市场", "信用风险", "资产证券化"], "w": 28}, {"cat": "金融产品", "name": "期货", "desc": "期货是标准化的、在交易所交易的、对特定商品或金融工具的远期合约。", "rel": ["人民币汇率", "证券交易所", "外汇市场", "期权", "市场风险"], "w": 25}, {"cat": "金融产品", "name": "期权", "desc": "期权是合约持有者在特定时间以特定价格买入或卖出标的资产的权利，但没有义务。", "rel": ["证券交易所", "期货", "互换", "市场风险"], "w": 23}, {"cat": "金融产品", "name": "互换", "desc": "互换是交易双方约定在未来交换一系列现金流的金融衍生品。", "rel": ["银行间市场", "外汇市场", "期权", "市场风险", "信贷违约互换"], "w": 22}, {"cat": "金融风险", "name": "信用风险", "desc": "信用风险是因交易对手不能履行合约而导致的经济损失风险。", "rel": ["保险公司", "债券", "市场风险", "流动性风险", "操作风险", "信贷违约互换"], "w": 26}, {"cat": "金融风险", "name": "市场风险", "desc": "市场风险是因市场价格变动导致的金融资产价值波动风险。", "rel": ["保险公司", "股票", "期货", "期权", "互换", "信用风险", "流动性风险", "操作风险"], "w": 25}, {"cat": "金融风险", "name": "流动性风险", "desc": "流动性风险是无法以合理成本及时获得资金满足需求的风险。", "rel": ["商业银行", "保险公司", "信用风险", "市场风险", "操作风险", "流动性覆盖率"], "w": 24}, {"cat": "金融风险", "name": "操作风险", "desc": "操作风险是由内部流程、人员和系统的不完善或失效，或外部事件导致的损失风险。", "rel": ["信用风险", "市场风险", "流动性风险"], "w": 22}, {"cat": "金融监管", "name": "资本充足率", "desc": "资本充足率是衡量银行资本是否充足的重要指标，是银行抵御风险的基本保障。", "rel": ["商业银行", "杠杆率", "流动性覆盖率", "巴塞尔协议"], "w": 24}, {"cat": "金融监管", "name": "杠杆率", "desc": "杠杆率是衡量银行资本与总资产之比的监管指标，是对资本充足率的补充。", "rel": ["商业银行", "资本充足率", "巴塞尔协议"], "w": 22}, {"cat": "金融监管", "name": "流动性覆盖率", "desc": "流动性覆盖率是衡量银行在压力情景下短期流动性风险抵御能力的监管指标。", "rel": ["商业银行", "流动性风险", "资本充足率", "巴塞尔协议"], "w": 20}, {"cat": "金融监管", "name": "巴塞尔协议", "desc": "巴塞尔协议是国际银行监管标准，旨在加强银行监管和风险管理。", "rel": ["资本充足率", "杠杆率", "流动性覆盖率", "金融监管科技"], "w": 24}, {"cat": "金融科技", "name": "互联网金融", "desc": "互联网金融是传统金融与互联网技术相结合的新型金融业态。", "rel": ["区块链", "数字货币", "大数据金融", "普惠金融"], "w": 28}, {"cat": "金融科技", "name": "区块链", "desc": "区块链是一种分布式数据存储、点对点传输、共识机制、加密算法等技术的新型应用模式。", "rel": ["互联网金融", "数字货币", "大数据金融", "金融监管科技"], "w": 26}, {"cat": "金融科技", "name": "数字货币", "desc": "数字货币是基于密码学原理设计的电子货币形式，包括央行数字货币和加密货币。", "rel": ["互联网金融", "区块链", "大数据金融"], "w": 25}, {"cat": "金融科技", "name": "大数据金融", "desc": "大数据金融是利用大数据技术分析海量数据，优化金融产品和服务的新兴领域。", "rel": ["互联网金融", "区块链", "数字货币", "量化投资", "金融监管科技"], "w": 24}, {"cat": "金融科技", "name": "金融监管科技", "desc": "金融监管科技是利用科技手段提升金融监管效率和效果的技术和应用。", "rel": ["巴塞尔协议", "区块链", "大数据金融", "绿色金融"], "w": 20}, {"cat": "金融理念", "name": "普惠金融", "desc": "普惠金融旨在以可负担的成本为弱势群体和小微企业提供适当、有效的金融服务。", "rel": ["互联网金融", "绿色金融"], "w": 22}, {"cat": "金融理念", "name": "绿色金融", "desc": "绿色金融是指为支持环境改善、应对气候变化和资源节约高效利用的经济活动提供的金融服务。", "rel": ["普惠金融", "金融监管科技"], "w": 20}, {"cat": "金融创新", "name": "资产证券化", "desc": "资产证券化是将缺乏流动性但能产生可预见收入的资产，转换为可在金融市场上流通的证券的过程。", "rel": ["投资银行", "债券", "信贷违约互换"], "w": 24}, {"cat": "金融创新", "name": "信贷违约互换", "desc": "信贷违约互换是一种信用衍生品，买方通过支付溢价获得信用风险保护。", "rel": ["互换", "信用风险", "资产证券化"], "w": 22}, {"cat": "投资策略", "name": "量化投资", "desc": "量化投资是利用数学模型和计算机技术进行投资决策和管理的系统性方法。", "rel": ["股票", "大数据金融", "价值投资", "指数投资"], "w": 23}, {"cat": "投资策略", "name": "价值投资", "desc": "价值投资是基于对公司内在价值的分析，购买被低估股票的投资策略。", "rel": ["股票", "量化投资", "指数投资"], "w": 24}, {"cat": "投资策略", "name": "指数投资", "desc": "指数投资是按照特定指数的成分和权重配置资产的被动投资策略。", "rel": ["股票", "量化投资", "价值投资"], "w": 22}];
+function renderKG(){
+  var h='',lastCat=null;
+  KG.forEach(function(k){
+    if(k.cat!==lastCat){
+      var cnt=KG.filter(function(x){return x.cat===k.cat}).length;
+      h+='<div style="margin:20px 0 10px;font-size:15px;font-weight:700;color:var(--tx)">'+k.cat+'<span style="font-size:11px;color:var(--tx3);font-weight:400;margin-left:8px">'+cnt+' 个概念</span></div>';
+      lastCat=k.cat;
+    }
+    h+='<div class="kgcard"><h4>'+k.name+'<span class="cat">'+k.cat+'</span><span class="w">权重 '+k.w+'</span></h4>'+
+       '<p>'+k.desc+'</p>'+
+       (k.rel.length?'<div class="rel"><b>关联：</b>'+k.rel.join(' · ')+'</div>':'')+
+       '</div>';
+  });
+  document.getElementById('kgwrap').innerHTML=h;
+}
+renderKG();
+function switchMode(m){
+  var jc=m==='jc';
+  document.getElementById('tabJc').classList.toggle('on',jc);
+  document.getElementById('tabKg').classList.toggle('on',!jc);
+  document.getElementById('chips').style.display=jc?'flex':'none';
+  document.getElementById('list').style.display=jc?'block':'none';
+  document.getElementById('kgwrap').style.display=jc?'none':'block';
+}
 </script>
 </body>
 </html>
