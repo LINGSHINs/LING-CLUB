@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>民法侵权责任编 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">1.民法 / 民法侵权责任编</span></div>
+<a href="../falv-tuozhan.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">侵权行为定义</a><a class="l2" href="#sec_1">承担方式</a><a class="h1" href="#sec_2">侵权行为归责原则</a><a class="l2" href="#sec_3">1. 过错责任原则</a><a class="l2" href="#sec_4">2. 无过错责任原则</a><a class="l2" href="#sec_7">3. 公平责任原则</a><a class="l2" href="#sec_8">4. 免责事由</a><a class="h1" href="#sec_9">民法典新修：高空抛物坠物治理规则</a></nav>
+<div class="doc" id="doc"><h1>民法侵权责任编</h1>
+<h2 id="sec_0">侵权行为定义</h2>
+<p><strong>侵权行为</strong>是指民事主体违反民事义务，侵害他人合法权益，依法应当承担民事责任的行为。</p>
+<h3 id="sec_1">承担方式</h3>
+<ol>
+<li>停止侵害</li>
+<li>排除妨碍</li>
+<li>消除危险</li>
+<li>返还财产</li>
+<li>恢复原状</li>
+<li>赔偿损失</li>
+<li>赔礼道歉</li>
+<li>消除影响</li>
+<li>恢复名誉</li>
+</ol>
+<blockquote>
+<p>举例：张三在网上发布虚假信息诽谤李四，导致李四名誉受损。法院可能要求张三删除虚假信息（停止侵害），在相同平台公开道歉（赔礼道歉、消除影响），并赔偿李四因此遭受的经济损失（赔偿损失）。</p>
+</blockquote>
+<h2 id="sec_2">侵权行为归责原则</h2>
+<h3 id="sec_3">1. 过错责任原则</h3>
+<p>这是最基本的归责原则。行为人具有故意或者过失才可能承担侵权责任。</p>
+<ul>
+<li><strong>故意</strong>：行为人明知自己的行为会造成他人损害，并且希望或者放任这种结果发生。</li>
+<li><strong>过失</strong>：行为人应当预见自己的行为可能会造成他人损害，但因疏忽大意而没有预见，或者已经预见而轻信能够避免。</li>
+</ul>
+<blockquote>
+<p>举例：王五酒后驾车撞伤行人赵六。王五明知酒后驾车是违法的，却仍然这样做，属于过失行为，需要承担侵权责任。</p>
+</blockquote>
+<h3 id="sec_4">2. 无过错责任原则</h3>
+<h4 id="sec_5">概念</h4>
+<p>指在法律有特别规定情况下，与损害结果有因果关系的行为人，不论其有无过错，都要承担侵权赔偿责任的归责原则。</p>
+<h4 id="sec_6">适用范围</h4>
+<p>根据我国《侵权责任法》的规定，适用无过错责任原则的主要情形有：</p>
+<ol>
+<li>无民事行为能力人、限制民事行为能力人致人损害的，监护人承担无过错责任；</li>
+<li>用人单位的工作人员因执行工作任务致人损害的，用人单位承担无过错责任；</li>
+<li>因产品存在缺陷造成他人损害的，生产者和销售者承担的不真正连带责任，为无过错责任。
+<ul>
+<li>销售者具有过错的，承担最终责任；</li>
+<li>销售者无过错的，生产者承担最终责任；</li>
+</ul>
+</li>
+<li>因环境污染致人损害的，污染者承担无过错责任；</li>
+<li>高度危险责任中，从事高度危险作业者，高度危险物品的经营者、占有人承担无过错责任；</li>
+<li>饲养的动物致人损害的，动物饲养人或者管理人承担无过错责任（但动物园承担过错推定责任）</li>
+</ol>
+<blockquote>
+<p>举例：某化工厂排放有毒废水导致附近居民健康受损。即使化工厂已经采取了一定的防护措施，仍然要对居民的损失承担赔偿责任，这就是适用无过错责任原则。</p>
+</blockquote>
+<h3 id="sec_7">3. 公平责任原则</h3>
+<p>公平责任原则是指在当事人双方均无过错的情况下，根据公平原则由一方对他方的损失给予适当补偿的归责原则。</p>
+<blockquote>
+<p>举例：甲和乙在人行道上相撞，甲摔倒受伤。虽然双方都没有过错，但考虑到甲受伤需要医疗费用，法院可能会判决乙承担部分医疗费用，体现公平责任原则。</p>
+</blockquote>
+<h3 id="sec_8">4. 免责事由</h3>
+<p>侵权责任的免责事由包括：</p>
+<ol>
+<li>被侵权人对损害的发生也有过错的，可以减轻侵权人的责任；</li>
+<li>损害是因受害人故意造成的；</li>
+<li>损害是因第三人造成的，由第三人承担；</li>
+<li>因不可抗力造成他人损害的；</li>
+<li>因正当防卫造成损害的；</li>
+<li>因紧急避险造成损害的，由引起险情发生的人承担责任。</li>
+</ol>
+<blockquote>
+<p>举例：在台风天气（不可抗力），一块广告牌被吹落砸坏了路边停放的汽车。广告牌的所有者可以主张不可抗力免责。</p>
+</blockquote>
+<h2 id="sec_9">民法典新修：高空抛物坠物治理规则</h2>
+<ol>
+<li>禁止从建筑物中抛掷物品。</li>
+<li>从建筑物中抛掷物品或者从建筑物上坠落的物品造成他人损害的，由侵权人依法承担侵权责任。</li>
+<li>经调查难以确定具体侵权人的，除能够证明自己不是侵权人的外，由可能加害的建筑物使用人给予补偿。</li>
+<li>可能加害的建筑物使用人补偿后，有权向侵权人追偿。</li>
+<li>物业服务企业等建筑物管理人应当采取必要的安全保障措施防止上述情形的发生；未采取必要的安全保障措施的，应当依法承担未履行安全保障义务的侵权责任。</li>
+<li>发生高空抛物坠物情形的，公安等机关应当依法及时调查，查清责任人。</li>
+</ol>
+<blockquote>
+<p>解释：这一规定旨在解决&quot;高空抛物&quot;这一社会顽疾。它强调了建筑物使用人和管理人的责任，同时也为难以确定具体侵权人的情况提供了解决方案，体现了保护受害人利益的立法意图。</p>
+</blockquote>
+<blockquote>
+<p>举例：某小区发生高空抛物事件，砸伤了路人。如果无法查明具体是哪户居民所为，那么该楼层的所有住户可能需要共同承担赔偿责任，除非他们能够证明自己不是侵权人。同时，如果物业公司没有采取必要的防范措施（如安装监控摄像头），也可能需要承担部分责任。</p>
+</blockquote>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>行政诉讼 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">4.行政法 / 行政诉讼</span></div>
+<a href="../falv-tuozhan.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、诉讼当事人</a><a class="l2" href="#sec_1">（一）原告</a><a class="l2" href="#sec_2">（二）被告</a><a class="h1" href="#sec_3">二、行政诉讼原则</a><a class="l2" href="#sec_4">共有原则：</a><a class="l2" href="#sec_5">特有原则：</a><a class="h1" href="#sec_6">三、受案范围</a><a class="l2" href="#sec_7">（一）人民法院受理的行政案件</a><a class="l2" href="#sec_8">（二）人民法院不予受理的事项</a><a class="h1" href="#sec_9">四、管辖</a><a class="l2" href="#sec_10">（一）级别管辖</a><a class="l2" href="#sec_11">（二）地域管辖</a><a class="l2" href="#sec_12">（三）裁定管辖</a><a class="h1" href="#sec_13">五、证据</a><a class="l2" href="#sec_14">（一）种类</a><a class="l2" href="#sec_15">（二）举证责任</a><a class="h1" href="#sec_16">六、行政诉讼程序</a><a class="l2" href="#sec_17">（一）行政诉讼类型</a><a class="l2" href="#sec_18">（二）起诉的条件：</a><a class="l2" href="#sec_19">（三）诉讼时效</a><a class="l2" href="#sec_20">（四）回避制度</a><a class="l2" href="#sec_21">（五）判决</a></nav>
+<div class="doc" id="doc"><h1>行政诉讼</h1>
+<p>行政诉讼是指公民、法人或者其他组织认为行使国家行政权的机关和组织及其工作人员所实施的具体行政行为，侵犯了其合法权利，依法向人民法院起诉。人民法院在当事人及其他诉讼参与人的参加下，依法对被诉具体行政行为进行审查并做出裁判，从而解决行政争议的制度。这种诉讼通常被称为“民告官”。</p>
+<h2 id="sec_0">一、诉讼当事人</h2>
+<h3 id="sec_1">（一）原告</h3>
+<ol>
+<li><strong>公民本人</strong>：如果公民本人死亡或被限制人身自由，其近亲属可以以自己的名义提起诉讼。</li>
+<li><strong>法人本身</strong>：如果法人终止，承受其权利的法人或者其他组织可以提起诉讼。</li>
+</ol>
+<h3 id="sec_2">（二）被告</h3>
+<ol>
+<li><strong>一般情况</strong>：与行政复议被申请人的确定相同，都是看行政主体标准。</li>
+<li><strong>特殊情况</strong>：经复议后起诉
+<ul>
+<li><strong>复议维持</strong>：原机关和复议机关为共同被告。</li>
+<li><strong>复议改变</strong>：复议机关为被告。</li>
+<li><strong>复议不作为</strong>：原机关为被告。</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_3">二、行政诉讼原则</h2>
+<h3 id="sec_4">共有原则：</h3>
+<ol>
+<li><strong>以事实为依据，以法律为准绳</strong>：法院在审理案件时，必须以事实为基础，并以法律为准绳。</li>
+<li><strong>当事人平等法律地位的原则</strong>：所有当事人在法律面前一律平等。</li>
+<li><strong>使用民族语言原则</strong>：诉讼过程中应当使用当事人熟悉的民族语言。</li>
+<li><strong>当事各方有权辩论</strong>：当事人有权在法庭上进行辩论。</li>
+<li><strong>检察院监督原则</strong>：检察院对行政诉讼进行监督。</li>
+<li><strong>公开审判原则</strong>：法院审理案件应当公开进行。</li>
+<li><strong>合议制、回避制、两审终审制</strong>：法院审理案件应当由合议庭进行，审判人员有回避的义务，实行两审终审制。</li>
+</ol>
+<h3 id="sec_5">特有原则：</h3>
+<ol>
+<li><strong>原告对谁不服谁就是被告</strong>：原告对哪个行政机关的行为不服，就以哪个行政机关为被告。</li>
+<li><strong>选择复议</strong>：当事人对具体行政行为不服时，可以先申请复议，对复议决定不服，再向法院起诉，也可以不经复议直接向法院起诉。</li>
+<li><strong>审查具体行政行为合法性</strong>：人民法院对行政行为是否合法进行审查。</li>
+<li><strong>具体行政行为不因诉讼而停止执行</strong>：诉讼期间，行政行为的执行不停止。</li>
+<li><strong>不适用调解</strong>：人民法院审理行政案件，不适用调解。</li>
+<li><strong>被告负举证责任</strong>：被告需提供事实依据和法律依据来证明自己的行政行为是合法的。</li>
+<li><strong>人民法院依法对行政案件独立行使审判权，不受行政机关、社会团体和个人的干涉</strong>。</li>
+</ol>
+<h2 id="sec_6">三、受案范围</h2>
+<h3 id="sec_7">（一）人民法院受理的行政案件</h3>
+<ol>
+<li>对行政处罚不服的案件。</li>
+<li>对行政强制措施和行政强制执行不服的案件。</li>
+<li>对行政机关作出的有关行政许可的决定不服的案件。</li>
+<li>对行政机关作出的关于确认自然资源的所有权或者使用权的决定不服的案件。</li>
+<li>对征收、征用决定及其补偿决定不服的案件。</li>
+<li>对行政机关不履行或拒绝履行保护人身权、财产权等合法权益的案件。</li>
+<li>认为行政机关侵犯其经营自主权或者农村土地承包经营权、农村土地经营权的案件。</li>
+<li>认为行政机关滥用行政权力排除或者限制竞争的案件。</li>
+<li>认为行政机关违法集资、摊派费用或者违法要求履行其他义务的案件。</li>
+<li>认为行政机关没有依法支付抚恤金、最低生活保障待遇或者社会保险待遇的案件。</li>
+<li>认为行政机关不依法履行、未按照约定履行或者违法变更、解除政府特许经营协议、土地房屋征收补偿协议等协议的案件。</li>
+<li>认为行政机关侵犯其他人身权、财产权等合法权益的案件。</li>
+</ol>
+<h3 id="sec_8">（二）人民法院不予受理的事项</h3>
+<ol>
+<li>国防、外交等国家行为。</li>
+<li>行政法规、规章或者行政机关制定、发布的具有普遍约束力的决定、命令。</li>
+<li>行政机关对行政机关工作人员的奖惩、任免等决定。</li>
+<li>法律规定由行政机关最终裁决的行政行为。</li>
+</ol>
+<h2 id="sec_9">四、管辖</h2>
+<h3 id="sec_10">（一）级别管辖</h3>
+<ol>
+<li><strong>基层人民法院</strong>：一般的行政案件由基层人民法院管辖。</li>
+<li><strong>中级人民法院</strong>：对国务院部门或县级以上地方人民政府所作的行政行为提起诉讼的案件，由中级人民法院管辖。</li>
+<li><strong>高级人民法院</strong>：重大、复杂的行政案件由高级人民法院管辖。</li>
+<li><strong>最高人民法院</strong>：全国范围内重大、复杂的行政案件由最高人民法院管辖。</li>
+</ol>
+<h3 id="sec_11">（二）地域管辖</h3>
+<ol>
+<li><strong>一审行政案件</strong>：对国务院部门或县级以上地方人民政府所作的行政行为提起诉讼的案件，由中级人民法院管辖。</li>
+<li><strong>重大、复杂的一审行政案件</strong>：由高级人民法院管辖。</li>
+<li><strong>全国范围内重大、复杂的一审行政案件</strong>：由最高人民法院管辖。</li>
+<li><strong>一般地域管辖</strong>：由最初作出行政行为的行政机关所在地人民法院管辖。</li>
+<li><strong>限制人身自由的案件</strong>：由被告所在地人民法院管辖。</li>
+<li><strong>特殊地域管辖</strong>：
+<ul>
+<li>经过行政复议的案件：由被告所在地或者原告所在地人民法院管辖。</li>
+<li>不动产有关案件：由不动产所在地人民法院管辖。</li>
+<li>共同管辖：多个法院都有管辖权的案件，原告可以选择其中一个法院。</li>
+</ul>
+</li>
+</ol>
+<h3 id="sec_12">（三）裁定管辖</h3>
+<ol>
+<li><strong>移送管辖</strong>：
+<ul>
+<li>多个法院都有管辖权，原告可以选择其中一个法院。</li>
+<li>原告向多个有管辖权的法院起诉，由最先立案的法院管辖。</li>
+<li>受诉法院发现受理的案件不属于本院管辖的，应当移送有管辖权的法院，受移送的法院应当受理。</li>
+</ul>
+</li>
+<li><strong>指定管辖</strong>：
+<ul>
+<li>由于特殊原因有管辖权的法院不能行使管辖权的，由上级法院指定管辖。</li>
+<li>法院之间发生管辖权争议而又协商不成的，报它们的共同上级法院指定管辖。</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_13">五、证据</h2>
+<h3 id="sec_14">（一）种类</h3>
+<p>证据包括：书证、物证、视听资料、电子数据、证人证言、当事人的陈述、鉴定意见、勘验笔录、现场笔录。</p>
+<h3 id="sec_15">（二）举证责任</h3>
+<ol>
+<li><strong>被告方承担举证责任</strong>：被告需提供事实依据和法律依据来证明自己的行政行为是合法的。在诉讼过程中，被告及其诉讼代理人不得自行向原告、第三人和证人收集证据。</li>
+<li><strong>原告的举证责任</strong>：
+<ul>
+<li>在起诉被告不履行法定职责的案件中，原告应当提供其向被告提出申请的证据。</li>
+<li>在行政赔偿、补偿的案件中，原告应当对行政行为造成的损害提供证据。</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_16">六、行政诉讼程序</h2>
+<h3 id="sec_17">（一）行政诉讼类型</h3>
+<ol>
+<li>经行政复议后提起诉讼；</li>
+<li>直接提起诉讼。</li>
+</ol>
+<h3 id="sec_18">（二）起诉的条件：</h3>
+<ol>
+<li>原告是与行政行为有利害关系的公民、法人或者其他组织；</li>
+<li>有明确的被告；</li>
+<li>有具体的诉讼请求和事实根据；</li>
+<li>属于人民法院受案范围和受诉人民法院管辖。</li>
+</ol>
+<h3 id="sec_19">（三）诉讼时效</h3>
+<ol>
+<li>不服复议决定：收到复议决定书之日起15日内。</li>
+<li>复议机关逾期不作决定：复议期满之日起15日内。</li>
+<li>直接起诉：知道或者应当知道作出行政行为之日起6个月内。</li>
+<li>不受理：因不动产提起诉讼的案件自行政行为作出之日起超过20年，其他案件自行政行为作出之日起超过5年提起诉讼。</li>
+</ol>
+<h3 id="sec_20">（四）回避制度</h3>
+<ol>
+<li><strong>回避人员</strong>：审判人员、书记员、翻译人员、鉴定人、勘验人以及院长。</li>
+<li><strong>回避缘由</strong>：与本案有利害关系或者有其他关系。</li>
+<li><strong>回避决定</strong>：院长担任审判长时的回避，由审判委员会决定；审判人员的回避，由院长决定；其他人员的回避，由审判长决定。</li>
+</ol>
+<h3 id="sec_21">（五）判决</h3>
+<ol>
+<li><strong>一审判决</strong>
+<ul>
+<li>人民法院应当在立案之日起六个月内作出第一审判决。适用简易程序审理的行政案件，由审判员一人独任审理，并应当在立案之日起四十五日内审结。</li>
+<li>判决依据：依据法律、法规，参照规章。</li>
+</ul>
+</li>
+<li><strong>二审判决</strong>
+<ul>
+<li>当事人不服人民法院第一审判决的，有权在判决书送达之日起十五日内向上一级人民法院提起上诉。</li>
+<li>当事人不服人民法院第一审裁定的，有权在裁定书送达之日起十日内向上一级人民法院提起上诉。逾期不提起上诉的，人民法院的第一审判决或者裁定发生法律效力。</li>
+<li>人民法院审理上诉案件，应当对原审人民法院的判决、裁定和被诉行政行为进行全面审查。人民法院审理上诉案件，应当在收到上诉状之日起三个月内作出终审判决。</li>
+<li>我国实行两审终审制，因此二审判决是生效判决，亦称终审判决，当事人对其不能提出上诉。</li>
+</ul>
+</li>
+<li><strong>再审</strong>
+<ul>
+<li>当事人对已经发生法律效力的判决、裁定，认为确有错误的，可以向上一级人民法院申请再审，但判决、裁定不停止执行。</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</body></html>

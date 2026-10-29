@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>标题填入题 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>通用能力·言语理解</b> <span class="crumb">1.片段阅读 / 标题填入题</span></div>
+<a href="../tongyong-yanyu.html">&larr; 通用能力·言语理解首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">提问方式</a><a class="h1" href="#sec_1">考点介绍</a><a class="h1" href="#sec_2">解题要点</a><a class="l2" href="#sec_3">第一优先级：契合文段中心</a><a class="l2" href="#sec_4">其他注意事项</a><a class="h1" href="#sec_5">练习技巧</a><a class="h1" href="#sec_6">真题示例</a></nav>
+<div class="doc" id="doc"><h1>标题填入题</h1>
+<h2 id="sec_0">提问方式</h2>
+<p>标题填入题通常以以下方式提问：</p>
+<ul>
+<li>&quot;最适合做这段文字标题的是……&quot;</li>
+<li>&quot;下列哪一项最适合做本文的标题？&quot;</li>
+<li>&quot;为这段文字拟一个最恰当的标题&quot;</li>
+</ul>
+<h2 id="sec_1">考点介绍</h2>
+<p>标题填入题主要考察考生的以下能力：</p>
+<ol>
+<li>理解文段主旨</li>
+<li>概括归纳能力</li>
+<li>准确表达能力</li>
+</ol>
+<h2 id="sec_2">解题要点</h2>
+<h3 id="sec_3">第一优先级：契合文段中心</h3>
+<ol>
+<li>
+<p><strong>把握文段主旨</strong>：</p>
+<ul>
+<li>仔细阅读全文，特别注意首尾段落</li>
+<li>寻找文段的中心句或主题句</li>
+<li>分析文段的行文脉络和逻辑关系</li>
+</ul>
+</li>
+<li>
+<p><strong>选择最贴切的标题</strong>：</p>
+<ul>
+<li>标题应概括文段的核心内容</li>
+<li>避免选择过于宽泛或过于具体的选项</li>
+<li>注意标题的表述应准确、简洁</li>
+</ul>
+</li>
+<li>
+<p><strong>排除法</strong>：</p>
+<ul>
+<li>排除与文段主旨不符的选项</li>
+<li>排除片面或以偏概全的选项</li>
+<li>排除文段未提及的内容</li>
+</ul>
+</li>
+</ol>
+<h3 id="sec_4">其他注意事项</h3>
+<ol>
+<li>
+<p><strong>标题的特点</strong>：</p>
+<ul>
+<li>简明扼要：通常不超过20字</li>
+<li>概括全面：涵盖文段的主要内容</li>
+<li>引人注目：吸引读者的兴趣</li>
+</ul>
+</li>
+<li>
+<p><strong>常见的标题类型</strong>：</p>
+<ul>
+<li>主题式：直接点明文章主题</li>
+<li>概括式：概括文章主要内容</li>
+<li>疑问式：以问题形式引发思考</li>
+<li>对比式：通过对比突出主题</li>
+</ul>
+</li>
+<li>
+<p><strong>避免常见陷阱</strong>：</p>
+<ul>
+<li>不要被文段中的细节或例子误导</li>
+<li>警惕与文段主旨相关但不够全面的选项</li>
+<li>注意区分文段的主要内容和次要内容</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_5">练习技巧</h2>
+<ol>
+<li>平时多阅读各类文章，尝试为文章拟定标题</li>
+<li>练习概括段落大意，提炼中心思想</li>
+<li>做题时，先自己思考合适的标题，再对比选项</li>
+<li>分析错题，总结自己在把握文段主旨方面的不足</li>
+</ol>
+<h2 id="sec_6">真题示例</h2>
+</div>
+</div>
+</body></html>

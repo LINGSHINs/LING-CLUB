@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>词句理解题 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>通用能力·言语理解</b> <span class="crumb">1.片段阅读 / 词句理解题</span></div>
+<a href="../tongyong-yanyu.html">&larr; 通用能力·言语理解首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">概述</a><a class="h1" href="#sec_1">常见提问方式</a><a class="h1" href="#sec_2">常规题型及解题思路</a><a class="l2" href="#sec_3">1. 词义理解题</a><a class="l2" href="#sec_8">2. 句意理解题</a><a class="l2" href="#sec_12">3. 代词指代题</a><a class="h1" href="#sec_16">应试技巧</a><a class="h1" href="#sec_17">常见陷阱及应对策略</a></nav>
+<div class="doc" id="doc"><h1>词句理解题</h1>
+<h2 id="sec_0">概述</h2>
+<p>词句理解题是行测语言理解与表达能力考试中的重要题型之一。这类题目主要考察考生对文本中特定词语或句子的理解能力，以及对上下文语境的把握能力。在公务员考试中，词句理解题通常占据言语理解与表达模块的15-20%，是考生必须掌握的关键题型。</p>
+<h2 id="sec_1">常见提问方式</h2>
+<ol>
+<li>词义理解</li>
+<li>句意理解</li>
+<li>代词指代</li>
+</ol>
+<p>除此之外，还可能出现以下变体：</p>
+<ol start="4">
+<li>语句衔接</li>
+<li>语句排序</li>
+</ol>
+<h2 id="sec_2">常规题型及解题思路</h2>
+<h3 id="sec_3">1. 词义理解题</h3>
+<h4 id="sec_4">考点介绍</h4>
+<p>这类题目通常会问：&quot;这段文字中'某某'的含义/意思是......&quot;</p>
+<h4 id="sec_5">解题思路</h4>
+<ol>
+<li>首先定位原文中的目标词语</li>
+<li>结合文段内容理解词义</li>
+<li>注意词语在特定语境下的含义，而非字面意思</li>
+</ol>
+<h4 id="sec_6">注意事项</h4>
+<ul>
+<li>若词语前后出现&quot;：&quot;、&quot;——&quot;、&quot;即&quot;、&quot;也就是说&quot;等解释说明类提示信息，重点理解前后内容</li>
+<li>若没有明显解释说明类提示信息，需结合所在语句或上下文进行理解</li>
+</ul>
+<h4 id="sec_7">示例</h4>
+<p>原文：在当今社会，&quot;内卷&quot;已成为一个热门话题，它反映了人们在激烈竞争中不断提高标准但收益递减的现象。</p>
+<p>问题：文中&quot;内卷&quot;的含义最接近：
+A. 内部矛盾
+B. 恶性竞争
+C. 效率低下
+D. 创新不足</p>
+<p>解析：根据原文对&quot;内卷&quot;的描述，我们可以理解它指的是在竞争中不断提高标准但收益递减的现象。这与选项B&quot;恶性竞争&quot;的含义最为接近。因此，正确答案是B。</p>
+<h3 id="sec_8">2. 句意理解题</h3>
+<h4 id="sec_9">考点介绍</h4>
+<p>这类题目通常会要求考生理解特定句子在文章中的作用或含义。</p>
+<h4 id="sec_10">解题思路</h4>
+<ol>
+<li>准确定位目标句子</li>
+<li>分析句子在段落或文章中的作用（例如：总结前文、引出下文、举例说明等）</li>
+<li>结合上下文理解句意</li>
+</ol>
+<h4 id="sec_11">示例</h4>
+<p>原文：尽管人工智能技术日新月异，但在某些需要复杂情感判断和创造性思维的领域，人类仍然具有不可替代的优势。</p>
+<p>问题：这句话的主要作用是：
+A. 强调人工智能的重要性
+B. 批评人类的局限性
+C. 指出人工智能的不足
+D. 平衡人工智能和人类能力的认识</p>
+<BlurredAnswer>
+解析：这句话通过转折词"尽管"和"但"，既肯定了人工智能的进步，又指出了人类在某些领域的优势。因此，这句话的主要作用是平衡人们对人工智能和人类能力的认识。正确答案是D。
+</BlurredAnswer>
+<h3 id="sec_12">3. 代词指代题</h3>
+<h4 id="sec_13">考点介绍</h4>
+<p>这类题目通常会问：&quot;这段文字中'某某'（代词）指的是......&quot;</p>
+<h4 id="sec_14">解题思路</h4>
+<ol>
+<li>首先定位原文中的目标代词</li>
+<li>一般往前寻找指代内容（如遇纠结情况，需结合指代词后的提示信息综合判断）</li>
+</ol>
+<h4 id="sec_15">常见干扰选项</h4>
+<ol>
+<li>代词之后的内容</li>
+<li>文段出现多个代词时，非提问方式中的代词所指代的内容</li>
+<li>离代词最近但非重点的内容（注意：并非越近越好）</li>
+</ol>
+<h2 id="sec_16">应试技巧</h2>
+<ol>
+<li>
+<p><strong>关注上下文</strong>：词句理解题的关键在于结合上下文。不要孤立地看待单个词语或句子。</p>
+</li>
+<li>
+<p><strong>寻找关键词</strong>：注意文中的转折词（如&quot;但是&quot;、&quot;然而&quot;）、总结词（如&quot;总之&quot;、&quot;因此&quot;）等，它们往往暗示了重要信息。</p>
+</li>
+<li>
+<p><strong>排除法</strong>：当不确定正确答案时，可以先排除明显错误的选项，提高选对的概率。</p>
+</li>
+<li>
+<p><strong>回归原文</strong>：解题时始终以原文为依据，避免过度推测或主观臆断。</p>
+</li>
+<li>
+<p><strong>把握中心</strong>：理解词句时要紧扣文章主旨，确保你的理解与文章整体含义一致。</p>
+</li>
+<li>
+<p><strong>注意语境</strong>：同一个词语在不同语境下可能有不同含义，要根据具体语境来理解。</p>
+</li>
+<li>
+<p><strong>多做真题练习</strong>：通过练习真题，熟悉出题思路和答题技巧，提高解题速度和准确率。</p>
+</li>
+</ol>
+<h2 id="sec_17">常见陷阱及应对策略</h2>
+<ol>
+<li><strong>望文生义</strong>：避免仅根据字面意思理解词语，要结合上下文。</li>
+<li><strong>以偏概全</strong>：不要仅根据文章的一小部分就下定论，要全面理解文意。</li>
+<li><strong>主观臆断</strong>：避免将个人观点强加于文章，要客观分析文章内容。</li>
+<li><strong>忽视细节</strong>：注意文中的细微表述，如程度词、情感色彩等，它们可能影响整体含义。</li>
+</ol>
+</div>
+</div>
+</body></html>

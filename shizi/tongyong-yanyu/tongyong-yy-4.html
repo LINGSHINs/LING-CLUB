@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>篇章阅读 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>通用能力·言语理解</b> <span class="crumb">篇章阅读</span></div>
+<a href="../tongyong-yanyu.html">&larr; 通用能力·言语理解首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">考查题型</a><a class="l2" href="#sec_1">题型详解</a><a class="h1" href="#sec_2">命题思路</a><a class="h1" href="#sec_3">解题思路</a><a class="l2" href="#sec_4">1. 明确阅读顺序：问题 → 文段</a><a class="l2" href="#sec_5">2. 利用题干关键词定位原文</a><a class="l2" href="#sec_6">3. 做题顺序及注意事项</a><a class="h1" href="#sec_9">考点介绍</a></nav>
+<div class="doc" id="doc"><h1>篇章阅读</h1>
+<h2 id="sec_0">考查题型</h2>
+<p>篇章阅读是行测考试中的重要组成部分，主要包含以下题型：</p>
+<ol>
+<li>细节判断题</li>
+<li>中心理解题</li>
+<li>词句理解题</li>
+<li>标题填入题</li>
+<li>语句填空题</li>
+<li>逻辑填空题</li>
+</ol>
+<blockquote>
+<p>扩展说明：这些题型全面考查考生的阅读理解能力，从具体细节到整体把握都有涉及。每种题型都有其特点和解题技巧，考生需要通过大量练习来熟悉。</p>
+</blockquote>
+<h3 id="sec_1">题型详解</h3>
+<ol>
+<li>
+<p><strong>细节判断题</strong>：考查对文章具体信息的准确把握。</p>
+<ul>
+<li>例：根据原文，以下哪项说法正确？</li>
+<li>技巧：定位关键词，对比原文，注意陷阱选项。</li>
+</ul>
+</li>
+<li>
+<p><strong>中心理解题</strong>：考查对文章主旨的理解。</p>
+<ul>
+<li>例：这篇文章主要讨论了什么问题？</li>
+<li>技巧：关注首尾段、主题句，把握文章脉络。</li>
+</ul>
+</li>
+<li>
+<p><strong>词句理解题</strong>：考查对特定词语或句子在语境中含义的理解。</p>
+<ul>
+<li>例：文中&quot;...&quot;一句中的&quot;...&quot;是什么意思？</li>
+<li>技巧：结合上下文，理解词句在特定语境中的含义。</li>
+</ul>
+</li>
+<li>
+<p><strong>标题填入题</strong>：考查对文章主旨的概括能力。</p>
+<ul>
+<li>例：下列哪个选项最适合作为本文的标题？</li>
+<li>技巧：把握文章核心观点，选择既概括又不过于宽泛的表述。</li>
+</ul>
+</li>
+<li>
+<p><strong>语句填空题</strong>：考查对文章逻辑关系的理解。</p>
+<ul>
+<li>例：填入文中空白处最恰当的一项是？</li>
+<li>技巧：注意上下文的逻辑关系，选择能够衔接上下文的选项。</li>
+</ul>
+</li>
+<li>
+<p><strong>逻辑填空题</strong>：考查对文章论证结构的把握。</p>
+<ul>
+<li>例：根据文章逻辑，下列哪项最适合填入空白处？</li>
+<li>技巧：分析文章的论证结构，选择能够加强论证的选项。</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_2">命题思路</h2>
+<p>了解命题思路有助于考生更好地把握考点，提高答题效率。</p>
+<ol>
+<li>
+<p><strong>重点考查原文重现的内容</strong></p>
+<ul>
+<li>考官倾向于直接从原文中提取信息来设置题目，因此熟悉原文表述非常重要。</li>
+<li>例：原文中提到&quot;近年来，我国环保政策日益完善&quot;，题目可能会问：&quot;根据原文，关于我国环保政策，下列说法正确的是？&quot;</li>
+</ul>
+</li>
+<li>
+<p><strong>题目难度与阅读难度成反比</strong></p>
+<ul>
+<li>通常，文章越难理解，题目反而会相对简单，以确保考生能够完成答题。</li>
+<li>例：对于涉及专业术语的科技文章，题目可能会集中在文章的基本观点和简单事实上。</li>
+</ul>
+</li>
+<li>
+<p><strong>题目顺序与文段顺序基本一致</strong></p>
+<ul>
+<li>这一特点有助于考生快速定位相关信息。</li>
+<li>技巧：解题时可以按照题目顺序在文章中依次寻找答案，提高效率。</li>
+</ul>
+</li>
+<li>
+<p><strong>文段内容&quot;雨露均沾&quot;</strong></p>
+<ul>
+<li>命题会尽量覆盖文章的各个部分，不会过分集中在某一段落。</li>
+<li>提示：阅读时要注意每个段落的重要信息，不要忽视任何部分。</li>
+</ul>
+</li>
+</ol>
+<h2 id="sec_3">解题思路</h2>
+<h3 id="sec_4">1. 明确阅读顺序：问题 → 文段</h3>
+<blockquote>
+<p>技巧：先浏览题目，了解需要寻找的信息，再有针对性地阅读文章，可以提高阅读效率。</p>
+</blockquote>
+<ul>
+<li>例：快速浏览题目后，发现有一题问&quot;作者对人工智能的态度是？&quot;，阅读文章时就可以特别留意与人工智能相关的描述和作者的观点表达。</li>
+</ul>
+<h3 id="sec_5">2. 利用题干关键词定位原文</h3>
+<p>定位技巧包括：</p>
+<ul>
+<li>寻找&quot;第X段&quot;、&quot;关于……&quot;等明确指示</li>
+<li>注意全篇概括性表述</li>
+<li>留意特殊标点符号和专有名词</li>
+</ul>
+<p>例：题目中出现&quot;根据第二段&quot;，直接定位到第二段；
+出现&quot;关于环境保护&quot;，在文中寻找与环境保护相关的段落；
+出现&quot;李四认为&quot;，在文中寻找引号或人名。</p>
+<h3 id="sec_6">3. 做题顺序及注意事项</h3>
+<h4 id="sec_7">边读边做</h4>
+<ul>
+<li>适用于：语句填空题、逻辑填空题、词句理解题、段落中心理解题、易定位的细节判断题等</li>
+<li>方法：按常规方法解题，注重文章首尾段、段落首尾句</li>
+</ul>
+<h4 id="sec_8">后置解题</h4>
+<ol>
+<li>
+<p>全文中心理解题</p>
+<ul>
+<li>注意事项：把握文章主题词</li>
+<li>技巧：通过文章的首尾段和各段落的主题句来概括全文中心</li>
+</ul>
+</li>
+<li>
+<p>全文细节判断题</p>
+<ul>
+<li>注意事项：最后完成</li>
+<li>技巧：
+<ul>
+<li>优先定位其他题目未涉及的文段</li>
+<li>有效利用其他题目中的相关信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>扩展：在公务员行测考试中，时间管理至关重要。采用&quot;边读边做&quot;和&quot;后置解题&quot;的策略可以帮助考生更高效地完成篇章阅读部分。建议考生在练习时模拟考试环境，严格控制时间，提高答题速度和准确率。</p>
+</blockquote>
+<h2 id="sec_9">考点介绍</h2>
+<ol>
+<li>
+<p><strong>题型题量</strong>：篇章阅读通常包含1-2篇文章，每篇文章附带4-5个问题。</p>
+<ul>
+<li>提示：考生应合理分配时间，每篇文章平均用时不超过15分钟。</li>
+</ul>
+</li>
+<li>
+<p><strong>考查重点</strong>：</p>
+<ul>
+<li>准确理解文章内容</li>
+<li>把握文章逻辑结构</li>
+<li>提取关键信息的能力</li>
+<li>综合分析和推理能力</li>
+</ul>
+</li>
+<li>
+<p><strong>常见陷阱</strong>：</p>
+<ul>
+<li>混淆文中观点和作者观点
+例：文章引用专家观点&quot;AI将取代人类工作&quot;，但作者可能并不赞同这一观点。</li>
+<li>过度推断或主观臆测
+例：文章提到&quot;城市化进程加快&quot;，不能推断&quot;农村人口减少&quot;，因为可能有其他因素影响。</li>
+<li>忽视文章的语境和整体含义
+例：文章某处提到&quot;环境污染问题严重&quot;，但整体可能在讨论环保措施的成效，不能片面理解。</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</body></html>

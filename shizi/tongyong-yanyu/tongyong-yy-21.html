@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>语句排序题 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>通用能力·言语理解</b> <span class="crumb">2.语句表达 / 语句排序题</span></div>
+<a href="../tongyong-yanyu.html">&larr; 通用能力·言语理解首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">考点介绍</a><a class="h1" href="#sec_1">提问方式</a><a class="h1" href="#sec_2">解题要点</a><a class="l2" href="#sec_3">1. 确定首句（第一步）</a><a class="l2" href="#sec_6">2. 确定捆绑</a><a class="l2" href="#sec_7">3. 确定顺序</a><a class="l2" href="#sec_8">4. 确定尾句</a><a class="h1" href="#sec_9">解题技巧</a><a class="h1" href="#sec_10">真题演练</a></nav>
+<div class="doc" id="doc"><h1>语句排序题</h1>
+<h2 id="sec_0">考点介绍</h2>
+<p>语句排序题是公务员行测考试中常见且重要的题型之一，主要考察考生的逻辑思维能力、语言组织能力和文章结构把握能力。这类题目要求考生将给定的几个句子重新排列，使其形成一个逻辑连贯、语序正确的段落。</p>
+<blockquote>
+<p>扩展说明：在实际考试中，语句排序题通常出现在&quot;言语理解与表达&quot;模块，占据相当重要的分值比重。熟练掌握这一题型的解题技巧，可以有效提高考生的得分率。</p>
+</blockquote>
+<h2 id="sec_1">提问方式</h2>
+<p>典型的提问方式如下：</p>
+<blockquote>
+<p>将以上/以下几个句子重新排列，语序正确的是……</p>
+</blockquote>
+<blockquote>
+<p>注意：有时题目也会变化为&quot;排列正确的一项是&quot;或&quot;符合语言表达习惯的是&quot;等，本质上考察点是一样的。</p>
+</blockquote>
+<h2 id="sec_2">解题要点</h2>
+<p>解答语句排序题时，主要有以下几个关键步骤：</p>
+<ol>
+<li>确定首句</li>
+<li>确定捆绑</li>
+<li>确定顺序</li>
+<li>确定尾句</li>
+</ol>
+<h3 id="sec_3">1. 确定首句（第一步）</h3>
+<p>首句的确定是解题的关键第一步。通常需要结合选项，对比不同句子的特征。</p>
+<h4 id="sec_4">首句特征</h4>
+<ul>
+<li>背景引入：常见表述如&quot;随着&quot;、&quot;近年来&quot;、&quot;在……大背景/环境下&quot;</li>
+<li>下定义：常见表述如&quot;……就是&quot;、&quot;……是指&quot;</li>
+<li>提出问题或观点：常以疑问句或表达某种现象、观点的陈述句开头</li>
+</ul>
+<h4 id="sec_5">非首句特征</h4>
+<ul>
+<li>含有指代不清的指代词：如&quot;这&quot;、&quot;那&quot;、&quot;他&quot;、&quot;其&quot;、&quot;该&quot;、&quot;此&quot;等</li>
+<li>包含关联词的后半部分：如&quot;但&quot;、&quot;却&quot;、&quot;而且&quot;等</li>
+<li>举例子：常见表述如&quot;例如&quot;、&quot;比如&quot;、&quot;就像&quot;等（通常会放在观点句之后）</li>
+</ul>
+<blockquote>
+<p>举例：</p>
+<ol>
+<li>随着人工智能技术的快速发展，其在各行各业的应用日益广泛。（√ 适合作为首句）</li>
+<li>这种技术革新带来了前所未有的机遇和挑战。（× 不适合作为首句，因为有指代词&quot;这种&quot;）</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>技巧提示：在实际解题中，可以先快速浏览所有选项的第一句话，通常能够很快锁定合适的首句。</p>
+</blockquote>
+<h3 id="sec_6">2. 确定捆绑</h3>
+<p>确定捆绑是指找出必须放在一起的句子组合。常见的捆绑线索包括：</p>
+<ul>
+<li>指代词：如&quot;这&quot;、&quot;那&quot;、&quot;他&quot;、&quot;其&quot;、&quot;该&quot;、&quot;此&quot;、&quot;这些&quot;、&quot;他们&quot;等</li>
+<li>转折关联词：如&quot;虽然……但是……&quot;、&quot;可是&quot;、&quot;然而&quot;、&quot;不过&quot;、&quot;却&quot;等</li>
+<li>并列关联词：如&quot;同时&quot;、&quot;同样&quot;、&quot;此外&quot;、&quot;也&quot;等</li>
+<li>行文逻辑：如观点+解释说明、提问+回答、问题+对策等</li>
+</ul>
+<blockquote>
+<p>举例：</p>
+<ol>
+<li>虽然政府大力推广新能源汽车，</li>
+<li>但是传统燃油车仍然占据着市场的主导地位。</li>
+<li>这种现状主要是由于充电设施不足和续航里程有限等因素造成的。
+（这三句因为&quot;虽然……但是……&quot;的转折关系和&quot;这种现状&quot;的指代关系，应该捆绑在一起）</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>技巧提示：找到捆绑关系后，可以将这些句子看作一个整体，简化后续的排序过程。</p>
+</blockquote>
+<h3 id="sec_7">3. 确定顺序</h3>
+<p>在确定了首句和捆绑之后，需要根据句子之间的逻辑关系确定正确的顺序。常见的顺序依据包括：</p>
+<ul>
+<li>时间脉络：按照事件发生的先后顺序排列</li>
+<li>行动顺序：按照行为或过程的自然顺序排列</li>
+<li>因果关系：原因在前，结果在后</li>
+<li>总分结构：先概括后具体，或先具体后概括</li>
+<li>空间顺序：按照空间位置或范围的变化排列</li>
+</ul>
+<blockquote>
+<p>举例：</p>
+<ol>
+<li>2008年，全球金融危机爆发，对世界经济造成巨大冲击。</li>
+<li>随后，各国政府纷纷出台刺激经济的政策，以应对危机。</li>
+<li>经过几年的努力，到2013年，大多数发达国家的经济开始逐步复苏。</li>
+<li>然而，这场危机的影响深远，促使各国重新审视金融监管体系。
+（这四句按照时间脉络和因果关系排列）</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>技巧提示：注意句子中的时间标记词（如年份、&quot;随后&quot;、&quot;最终&quot;等）和逻辑关联词（如&quot;因此&quot;、&quot;由于&quot;等），它们往往是确定顺序的重要线索。</p>
+</blockquote>
+<h3 id="sec_8">4. 确定尾句</h3>
+<p>尾句的确定与首句同样重要。常见的尾句特征包括：</p>
+<ul>
+<li>总结性表述：常见引导词如&quot;因此&quot;、&quot;所以&quot;、&quot;看来&quot;、&quot;总之&quot;等</li>
+<li>对策或展望：提出解决问题的方法或对未来的展望</li>
+<li>&quot;这……&quot;引导的总结性句子</li>
+<li>呼吁或号召性质的句子</li>
+</ul>
+<blockquote>
+<p>举例：</p>
+<ol>
+<li>因此，加强环境保护和推动可持续发展已成为全球共识，需要各国共同努力。（√ 适合作为尾句）</li>
+<li>环境问题由来已久，其根源十分复杂。（× 不适合作为尾句，更像是引出话题的句子）</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>技巧提示：尾句通常具有收束全文的作用，如果发现某句话有明显的总结或展望意味，可以优先考虑将其放在最后。</p>
+</blockquote>
+<h2 id="sec_9">解题技巧</h2>
+<ol>
+<li>
+<p>仔细阅读所有句子，找出关键词和逻辑关系。在阅读时，可以用笔标注出每个句子的主要内容和关键词，有助于快速理清思路。</p>
+</li>
+<li>
+<p>利用选项提示，快速定位可能的首句和尾句。通过对比不同选项的开头和结尾，往往能够更快地确定合适的首尾句。</p>
+</li>
+<li>
+<p>注意句子之间的逻辑连贯性，确保上下文衔接自然。可以试着将相邻的句子读一遍，看是否通顺。</p>
+</li>
+<li>
+<p>检查是否有明显的时间顺序或因果关系。时间词和因果关联词是重要的排序线索。</p>
+</li>
+<li>
+<p>最后通读一遍，确保整个段落意思通顺、逻辑合理。如果感觉某处不通顺，可能就是排序出现了问题。</p>
+</li>
+<li>
+<p>注意选项陷阱。有时候正确选项可能只有一两个句子的位置与其他选项不同，要细心比对。</p>
+</li>
+<li>
+<p>控制时间。语句排序题虽然重要，但不宜花费太多时间。建议控制在1-2分钟内完成一道题。</p>
+</li>
+</ol>
+<h2 id="sec_10">真题演练</h2>
+<p>让我们来看一道真题，加深理解：</p>
+<blockquote>
+<p>将以下句子重新排列，语序正确的是：
+①这种技术不仅可以提高农作物产量，还能减少农药和化肥的使用
+②然而，转基因技术的安全性仍然存在争议，需要进一步的研究和监管
+③转基因技术是现代生物技术的重要分支之一
+④它通过改变生物体的基因组成来获得预期的性状
+⑤近年来，转基因作物在全球范围内的种植面积不断扩大</p>
+</blockquote>
+<p>A. ③④①⑤②
+B. ⑤③④①②
+C. ③④②①⑤
+D. ⑤①③④②</p>
+<BlurredAnswer>
+解析：
+<ol>
+<li>首句：③是下定义的句子，适合作为首句。⑤虽然有&quot;近年来&quot;，但不如③更适合作为开头。</li>
+<li>捆绑：③和④因为代词&quot;它&quot;形成捆绑。</li>
+<li>顺序：在介绍完定义后，①说明了技术的优点，⑤表示技术的应用情况，②指出存在的问题，符合介绍事物的一般逻辑。</li>
+<li>尾句：②提出了需要进一步研究和监管的观点，适合作为结尾。</li>
+</ol>
+<p>因此，正确答案是A选项：③④①⑤②。
+</BlurredAnswer></p>
+</div>
+</div>
+</body></html>
