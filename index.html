@@ -106,7 +106,13 @@ body{background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);color:var(
 .plan b{color:var(--navy);display:block;font-size:13px;margin-bottom:4px}
 .plan a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;font-size:12px}
 </style>
-</head>
+<style>.srch{margin-top:14px;display:flex;gap:8px}
+.srch input{flex:1;padding:12px 16px;border:1px solid var(--line);border-radius:14px;font-size:14px;background:#fff;box-shadow:var(--cardsh);outline:none;color:var(--navy);font-family:inherit}
+.srch input:focus{border-color:var(--blue)}
+.sres{background:#fff;border-radius:16px;box-shadow:var(--cardsh);margin-top:10px;overflow:hidden;display:none}
+.sres a{display:block;padding:11px 16px;font-size:13.5px;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--bg2)}
+.sres a:last-child{border:none}
+.sres a small{color:var(--blue);margin-right:8px;font-size:11px}</style></head>
 <body>
 <div class="shell">
 
@@ -140,7 +146,8 @@ body{background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);color:var(
         <small>备考进行中 · <b id="cdDays">待定</b> 天后考试（2027 年，时间待定）</small>
       </div>
 
-      <div class="examcard" id="exam">
+      <div class="srch"><input id="sq" placeholder="搜索 201 篇讲义与笔记…" autocomplete="off"><div class="sres" id="sr"></div></div>
+<div class="examcard" id="exam">
         <div><b>考试倒计时</b><p>时间确定后自动开始精确倒计时</p></div>
         <div class="r"><div class="t" id="cdText">时间待定</div></div>
       </div>
@@ -202,6 +209,18 @@ function cd(){
   d.textContent=dd;
 }
 cd();setInterval(cd,60000);
+var ART=[];var XR=new XMLHttpRequest();
+XR.open('GET','articles.json');XR.onload=function(){try{ART=JSON.parse(XR.responseText);var si=document.getElementById('sq');si.placeholder='搜索 '+ART.length+' 篇讲义与笔记…'}catch(e){}};
+XR.send();
+var srEl=document.getElementById('sr'),sqEl=document.getElementById('sq');
+sqEl.addEventListener('input',function(){
+  var q=this.value.trim().toLowerCase();
+  if(!q){srEl.style.display='none';srEl.innerHTML='';return}
+  var hits=ART.filter(function(a){return (a.t+a.c).toLowerCase().indexOf(q)>-1}).slice(0,8);
+  srEl.innerHTML=hits.map(function(a){return '<a href="shizi/'+a.u+'"><small>'+a.c+'</small>'+a.t+'</a>'}).join('')||'<a>无匹配</a>';
+  srEl.style.display='block';
+});
+document.addEventListener('click',function(e){if(!srEl.contains(e.target)&&e.target!==sqEl)srEl.style.display='none'});
 </script>
 </body>
 </html>
