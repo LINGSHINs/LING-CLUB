@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GB/T 9704-2012 公文格式国家标准 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>文秘基础·公文写作</b> <span class="crumb">党政机关公文格式国标全文要点</span></div>
+<a href="../wenmi.html">&larr; 文秘基础·公文写作首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">目录</a><a class="h1" href="#sec_1">标准概述</a><a class="h1" href="#sec_2">公文用纸要求</a><a class="l2" href="#sec_3">技术指标</a><a class="l2" href="#sec_4">幅面尺寸</a><a class="h1" href="#sec_5">版面设置标准</a><a class="l2" href="#sec_6">页边与版心尺寸</a><a class="l2" href="#sec_7">文字颜色</a><a class="l2" href="#sec_8">制版要求</a><a class="l2" href="#sec_9">印刷要求</a><a class="l2" href="#sec_10">装订要求</a><a class="h1" href="#sec_11">字体字号规范</a><a class="l2" href="#sec_12">核心要素规范</a><a class="l2" href="#sec_13">结构层次序数</a><a class="h1" href="#sec_14">组成部分格式</a><a class="l2" href="#sec_15">一、版头部分（首页红色分隔线以上）</a><a class="l2" href="#sec_23">二、主体部分（首页分隔线以下至末页首条分隔线以上）</a><a class="l2" href="#sec_31">三、版记部分（末页首条分隔线以下、末条分隔线以上）</a><a class="h1" href="#sec_35">页码编排规则</a><a class="l2" href="#sec_36">1. 基本格式</a><a class="l2" href="#sec_37">2. 特殊页码编排</a><a class="l2" href="#sec_38">3. 页码字体和字号</a><a class="h1" href="#sec_39">公文中表格编排</a><a class="l2" href="#sec_40">1. 横排表格</a><a class="l2" href="#sec_41">2. 表格字体要求</a><a class="h1" href="#sec_42">公文中计量单位、标点符号和数字用法</a><a class="l2" href="#sec_43">1. 计量单位</a><a class="l2" href="#sec_44">2. 标点符号</a><a class="l2" href="#sec_45">3. 数字用法</a><a class="h1" href="#sec_46">公文的特定格式</a><a class="l2" href="#sec_47">1. 信函格式</a><a class="l2" href="#sec_48">2. 命令（令）格式</a><a class="l2" href="#sec_49">3. 纪要格式</a><a class="h1" href="#sec_50">公文排版检查要点</a><a class="l2" href="#sec_51">首页检查项目</a><a class="l2" href="#sec_52">正文检查项目</a><a class="l2" href="#sec_53">版记检查项目</a><a class="h1" href="#sec_54">式样列表</a></nav>
+<div class="doc" id="doc"><h1>GB/T 9704-2012 党政机关公文格式标准</h1>
+<h2 id="sec_0">目录</h2>
+<ul>
+<li><a href="#%E6%A0%87%E5%87%86%E6%A6%82%E8%BF%B0">标准概述</a></li>
+<li><a href="#%E5%85%AC%E6%96%87%E7%94%A8%E7%BA%B8%E8%A6%81%E6%B1%82">公文用纸要求</a></li>
+<li><a href="#%E7%89%88%E9%9D%A2%E8%AE%BE%E7%BD%AE%E6%A0%87%E5%87%86">版面设置标准</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93%E5%AD%97%E5%8F%B7%E8%A7%84%E8%8C%83">字体字号规范</a></li>
+<li><a href="#%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%E6%A0%BC%E5%BC%8F">组成部分格式</a></li>
+<li><a href="#%E7%89%B9%E5%AE%9A%E6%A0%BC%E5%BC%8F%E8%A6%81%E6%B1%82">特定格式要求</a></li>
+</ul>
+<hr />
+<h2 id="sec_1">标准概述</h2>
+<p>根据GB/T 9704-2012《党政机关公文格式》国家标准，本标准规定了党政机关公文通用的纸张要求、排版和印制装订要求、公文格式各要素的编排规则，并给出了公文的式样。</p>
+<p><strong>适用范围</strong>：各级党政机关制发的公文，其他机关和单位可参照执行。</p>
+<p><strong>实施日期</strong>：2012年7月1日</p>
+<hr />
+<h2 id="sec_2">公文用纸要求</h2>
+<h3 id="sec_3">技术指标</h3>
+<ul>
+<li><strong>纸张定量</strong>：60-80 g/m² 的胶版印刷纸或复印纸</li>
+<li><strong>白度</strong>：80%-90%</li></li>
+<li><strong>不透明度</strong>：≥85%</li>
+<li><strong>pH值</strong>：7.5-9.5</li>
+<li><strong>横向耐折度</strong>：≥15次</li>
+</ul>
+<h3 id="sec_4">幅面尺寸</h3>
+<ul>
+<li><strong>标准</strong>：A4型纸（GB/T 148）</li>
+<li><strong>成品尺寸</strong>：210mm×297mm</li>
+</ul>
+<hr />
+<h2 id="sec_5">版面设置标准</h2>
+<h3 id="sec_6">页边与版心尺寸</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>尺寸</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>天头（上白边）</td>
+<td>37mm±1mm</td>
+<td>首页距离版心上边缘</td>
+</tr>
+<tr>
+<td>订口（左白边）</td>
+<td>28mm±1mm</td>
+<td></td>
+</tr>
+<tr>
+<td>版心尺寸</td>
+<td>156mm×225mm</td>
+<td></td>
+</tr>
+<tr>
+<td>行数</td>
+<td>22行/面</td>
+<td>撑满版心</td>
+</tr>
+<tr>
+<td>字数</td>
+<td>28字/行</td>
+<td>撑满版心</td>
+</tr>
+<tr>
+<td>行距</td>
+<td>28磅</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_7">文字颜色</h3>
+<ul>
+<li>无特殊说明，公文文字颜色均为<strong>黑色</strong></li>
+</ul>
+<h3 id="sec_8">制版要求</h3>
+<ul>
+<li>版面干净无底灰</li>
+<li>字迹清楚无断划</li>
+<li>尺寸标准，版心不斜</li>
+<li>误差不超过1mm</li>
+</ul>
+<h3 id="sec_9">印刷要求</h3>
+<ul>
+<li>双面印刷</li>
+<li>页码套正</li>
+<li>两面误差不超过2mm</li>
+<li>油墨：黑色BL100%，红色Y80%|M80%</li>
+</ul>
+<h3 id="sec_10">装订要求</h3>
+<ul>
+<li>左侧装订</li>
+<li>不掉页</li>
+<li>两页间误差不超过4mm</li>
+<li>裁切后成品误差±2mm</li>
+<li>四角成90°，无毛茬或缺损</li>
+</ul>
+<p><strong>骑马订或平订要求</strong>：</p>
+<ol>
+<li>订位为两钉外订眼距版面上下边缘各70mm处，允许误差±4mm</li>
+<li>无坏钉、漏钉、重钉，钉脚平伏牢固</li>
+<li>骑马订钉锯订在折缝线上，平订钉锯与书脊间距离3-5mm</li>
+</ol>
+<hr />
+<h2 id="sec_11">字体字号规范</h2>
+<h3 id="sec_12">核心要素规范</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>字体</th>
+<th>字号</th>
+<th>位置要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>发文机关标志</strong></td>
+<td>小标宋体</td>
+<td>自定</td>
+<td>居中</td>
+</tr>
+<tr>
+<td><strong>文件标题</strong></td>
+<td>小标宋体</td>
+<td>2号</td>
+<td>居中</td>
+</tr>
+<tr>
+<td><strong>正文</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>隔段左空二字</td>
+</tr>
+<tr>
+<td><strong>第一层次标题</strong></td>
+<td>黑体</td>
+<td>3号</td>
+<td>使用&quot;一、&quot;</td>
+</tr>
+<tr>
+<td><strong>第二层次标题</strong></td>
+<td>楷体_GB2312</td>
+<td>3号</td>
+<td>使用&quot;（一）&quot;</td>
+</tr>
+<tr>
+<td><strong>第三层次标题</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>使用&quot;1.&quot;</td>
+</tr>
+<tr>
+<td><strong>第四层次标题</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>使用&quot;（1）&quot;</td>
+</tr>
+<tr>
+<td><strong>份数序号</strong></td>
+<td>黑体</td>
+<td>3号</td>
+<td>左上角第一行</td>
+</tr>
+<tr>
+<td><strong>密级和保密期限</strong></td>
+<td>黑体</td>
+<td>3号</td>
+<td>左上角第二行</td>
+</tr>
+<tr>
+<td><strong>紧急程度</strong></td>
+<td>黑体</td>
+<td>3号</td>
+<td>左上角第三行</td>
+</tr>
+<tr>
+<td><strong>发文字号</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>红色分隔线下方居中</td>
+</tr>
+<tr>
+<td><strong>签发人&quot;三字&quot;</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>右空一字</td>
+</tr>
+<tr>
+<td><strong>签发人姓名</strong></td>
+<td>楷体_GB2312</td>
+<td>3号</td>
+<td>签发人三字后</td>
+</tr>
+<tr>
+<td><strong>附件说明</strong></td>
+<td>黑体</td>
+<td>3号</td>
+<td>正文下空一行左空二字</td>
+</tr>
+<tr>
+<td><strong>附注</strong></td>
+<td>仿宋_GB2312</td>
+<td>3号</td>
+<td>成文日期下一行左空二字加圆括号</td>
+</tr>
+<tr>
+<td><strong>抄送机关</strong></td>
+<td>仿宋_GB2312</td>
+<td>4号</td>
+<td>印发机关上一行左右各空一字</td>
+</tr>
+<tr>
+<td><strong>印发机关和日期</strong></td>
+<td>仿宋_GB2312</td>
+<td>4号</td>
+<td>末条分隔线之上</td>
+</tr>
+<tr>
+<td><strong>页码</strong></td>
+<td>宋体（半角）</td>
+<td>4号</td>
+<td>版心下边缘左右各一字线</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_13">结构层次序数</h3>
+<pre><code>一、 第一层次（黑体）
+  （一） 第二层次（楷体_GB2312）
+    1.  第三层次（仿宋_GB2312）
+      （1） 第四层次（仿宋_GB2312）
+</code></pre>
+<p><strong>层次标题位置要求</strong>：</p>
+<ul>
+<li>第一层次标题：单独成行</li>
+<li>第二层次标题：单独成行</li>
+<li>第三、四层次标题：可与正文连排</li>
+</ul>
+<hr />
+<h2 id="sec_14">组成部分格式</h2>
+<h3 id="sec_15">一、版头部分（首页红色分隔线以上）</h3>
+<h4 id="sec_16">1. 份号</h4>
+<ul>
+<li>使用6位3号<strong>阿拉伯数字</strong></li>
+<li>顶格编排在版心左上角第1行</li>
+<li>例：000001</li>
+</ul>
+<h4 id="sec_17">2. 密级和保密期限</h4>
+<ul>
+<li>使用3号<strong>黑体字</strong></li>
+<li>顶格编排在版心左上角第2行</li>
+<li>保密期限中的数字用阿拉伯数字标注</li>
+<li>格式：密级★保密期限</li>
+<li>例：机密★3年</li>
+</ul>
+<h4 id="sec_18">3. 紧急程度</h4>
+<ul>
+<li>使用3号<strong>黑体字</strong></li>
+<li>顶格编排在版心左上角</li>
+<li>如需同时标注份号、密级和保密期限、紧急程度，按顺序自上而下分行排列</li>
+</ul>
+<h4 id="sec_19">4. 发文机关标志</h4>
+<ul>
+<li>使用<strong>发文机关全称</strong>或<strong>规范化简称</strong>加&quot;文件&quot;二字</li>
+<li>也可使用发文机关全称或规范化简称</li>
+<li>居中排布，上边缘至版心上边缘35mm</li>
+<li>推荐使用<strong>小标宋体字</strong>，颜色为<strong>红色</strong></li>
+<li>联合行文时：
+<ul>
+<li>如需同时标注联署发文机关名称，一般将<strong>主办机关名称</strong>排列在前</li>
+<li>如有&quot;文件&quot;二字，应当置于发文机关名称右侧</li>
+</ul>
+</li>
+</ul>
+<h4 id="sec_20">5. 发文字号</h4>
+<ul>
+<li>由<strong>机关代字、年份、序号</strong>组成</li>
+<li>编排在发文机关标志下空二行位置，居中排布</li>
+<li><strong>年份</strong>用4位阿拉伯数字，用**六角括号&quot;〔〕&quot;**括入</li>
+<li><strong>序号</strong>不加&quot;第&quot;字，不编虚位</li>
+<li>格式示例：国办发〔2024〕15号</li>
+<li><strong>上行文</strong>：发文字号居左空一字编排，与最后一个签发人姓名处在同一行</li>
+</ul>
+<h4 id="sec_21">6. 签发人</h4>
+<ul>
+<li>上行文需标注签发人</li>
+<li>格式：&quot;签发人&quot;三字+全角冒号+签发人姓名</li>
+<li>&quot;签发人&quot;三字使用3号<strong>仿宋_GB2312</strong>字体</li>
+<li>签发人姓名使用3号<strong>楷体_GB2312</strong>字体</li>
+<li>居右空一字，编排在发文机关标志下空二行位置</li>
+<li>多个签发人：
+<ul>
+<li>按照发文机关的排列顺序从左到右、自上而下依次均匀编排</li>
+<li>一般每行排两个姓名</li>
+<li>回行时与上一行第一个签发人姓名对齐</li>
+</ul>
+</li>
+</ul>
+<h4 id="sec_22">7. 版头中的分隔线</h4>
+<ul>
+<li>发文字号之下4mm处居中印一条与<strong>版心等宽的红色分隔线</strong></li>
+<li>高度约为0.5mm-1mm</li>
+</ul>
+<h3 id="sec_23">二、主体部分（首页分隔线以下至末页首条分隔线以上）</h3>
+<h4 id="sec_24">1. 标题</h4>
+<ul>
+<li>使用2号<strong>小标宋体字</strong>（方正）</li>
+<li>编排于红色分隔线下空二行位置</li>
+<li>分一行或多行居中排布</li>
+<li>回行要求：
+<ul>
+<li>做到词意完整</li>
+<li>排列对称</li>
+<li>长短适宜</li>
+<li>间距恰当</li>
+<li><strong>使用梯形或菱形排列</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>标题排列示例</strong>：</p>
+<pre><code>    国务院批转《发展改革委关于2024年
+    深化经济体制改革工作意见》的通知
+
+    国务院批转《进出口管理委员会
+    国家经济委员会关于建立中国工艺美术
+    行业协会的报告》的通知
+</code></pre>
+<h4 id="sec_25">2. 主送机关</h4>
+<ul>
+<li>使用3号<strong>仿宋_GB2312</strong>字体</li>
+<li>编排于标题下空一行位置，居左顶格</li>
+<li>回行时仍顶格</li>
+<li>最后一个机关名称后标<strong>全角冒号</strong></li>
+<li>如主送机关名称过多导致公文首页不能显示正文，应当将主送机关名称<strong>移至版记</strong></li>
+</ul>
+<h4 id="sec_26">3. 正文</h4>
+<ul>
+<li>公文首页<strong>必须显示正文</strong></li>
+<li>使用3号<strong>仿宋_GB2312</strong>字体</li>
+<li>编排于主送机关名称下一行</li>
+<li>每个自然段左空二字，回行顶格</li>
+<li>文中结构层次序数：
+<ul>
+<li>&quot;一、&quot;（黑体）</li>
+<li>&quot;（一）&quot;（楷体_GB2312）</li>
+<li>&quot;1.&quot;（仿宋_GB2312）</li>
+<li>&quot;（1）&quot;（仿宋_GB2312）</li>
+</ul>
+</li>
+</ul>
+<p><strong>段落格式</strong>：</p>
+<ul>
+<li>开头：引言部分，交代背景、目的、依据</li>
+<li>主体：核心内容，分条列项阐述</li>
+<li>结尾：总结、要求、希望等</li>
+</ul>
+<h4 id="sec_27">4. 附件说明</h4>
+<ul>
+<li>使用3号<strong>仿宋_GB2312</strong>字体</li>
+<li>正文下空一行左空二字编排&quot;附件&quot;二字</li>
+<li>后标全角冒号和附件名称</li>
+<li><strong>多个附件</strong>：
+<ul>
+<li>使用阿拉伯数字标注附件顺序号</li>
+<li>如&quot;附件：1. XXXXX&quot;</li>
+<li>附件名称后不加标点符号</li>
+</ul>
+</li>
+<li><strong>回行要求</strong>：与上一行附件名称的首字对齐</li>
+</ul>
+<h4 id="sec_28">5. 发文机关署名、成文日期和印章</h4>
+<h5>5.1 加盖印章的公文</h5>
+<ul>
+<li>
+<p><strong>单一机关行文时</strong>：</p>
+<ul>
+<li>一般在成文日期之上、以成文日期为准<strong>居中编排发文机关署名</strong></li>
+<li>印章端正、居中下压发文机关署名和成文日期</li>
+<li>使发文机关署名和成文日期居印章中心偏下位置</li>
+<li>印章顶端应当上距正文（或附件说明）一行之内（3号字）</li>
+</ul>
+</li>
+<li>
+<p><strong>联合行文时</strong>：</p>
+<ul>
+<li>各发文机关署名按发文机关顺序整齐排列在相应位置</li>
+<li>将印章一一对应、端正、居中下压发文机关署名</li>
+<li>最后一个印章端正、居中下压发文机关署名和成文日期</li>
+<li>印章之间排列整齐、互不相交或相切</li>
+<li>每排印章两端不得超出版心</li>
+<li>首排印章顶端上距正文（或附件说明）一行之内</li>
+</ul>
+</li>
+</ul>
+<h5>5.2 不加盖印章的公文</h5>
+<ul>
+<li>
+<p><strong>单一机关行文时</strong>：</p>
+<ul>
+<li>在正文（或附件说明）下空一行右空二字编排发文机关署名</li>
+<li>在发文机关署名下一行编排成文日期</li>
+<li>成文日期首字比发文机关署名首字右移二字</li>
+<li>如成文日期长于发文机关署名，成文日期右空二字编排</li>
+</ul>
+</li>
+<li>
+<p><strong>联合行文时</strong>：</p>
+<ul>
+<li>先编排主办机关署名，其余发文机关署名依次向下编排</li>
+</ul>
+</li>
+</ul>
+<h5>5.3 加盖签发人签名章的公文</h5>
+<ul>
+<li>使用红色签名章</li>
+<li><strong>单一机关制发时</strong>：
+<ul>
+<li>在正文（或附件说明）下空二行右空四字加盖签名章</li>
+<li>签名章左空二字标注签发人职务</li>
+<li>以签名章为准上下居中排布</li>
+<li>在签发人签名章下空一行右空四字编排成文日期</li>
+</ul>
+</li>
+</ul>
+<h5>5.4 成文日期中的数字</h5>
+<ul>
+<li>使用<strong>阿拉伯数字</strong></li>
+<li>年份应标<strong>全称</strong>（如：2024年）</li>
+<li>月、日不编虚位（如：5月8日，不写05月08日）</li>
+<li>格式：2024年5月8日</li>
+</ul>
+<h5>5.5 特殊情况说明</h5>
+<ul>
+<li>当公文排版后所剩空白处不能容下印章或签发人签名章、成文日期时，可以采取<strong>调整行距、字距</strong>的措施解决</li>
+<li><strong>不得出现空白印章</strong></li>
+</ul>
+<h4 id="sec_29">6. 附注</h4>
+<ul>
+<li>使用3号<strong>仿宋_GB2312</strong>字体</li>
+<li>居左空二字加<strong>圆括号</strong>编排在成文日期下一行</li>
+<li>内容：公文印发传达范围等需要说明的事项</li>
+<li>例：（联系人：张三，联系电话：12345678901）</li>
+</ul>
+<h4 id="sec_30">7. 附件</h4>
+<ul>
+<li>附件应当<strong>另面编排</strong>，并在版记之前，与公文正文一起装订</li>
+<li>&quot;附件&quot;二字及附件顺序号使用3号<strong>黑体字</strong>顶格编排在版心左上角第一行</li>
+<li>附件标题居中编排在版心第三行</li>
+<li>附件顺序号和附件标题应当与附件说明的表述一致</li>
+<li>附件格式要求同正文</li>
+<li>版记位于附件之后</li>
+</ul>
+<p><strong>附件与正文分开装订时</strong>：</p>
+<ul>
+<li>在附件左上角第一行顶格编排公文的发文字号</li>
+<li>在发文字号后标注&quot;附件&quot;二字及附件顺序号</li>
+</ul>
+<h3 id="sec_31">三、版记部分（末页首条分隔线以下、末条分隔线以上）</h3>
+<h4 id="sec_32">1. 版记中的分隔线</h4>
+<ul>
+<li>分隔线与<strong>版心等宽</strong></li>
+<li><strong>首条分隔线</strong>和<strong>末条分隔线</strong>用粗线（推荐高度0.35mm）</li>
+<li><strong>中间分隔线</strong>用细线（推荐高度0.25mm）</li>
+<li>首条分隔线位于版记中第一个要素之上</li>
+<li>末条分隔线与公文最后一面的版心下边缘重合</li>
+</ul>
+<h4 id="sec_33">2. 抄送机关</h4>
+<ul>
+<li>使用4号<strong>仿宋_GB2312</strong>字体</li>
+<li>在印发机关和印发日期之上一行、左右各空一字编排</li>
+<li>&quot;抄送&quot;二字后加<strong>全角冒号</strong>和抄送机关名称</li>
+<li>回行时与冒号后的首字对齐</li>
+<li>最后一个抄送机关名称后标<strong>句号</strong></li>
+</ul>
+<p><strong>主送机关移至版记时</strong>：</p>
+<ul>
+<li>将&quot;抄送&quot;改为&quot;主送&quot;</li>
+<li>编排方法同抄送机关</li>
+</ul>
+<p><strong>同时有主送和抄送时</strong>：</p>
+<ul>
+<li>主送机关置于抄送机关之上一行</li>
+<li>之间不加分隔线</li>
+</ul>
+<h4 id="sec_34">3. 印发机关和印发日期</h4>
+<ul>
+<li>使用4号<strong>仿宋_GB2312</strong>字体</li>
+<li>编排在末条分隔线之上</li>
+<li>印发机关左空一字，印发日期右空一字</li>
+<li>印发日期用阿拉伯数字将年、月、日标全</li>
+<li>后加&quot;印发&quot;二字</li>
+</ul>
+<p><strong>版记中如有其他要素</strong>（如印发份数）：</p>
+<ul>
+<li>应当将其与印发机关和印发日期用一条细分隔线隔开</li>
+</ul>
+<hr />
+<h2 id="sec_35">页码编排规则</h2>
+<h3 id="sec_36">1. 基本格式</h3>
+<ul>
+<li>使用4号半角<strong>宋体阿拉伯数字</strong></li>
+<li>编排在公文版心下边缘之下</li>
+<li><strong>单页码</strong>：居右空一字</li>
+<li><strong>双页码</strong>：居左空一字</li>
+<li>数字左右各放一条<strong>一字线</strong>（占一个字符位置）</li>
+<li>一字线上距版心下边缘7mm</li>
+</ul>
+<h3 id="sec_37">2. 特殊页码编排</h3>
+<ul>
+<li><strong>版记页前有空白页</strong>：
+<ul>
+<li>空白页和版记页均不编排页码</li>
+</ul>
+</li>
+<li><strong>公文附件与正文一起装订</strong>：
+<ul>
+<li>页码应当连续编排</li>
+</ul>
+</li>
+<li><strong>横排表格</strong>（A4纸型表格横排）：
+<ul>
+<li>页码位置与公文其他页码保持一致</li>
+<li>单页码，表头在订口一边</li>
+<li>双页码，表头在切口一边</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_38">3. 页码字体和字号</h3>
+<ul>
+<li>阿拉伯数字使用<strong>半角宋体</strong></li>
+<li>字号为<strong>4号</strong></li>
+</ul>
+<hr />
+<h2 id="sec_39">公文中表格编排</h2>
+<h3 id="sec_40">1. 横排表格</h3>
+<ul>
+<li><strong>页码位置</strong>与公文其他页码保持一致</li>
+<li>单页码时：表头在<strong>订口</strong>（左侧）一边</li>
+<li>双页码时：表头在<strong>切口</strong>（右侧）一边</li>
+</ul>
+<h3 id="sec_41">2. 表格字体要求</h3>
+<ul>
+<li>表格中文字使用<strong>仿宋_GB2312</strong>字体</li>
+<li>字号可根据表格内容适当调整，一般为<strong>3号或小3号</strong></li>
+</ul>
+<hr />
+<h2 id="sec_42">公文中计量单位、标点符号和数字用法</h2>
+<h3 id="sec_43">1. 计量单位</h3>
+<ul>
+<li>应符合GB 3100、GB 3101和GB 3102（所有部分）</li>
+<li>使用国际单位制（SI）单位</li>
+</ul>
+<h3 id="sec_44">2. 标点符号</h3>
+<ul>
+<li>应符合GB/T 15834《标点符号用法》</li>
+<li>主要要求：
+<ul>
+<li>使用<strong>全角标点符号</strong></li>
+<li>句末用<strong>全角句号&quot;。&quot;</strong></li>
+<li>列举用<strong>全角顿号&quot;、&quot;</strong></li>
+<li>数字间的间隔用<strong>全角空格</strong>或<strong>半角空格</strong>（根据需要）</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_45">3. 数字用法</h3>
+<ul>
+<li>应符合GB/T 15835《出版物上数字用法》</li>
+</ul>
+<p><strong>主要规则</strong>：</p>
+<ul>
+<li>
+<p><strong>使用阿拉伯数字的情况</strong>：</p>
+<ul>
+<li>公历世纪、年代、年、月、日和时刻</li>
+<li>计数与计量（包括正负整数、分数、小数、百分比、约数等）</li>
+<li>代号、代码和序号</li>
+<li>物理量量值</li>
+</ul>
+</li>
+<li>
+<p><strong>使用汉字数字的情况</strong>：</p>
+<ul>
+<li>数字作为词素构成定型的词、词组、成语、惯用语、缩略语或具有修辞色彩的词语</li>
+<li>邻近的两个数字并列连用表示概数（如：三五天）</li>
+<li>星期几</li>
+<li>夏历和中国清代以前历史纪年</li>
+</ul>
+</li>
+</ul>
+<p><strong>公文成文日期</strong>：一律使用<strong>阿拉伯数字</strong>标注</p>
+<hr />
+<h2 id="sec_46">公文的特定格式</h2>
+<h3 id="sec_47">1. 信函格式</h3>
+<p><strong>发文机关标志</strong>：</p>
+<ul>
+<li>使用发文机关全称或规范化简称</li>
+<li>居中排布，上边缘至上页边为30mm</li>
+<li>推荐使用红色小标宋体字</li>
+<li>联合行文时，使用主办机关标志</li>
+</ul>
+<p><strong>线框</strong>：</p>
+<ul>
+<li>发文机关标志下4mm处：红色双线（上粗下细）</li>
+<li>距下页边20mm处：红色双线（上细下粗）</li>
+<li>线长均为170mm，居中排布</li>
+</ul>
+<p><strong>序号和密级</strong>：</p>
+<ul>
+<li>如需标注份号、密级和保密期限、紧急程度</li>
+<li>顶格居版心左边缘编排在第一条红色双线下</li>
+<li>按顺序自上而下分行排列</li>
+<li>第一个要素与该线的距离为3号汉字高度的7/8</li>
+</ul>
+<p><strong>发文字号</strong>：</p>
+<ul>
+<li>顶格居版心右边缘编排在第一条红色双线下</li>
+<li>与该线的距离为3号汉字高度的7/8</li>
+</ul>
+<p><strong>标题</strong>：</p>
+<ul>
+<li>居中编排，与其上最后一个要素相距二行</li>
+</ul>
+<p><strong>首页</strong>：</p>
+<ul>
+<li><strong>不显示页码</strong></li>
+</ul>
+<p><strong>版记</strong>：</p>
+<ul>
+<li>版记不加印发机关和印发日期、分隔线</li>
+<li>位于公文最后一面版心内最下方</li>
+</ul>
+<h3 id="sec_48">2. 命令（令）格式</h3>
+<p><strong>发文机关标志</strong>：</p>
+<ul>
+<li>由发文机关全称加&quot;命令&quot;或&quot;令&quot;字组成</li>
+<li>居中排布，上边缘至版心上边缘为20mm</li>
+<li>推荐使用红色小标宋体字</li>
+</ul>
+<p><strong>令号</strong>：</p>
+<ul>
+<li>居中编排</li>
+<li>位于发文机关标志下空二行</li>
+</ul>
+<p><strong>正文</strong>：</p>
+<ul>
+<li>位于令号下空二行编排</li>
+</ul>
+<p><strong>签发人职务、签名章和成文日期</strong>：</p>
+<ul>
+<li>编排见7.3.5.3规定（引用标准原文）</li>
+</ul>
+<h3 id="sec_49">3. 纪要格式</h3>
+<p><strong>纪要标志</strong>：</p>
+<ul>
+<li>由&quot;XXXXX纪要&quot;组成</li>
+<li>居中排布，上边缘至版心上边缘为35mm</li>
+<li>推荐使用红色小标宋体字</li>
+</ul>
+<p><strong>出席人员名单</strong>：</p>
+<ul>
+<li>使用3号黑体字</li>
+<li>在正文或附件说明下空一行左空二字编排&quot;出席&quot;二字</li>
+<li>后标全角冒号</li>
+<li>冒号后用3号仿宋_GB2312字体标注出席人单位、姓名</li>
+<li>回行时与冒号后的首字对齐</li>
+</ul>
+<p><strong>请假和列席人员名单</strong>：</p>
+<ul>
+<li>依次另起一行</li>
+<li>将&quot;出席&quot;二字改为&quot;请假&quot;或&quot;列席&quot;</li>
+<li>编排方法同出席人员名单</li>
+</ul>
+<p><strong>自定义</strong>：</p>
+<ul>
+<li>纪要格式可以根据实际制定</li>
+</ul>
+<hr />
+<h2 id="sec_50">公文排版检查要点</h2>
+<h3 id="sec_51">首页检查项目</h3>
+<ul>
+<li>[ ] 份号、密级、紧急程度顺序是否正确</li>
+<li>[ ] 发文机关标志位置是否正确（上边缘距版心上边缘35mm）</li>
+<li>[ ] 发文字号位置是否正确</li>
+<li>[ ] 有签发人时格式是否规范</li>
+<li>[ ] 红色分隔线位置是否正确（发文字号下4mm）</li>
+<li>[ ] 标题与分隔线之间空2行</li>
+<li>[ ] 标题回行是否符合梯形/菱形要求</li>
+</ul>
+<h3 id="sec_52">正文检查项目</h3>
+<ul>
+<li>[ ] 主送机关与标题之间空1行</li>
+<li>[ ] 正文每段左空2字</li>
+<li>[ ] 层次标题字体使用正确</li>
+<li>[ ] 附件说明与正文间距正确（下空1行）</li>
+<li>[ ] 页眉页脚设置正确</li>
+</ul>
+<h3 id="sec_53">版记检查项目</h3>
+<ul>
+<li>[ ] 分隔线粗细正确（首末粗线，中间细线）</li>
+<li>[ ] 抄送机关排版正确（左右各空1字）</li>
+<li>[ ] 印发机关和日期位置正确</li>
+<li>[ ] 页码位置正确（单右双左，版心下边缘）</li>
+</ul>
+<hr />
+<h2 id="sec_54">式样列表</h2>
+<ol>
+<li>A4型公文用纸页边及版心尺寸</li>
+<li>公文首页版式</li>
+<li>联合行文公文首页版式1</li>
+<li>联合行文公文首页版式2</li>
+<li>公文末页版式1</li>
+<li>公文末页版式2</li>
+<li>联合行文公文末页版式1</li>
+<li>联合行文公文末页版式2</li>
+<li>附件说明页版式</li>
+<li>带附件公文末页版式</li>
+<li>信函格式首页版式</li>
+<li>命令（令）格式首页版式</li>
+</ol>
+<hr />
+<p><strong>注</strong>：本标准中的所有图示和版式应参考GB/T 9704-2012标准正式文本中的图样。</p>
+</div>
+</div>
+</body></html>
