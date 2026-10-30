@@ -6,152 +6,188 @@
 <title>LING CLUB · 学习门户</title>
 <style>
 :root{
-  --pink:#f9d3dc; --blue:#2563eb; --navy:#1e2a5e;
-  --skyc:#cdeaf7; --pinkc:#f9d9e3; --gray:#6b7280; --gray2:#9ca3af;
-  --cardsh:0 8px 24px rgba(30,42,94,.06); --floatsh:0 24px 60px rgba(30,42,94,.12);
+  --bg1:#eef3fb; --bg2:#f7eef3;
+  --blue:#2563eb; --navy:#1e2a5e;
+  --skyc:#cdeaf7; --pinkc:#f9d9e3; --lilac:#e7e3f7;
+  --gray:#6b7280; --gray2:#9ca3af;
+  --cardsh:0 6px 22px rgba(30,42,94,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:var(--pink);color:var(--navy);font-family:"PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
-.shell{max-width:1180px;margin:0 auto;padding:26px 18px}
-@media (min-width:900px){.shell{padding:40px 28px}}
-.dash{background:#fff;border-radius:24px;box-shadow:var(--floatsh);overflow:hidden;display:flex;flex-direction:column}
-@media (min-width:900px){.dash{flex-direction:row;min-height:640px}}
+body{background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);color:var(--navy);
+  font-family:"PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:15px;line-height:1.6;min-height:100vh}
+.shell{max-width:1220px;margin:0 auto;padding:22px 18px 50px}
+@media (min-width:900px){.shell{padding:36px 28px 60px}}
 
-/* 侧边栏 */
-.side{background:#fff;border-bottom:1px solid #f1f3f6;padding:16px 14px;display:flex;flex-direction:row;align-items:center;gap:12px;overflow-x:auto}
-@media (min-width:900px){.side{flex-direction:column;width:200px;flex-shrink:0;border-bottom:none;border-right:1px solid #f1f3f6;padding:26px 16px;justify-content:space-between;overflow:visible}}
-.logorow{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0}
-.logorow b{font-size:15px;letter-spacing:.04em;white-space:nowrap}
-@media (max-width:899px){.logorow b{display:none}}
-.side nav{display:flex;gap:6px}
-@media (min-width:900px){.side nav{flex-direction:column;gap:4px;width:100%}}
-.nav-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;color:var(--gray2);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;transition:.15s}
+/* 顶栏: 直接在背景上, 无大板 */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1220px;margin:0 auto;padding:0 4px 18px}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0}
+.brand b{font-size:16px;letter-spacing:.05em}
+.brand small{display:block;font-size:11px;color:var(--gray);font-weight:400}
+.topacts{display:flex;gap:8px}
+.iaction{width:38px;height:38px;border-radius:12px;background:#fff;box-shadow:var(--cardsh);display:flex;align-items:center;justify-content:center;color:var(--navy);text-decoration:none;transition:.15s}
+.iaction:hover{transform:translateY(-2px)}
+.iaction svg{width:18px;height:18px}
+
+/* 主网格: 侧栏窄列 + 内容 + 右栏, 无外层白板 */
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:900px){.grid{grid-template-columns:180px 1fr 270px;gap:20px;align-items:start}}
+
+/* 侧栏: 透明列上放白色小卡按钮 */
+.sidenav{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+@media (min-width:900px){.sidenav{flex-direction:column;position:sticky;top:24px;overflow:visible}}
+.nav-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:#fff;box-shadow:var(--cardsh);
+  color:var(--gray);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;transition:.15s}
 .nav-item svg{width:17px;height:17px;flex-shrink:0}
-.nav-item.on{color:var(--navy);background:#f1f3f6}
-.nav-item:hover{color:var(--navy)}
-.pro{display:none}
-@media (min-width:900px){.pro{display:block;background:linear-gradient(135deg,var(--blue),#4f83f5);border-radius:16px;padding:14px;color:#fff;font-size:12.5px;line-height:1.5}}
-.pro b{font-size:14px;display:block}
-.pro span{opacity:.85}
+.nav-item.on{color:var(--blue);background:#eaf1fe}
+.nav-item:hover{color:var(--navy);transform:translateY(-2px)}
 
-/* 主区 */
-.main{flex:1;padding:24px 22px;min-width:0}
-@media (min-width:900px){.main{padding:32px 34px}}
-.hello{font-size:25px;font-weight:700}
-.hello small{display:block;font-size:13px;color:var(--gray);font-weight:400;margin-top:4px}
+/* 内容列 */
+.main{min-width:0}
+.hello{padding:6px 4px 0}
+.hello h1{font-size:25px;font-weight:700}
+.hello small{display:block;font-size:13px;color:var(--gray);margin-top:4px}
 .hello small b{color:var(--blue)}
-.examcard{margin-top:18px;background:var(--blue);border-radius:18px;padding:18px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;overflow:hidden}
-.examcard:after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)}
-.examcard b{font-size:17px;display:block}
-.examcard .t{font-size:24px;font-weight:300;font-variant-numeric:tabular-nums}
-.examcard p{font-size:11.5px;opacity:.85;max-width:220px}
+
+/* 倒计时: 渐变蓝卡直接在背景上 */
+.examcard{margin-top:16px;background:linear-gradient(120deg,var(--blue),#5b8bf7);border-radius:20px;padding:20px 22px;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(37,99,235,.28)}
+.examcard:before{content:"";position:absolute;right:-34px;top:-34px;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.14)}
+.examcard b{font-size:16px;display:block}
+.examcard p{font-size:11.5px;opacity:.85;margin-top:2px}
+.examcard .t{font-size:25px;font-weight:300;font-variant-numeric:tabular-nums}
 .examcard .r{position:relative;z-index:1;text-align:right}
-.sec{margin-top:26px}
-.sec h3{font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:space-between}
-.sec h3 a{font-size:12px;color:var(--gray);font-weight:500;text-decoration:underline;text-underline-offset:3px}
-.subj-grid{margin-top:14px;display:grid;grid-template-columns:1fr;gap:12px}
+
+.sechead{display:flex;align-items:center;justify-content:space-between;margin:24px 4px 12px}
+.sechead h3{font-size:16px;font-weight:700}
+.sechead span{font-size:12px;color:var(--gray)}
+
+/* 学科卡: pastel 交替底色 */
+.subj-grid{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:560px){.subj-grid{grid-template-columns:1fr 1fr}}
-@media (min-width:1100px){.subj-grid{grid-template-columns:repeat(3,1fr)}}
-.subject{background:#fff;border-radius:16px;box-shadow:var(--cardsh);padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:.18s;position:relative}
-.subject:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,42,94,.12)}
+.subject{border-radius:18px;padding:18px 18px 15px;text-decoration:none;color:var(--navy);display:flex;flex-direction:column;gap:6px;transition:.18s;position:relative;overflow:hidden;box-shadow:var(--cardsh)}
+.subject:nth-child(4n+1){background:#fff}
+.subject:nth-child(4n+2){background:var(--skyc)}
+.subject:nth-child(4n+3){background:#fff}
+.subject:nth-child(4n+4){background:var(--pinkc)}
+.subject:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(30,42,94,.16)}
 .subject .row{display:flex;align-items:center;justify-content:space-between}
-.subject .tag{font-size:10.5px;font-weight:700;color:var(--blue);background:#eaf1fe;border-radius:999px;padding:2px 10px;letter-spacing:.04em}
-.subject b{font-size:16.5px}
-.subject span{font-size:12px;color:var(--gray);line-height:1.5}
-.subject .pct{height:5px;background:#f1f3f6;border-radius:99px;overflow:hidden;margin-top:4px}
-.subject .pct i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#6b9af8);border-radius:99px;transition:width .6s}
-.subject .pt{font-size:11px;color:var(--gray2)}
+.subject .tag{font-size:10.5px;font-weight:700;border-radius:999px;padding:2px 10px;letter-spacing:.04em;background:rgba(37,99,235,.12);color:var(--blue);width:max-content}
+.subject:nth-child(4n+2) .tag,.subject:nth-child(4n+4) .tag{background:rgba(30,42,94,.1)}
+.subject b{font-size:17px}
+.subject span{font-size:12px;color:var(--gray);line-height:1.55}
+.subject .pct{height:6px;background:rgba(30,42,94,.08);border-radius:99px;overflow:hidden;margin-top:5px}
+.subject .pct i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#6b9af8);border-radius:99px}
+.subject .pt{font-size:11px;color:var(--gray)}
+.subject .geo{position:absolute;right:-16px;bottom:-16px;width:64px;height:64px;border-radius:50%;border:2.5px solid rgba(37,99,235,.14)}
+.subject:nth-child(4n+3) .geo{border-color:rgba(30,42,94,.08)}
 
 /* 右栏 */
-.right{display:none}
-@media (min-width:900px){.right{width:290px;flex-shrink:0;background:#f8f9fb;border-left:1px solid #f1f3f6;padding:26px 20px;display:flex;flex-direction:column;gap:14px}}
-.user{display:flex;align-items:center;gap:10px}
-.user .av{width:38px;height:38px;border-radius:50%;background:var(--pinkc);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy)}
+.right{display:flex;flex-direction:column;gap:12px}
+@media (max-width:899px){.right{margin-top:6px}}
+.user{background:#fff;border-radius:16px;box-shadow:var(--cardsh);padding:14px;display:flex;align-items:center;gap:10px}
+.user .av{width:38px;height:38px;border-radius:50%;background:var(--pinkc);display:flex;align-items:center;justify-content:center;font-weight:700}
 .user b{font-size:14px;display:block;line-height:1.2}
 .user span{font-size:11px;color:var(--gray)}
-.right .plan{margin-top:auto;background:#fff;border-radius:16px;padding:14px;box-shadow:var(--cardsh);font-size:12.5px;color:var(--gray)}
-.plan b{color:var(--navy);display:block;font-size:13px;margin-bottom:4px}
-.plan a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;font-size:12px}
 .stat2x2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.fcard{border-radius:16px;padding:14px;font-size:12px;line-height:1.45;position:relative;overflow:hidden}
-.fcard b{font-size:15px;display:block;margin-bottom:3px}
-.fcard span{opacity:.8;font-size:11px}
-.fcard .geo{position:absolute;right:-12px;bottom:-12px;width:56px;height:56px;border-radius:50%;border:2px solid rgba(255,255,255,.35)}
+.fcard{border-radius:16px;padding:13px;font-size:12px;line-height:1.45;position:relative;overflow:hidden;box-shadow:var(--cardsh)}
+.fcard b{font-size:14.5px;display:block;margin-bottom:2px}
+.fcard span{opacity:.75;font-size:11px}
+.fcard .geo{position:absolute;right:-12px;bottom:-12px;width:52px;height:52px;border-radius:50%;border:2px solid rgba(255,255,255,.35)}
 .fcard.navy{background:var(--navy);color:#fff}
-.fcard.white{background:#fff;color:var(--navy);box-shadow:var(--cardsh)}
+.fcard.white{background:#fff;color:var(--navy)}
 .fcard.pink{background:var(--pinkc);color:var(--navy)}
 .fcard.sky{background:var(--skyc);color:var(--navy)}
+.fcard.navy .geo{border-color:rgba(255,255,255,.35)}
+.fcard.sky .geo{border-color:rgba(255,255,255,.6)}
+@media (min-width:900px){.right{position:sticky;top:24px}}
+.plan{background:#fff;border-radius:16px;box-shadow:var(--cardsh);padding:14px;font-size:12.5px;color:var(--gray)}
+.plan b{color:var(--navy);display:block;font-size:13px;margin-bottom:4px}
+.plan a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;font-size:12px}
 </style>
 </head>
 <body>
 <div class="shell">
-<div class="dash">
 
-  <aside class="side">
-    <div class="logorow">
+  <div class="topbar">
+    <div class="brand">
       <div class="logo">LC</div>
-      <b>LING CLUB</b>
+      <div><b>LING CLUB</b><small>个人学习门户 · 2026 备考</small></div>
     </div>
-    <nav>
+    <div class="topacts">
+      <a class="iaction" href="#subjects" title="学科"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V10M9 19V5M14 19v-8M19 19V8"/></svg></a>
+      <a class="iaction" href="shizi/" title="讲义库"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M9 7h7M9 11h7"/></svg></a>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <aside class="sidenav">
       <a class="nav-item on" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>总览</a>
-      <a class="nav-item" href="#subjects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V10M9 19V5M14 19v-8M19 19V8"/></svg>学科</a>
-      <a class="nav-item" href="#library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M9 7h7M9 11h7"/></svg>讲义库</a>
-      <a class="nav-item" href="#exam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>模拟考</a>
-    </nav>
-    <div class="pro"><b>材料持续更新中</b><span>发我讲义，转成沉浸式阅读页面</span></div>
-  </aside>
+      <a class="nav-item" href="jinrong.html">金融学</a>
+      <a class="nav-item" href="kuaiji.html">会计</a>
+      <a class="nav-item" href="jingji.html">经济学</a>
+      <a class="nav-item" href="falv.html">法律基础</a>
+      <a class="nav-item" href="wenmi.html">文秘基础</a>
+      <a class="nav-item" href="tongyong.html">通用能力</a>
+      <a class="nav-item" href="yingxiao.html">市场营销</a>
+    </aside>
 
-  <main class="main">
-    <div class="hello">你好，LING<small>备考进行中 · <b id="cdDays">--</b> 天后考试（2026 年 4-6 月，待定）</small></div>
+    <main class="main">
+      <div class="hello">
+        <h1>你好，LING</h1>
+        <small>备考进行中 · <b id="cdDays">待定</b> 天后考试（2026 年 4-6 月，待定）</small>
+      </div>
 
-    <div class="examcard" id="exam">
-      <div><b>考试倒计时</b><p>时间确定后自动开始精确倒计时（当前按 4 月 15 日预估）</p></div>
-      <div class="r"><div class="t" id="cdText">--</div></div>
-    </div>
+      <div class="examcard" id="exam">
+        <div><b>考试倒计时</b><p>时间确定后自动开始精确倒计时</p></div>
+        <div class="r"><div class="t" id="cdText">时间待定</div></div>
+      </div>
 
-    <div class="sec" id="subjects">
-      <h3>学科 <a>共 7 科 · 按分值排序</a></h3>
+      <div class="sechead" id="subjects">
+        <h3>学科</h3>
+        <span>7 科 · 按分值排序</span>
+      </div>
       <div class="subj-grid" id="grid"></div>
-    </div>
-  </main>
+    </main>
 
-  <aside class="right">
-    <div class="user">
-      <div class="av">L</div>
-      <div><b>LING</b><span>study plan · 2026</span></div>
-    </div>
-    <div class="stat2x2">
-      <div class="fcard navy"><b>金融 39.5</b><span>分值占比最大 · 主攻</span><i class="geo"></i></div>
-      <div class="fcard white"><b>会计 14</b><span>分录与报表是核心</span></div>
-      <div class="fcard pink"><b>经济 10.5</b><span>高鸿业微宏观</span></div>
-      <div class="fcard sky"><b>法律 10.5</b><span>民法典+支付结算</span><i class="geo"></i></div>
-    </div>
-    <div class="plan" id="library">
-      <b>学习方式</b>
-      每科页面为教材主干要点；后续上传的讲义将转成内嵌文字页，归入对应科目。
-      <a>材料直接发群里即可</a>
-    </div>
-  </aside>
+    <aside class="right">
+      <div class="user">
+        <div class="av">L</div>
+        <div><b>LING</b><span>study plan · 2026</span></div>
+      </div>
+      <div class="stat2x2">
+        <div class="fcard navy"><b>金融 39.5</b><span>占比最大 · 主攻</span><i class="geo"></i></div>
+        <div class="fcard white"><b>会计 14</b><span>30 章详解已上线</span></div>
+        <div class="fcard pink"><b>行测 9</b><span>58 篇专项详解</span></div>
+        <div class="fcard sky"><b>法律 10.5</b><span>民法 25 篇详解</span><i class="geo"></i></div>
+      </div>
+      <div class="plan">
+        <b>学习方式</b>
+        每科 = 教材主干 + 讲义/笔记内嵌阅读页；后续上传的讲义持续归入对应科目。
+        <a>材料直接发群里即可</a>
+      </div>
+    </aside>
 
-</div>
+  </div>
 </div>
 <script>
 var SUBJECTS=[
- {id:'jinrong',  name:'金融学',    tag:'39.5 分', desc:'主干+40概念图谱+拓展笔记+经济师考点', pct:50},
+ {id:'jinrong',  name:'金融学',    tag:'39.5 分', desc:'主干 + 知识图谱40概念 + 拓展笔记 + 经济师考点', pct:50},
  {id:'kuaiji',   name:'会计',      tag:'14 分',   desc:'基础会计主干 + 注会30章详解（基础+进阶）', pct:75},
- {id:'jingji',   name:'经济学',    tag:'10.5 分', desc:'主干+管理经济学+读书笔记六篇（微观/宏观/国际/财政/产业）', pct:60},
- {id:'falv',     name:'法律基础',  tag:'10.5 分', desc:'宪法·民法典·公司法·票据法·劳动法 + 民法详解25篇', pct:55},
- {id:'wenmi',    name:'文秘基础',  tag:'10.5 分', desc:'主干+公文三件套+管理学要点', pct:55},
- {id:'tongyong', name:'通用能力',  tag:'9 分',    desc:'言语理解·数量关系·判断推理·资料分析',          pct:70},
- {id:'yingxiao', name:'市场营销',  tag:'6 分',    desc:'主干+讲义全文+读书笔记', pct:65}
+ {id:'jingji',   name:'经济学',    tag:'10.5 分', desc:'主干 + 管理经济学全解 + 读书笔记六篇', pct:60},
+ {id:'falv',     name:'法律基础',  tag:'10.5 分', desc:'主干 + 民法详解25篇（全编）', pct:55},
+ {id:'wenmi',    name:'文秘基础',  tag:'10.5 分', desc:'主干 + 公文三件套 + 管理学要点', pct:55},
+ {id:'tongyong', name:'通用能力',  tag:'9 分',    desc:'数量/资料/言语/判断 58 篇专项详解 + 必背手册', pct:70},
+ {id:'yingxiao', name:'市场营销',  tag:'6 分',    desc:'主干 + 讲义全文 + 读书笔记', pct:65}
 ];
 var g=document.getElementById('grid');
 SUBJECTS.forEach(function(s){
   var a=document.createElement('a');
   a.className='subject';a.href=s.id+'.html';
   a.innerHTML='<div class="row"><span class="tag">'+s.tag+'</span></div><b>'+s.name+'</b><span>'+s.desc+'</span>'+
-    '<div class="pct"><i style="width:'+s.pct+'%"></i></div><div class="pt">内容完成度 '+s.pct+'%</div>';
+    '<div class="pct"><i style="width:'+s.pct+'%"></i></div><div class="pt">内容完成度 '+s.pct+'%</div><i class="geo"></i>';
   g.appendChild(a);
 });
 /* EXAM_DATE 确定后填 'YYYY-MM-DDTHH:MM:SS+08:00'；null=未定 */
