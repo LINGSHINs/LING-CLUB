@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>企业破产法律制度（进阶） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 企业破产法律制度</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、核心考法分类</a><a class="h1" href="#sec_1">二、典型例题解析</a><a class="l2" href="#sec_2">2.1 破产界限（单选题）</a><a class="l2" href="#sec_3">2.2 破产申请（单选题）</a><a class="l2" href="#sec_4">2.3 破产撤销权（单选题）—— 重点</a><a class="l2" href="#sec_5">2.4 债务人财产（单选题）</a><a class="l2" href="#sec_6">2.5 破产债权清偿顺序（单选题）—— 重点</a><a class="l2" href="#sec_7">2.6 重整程序（单选题）</a><a class="h1" href="#sec_8">三、法条要点速记</a><a class="l2" href="#sec_9">3.1 破产界限</a><a class="l2" href="#sec_10">3.2 破产撤销权（受理前1年内）</a><a class="l2" href="#sec_11">3.3 债务人财产</a><a class="l2" href="#sec_12">3.4 清偿顺序</a><a class="h1" href="#sec_13">四、易混点对比</a><a class="h1" href="#sec_14">五、速记口诀</a><a class="h1" href="#sec_15">自测清单</a></nav>
+<div class="doc" id="doc"><h1>企业破产法律制度 —— 典型考题解析</h1>
+<h2 id="sec_0">一、核心考法分类</h2>
+<p>本章在历年真题中的主要考法归纳：</p>
+<table>
+<thead>
+<tr>
+<th>考法类型</th>
+<th>常见题型</th>
+<th>考查特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>破产界限</td>
+<td>单选题</td>
+<td>不能清偿+资产不足/缺乏清偿能力</td>
+</tr>
+<tr>
+<td>破产申请与受理</td>
+<td>单选题</td>
+<td>申请人、受理程序</td>
+</tr>
+<tr>
+<td>管理人职责</td>
+<td>单选题</td>
+<td>接管财产、管理处分</td>
+</tr>
+<tr>
+<td>破产撤销权</td>
+<td>单选题、多选题</td>
+<td>受理前1年内的行为</td>
+</tr>
+<tr>
+<td>债务人财产</td>
+<td>单选题</td>
+<td>取回权、抵销权</td>
+</tr>
+<tr>
+<td>清偿顺序</td>
+<td>单选题、多选题</td>
+<td>费用→职工→税款→普通</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_1">二、典型例题解析</h2>
+<h3 id="sec_2">2.1 破产界限（单选题）</h3>
+<p><strong>题目：</strong> 根据《企业破产法》规定，企业法人不能清偿到期债务，且资产不足以清偿全部债务或明显缺乏清偿能力的，可以申请破产。下列情形中，可以认定为企业明显缺乏清偿能力的是（ ）。</p>
+<p>A. 资金不足，但尚未停止支付
+B. 资产被查封、冻结，无法变现
+C. 因经营不善导致连续亏损
+D. 长期拖延债务，但偶有收入</p>
+<p><strong>解析：</strong> 根据《企业破产法解释（一）》规定，下列情形之一的，可以认定为其&quot;明显缺乏清偿能力&quot;：（1）因资金严重不足或财产不能变现等原因，无法清偿债务；（2）法定代表人下落不明且无其他人员负责管理财产，无法清偿债务；（3）经人民法院强制执行，无法清偿债务；（4）长期亏损且经营扭亏困难，无法清偿债务；（5）导致债务人丧失清偿能力的其他情形。</p>
+<p>A选项：尚未停止支付不属于明显缺乏清偿能力的法定情形。
+B选项：资产被查封冻结无法变现，属于&quot;明显缺乏清偿能力&quot;。
+C选项：连续亏损但不必然导致无法清偿债务。
+D选项：长期拖延债务但不必然&quot;明显缺乏&quot;清偿能力。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_3">2.2 破产申请（单选题）</h3>
+<p><strong>题目：</strong> 下列主体中，有权提出破产申请的有（ ）。</p>
+<p>A. 债务人的普通债权人
+B. 债务人的连带保证人
+C. 债务人的分公司
+D. 债务人的工会组织</p>
+<p><strong>解析：</strong> 根据《企业破产法》规定，有权提出破产申请的主体包括：（1）债务人（可以自行申请）；（2）债权人（可以申请债务人破产）；（3）依法负有清算责任的人（企业法人已解散但未清算或未清算完毕，资产不足以清偿债务的）。</p>
+<p>A选项：普通债权人有权申请债务人破产。
+B选项：连带保证人不是直接债权人，只能在承担保证责任后才能向债务人追偿，此时其身份转变为债权人。
+C选项：分公司不是独立法人，债务人申请破产时应由债务人整体申请。
+D选项：工会组织不是适格申请人。</p>
+<p><strong>答案：</strong> A</p>
+<h3 id="sec_4">2.3 破产撤销权（单选题）—— 重点</h3>
+<p><strong>题目：</strong> 人民法院受理破产申请前1年内，下列行为，管理人有权请求撤销的是（ ）。</p>
+<p>A. 债务人支付了已到期的货款
+B. 债务人清偿了已过诉讼时效的债务
+C. 债务人以市价出售生产设备
+D. 债务人为关联方提供担保</p>
+<p><strong>解析：</strong> 根据《企业破产法》规定，人民法院受理破产申请前1年内，涉及债务人财产的下列行为，管理人有权请求撤销：（1）无偿转让财产；（2）以明显不合理的价格进行交易；（3）对没有财产担保的债务提供担保；（4）对未到期的债务提前清偿；（5）放弃债权。</p>
+<p>A选项：支付已到期货款属于正常经营行为，不可撤销。
+B选项：清偿已过诉讼时效的债务，属于清偿&quot;自然债务&quot;，可能涉及个别清偿，但因诉讼时效已过，债务本不应清偿，属于可撤销情形。
+C选项：以市价出售属于正常交易，不可撤销。
+D选项：对没有财产担保的债务提供担保，属于可撤销情形。</p>
+<p><strong>答案：</strong> BD</p>
+<h3 id="sec_5">2.4 债务人财产（单选题）</h3>
+<p><strong>题目：</strong> 关于破产取回权的说法，正确的是（ ）。</p>
+<p>A. 取回权只能针对债务人占有的他人财产
+B. 取回权不受诉讼时效限制
+C. 出卖人取回权适用于在途标的物
+D. 取回权人须向管理人申报债权</p>
+<p><strong>解析：</strong> 破产取回权是指财产的权利人可以不依照破产程序，从管理人接管的财产中取回其财产的权利。</p>
+<p>A选项正确。取回权的标的物应当是不属于债务人的财产。
+B选项错误。取回权虽然是实体权利，但行使取回权应当符合一定程序。
+C选项正确。出卖人取回权是指在买卖合同中，出卖人已将标的物发运，买受人尚未收到或尚未付清价款时，买受人被裁定破产，出卖人可以取回在途标的物的权利。
+D选项错误。取回权人不必申报债权，直接向管理人主张取回即可。</p>
+<p><strong>答案：</strong> AC</p>
+<h3 id="sec_6">2.5 破产债权清偿顺序（单选题）—— 重点</h3>
+<p><strong>题目：</strong> 某公司进入破产程序，破产财产在清偿破产费用后剩余500万元。下列债权中，应当最优先清偿的是（ ）。</p>
+<p>A. 欠某供应商的货款200万元
+B. 欠缴的税款150万元
+C. 欠职工的工资和社会保险费用180万元
+D. 欠银行的抵押贷款（以厂房抵押）300万元</p>
+<p><strong>解析：</strong> 根据《企业破产法》规定，破产财产在优先清偿破产费用和共益债务后，按照下列顺序清偿：（1）破产人所欠职工的工资和医疗、伤残补助、抚恤费用，所欠的应当划入职工个人账户的基本养老保险、基本医疗保险费用，以及法律、行政法规规定应当支付给职工的补偿金；（2）破产人欠缴的除上述以外的社会保险费用和破产人所欠税款；（3）普通破产债权。抵押债权属于有财产担保的债权，在破产清算中属于别除权，可以就抵押财产优先受偿，不按照上述顺序清偿。</p>
+<p>C选项的职工工资和社保费用属于第一顺位，最优先清偿。</p>
+<p><strong>答案：</strong> C</p>
+<h3 id="sec_7">2.6 重整程序（单选题）</h3>
+<p><strong>题目：</strong> 关于重整程序的说法，正确的是（ ）。</p>
+<p>A. 重整程序只能由债权人申请
+B. 重整计划草案由管理人制定
+C. 重整期间，债务人的债务人应当停止向债务人清偿债务
+D. 重整计划执行完毕，债务人免除未能清偿的债务</p>
+<p><strong>解析：</strong> A选项错误。重整程序的申请人可以是债务人、债权人、出资额占债务人注册资本1/10以上的出资人，以及法律规定的其他主体。B选项错误。重整计划草案由管理人或债务人制定（债务人自行管理财产和营业事务的，由债务人制定）。C选项错误。重整期间，债务人的债务人或财产持有人应当向管理人清偿债务或交付财产，而非&quot;停止清偿&quot;。D选项正确。重整计划执行完毕后，债务人免除未能清偿的债务。</p>
+<p><strong>答案：</strong> D</p>
+<h2 id="sec_8">三、法条要点速记</h2>
+<h3 id="sec_9">3.1 破产界限</h3>
+<table>
+<thead>
+<tr>
+<th>要件</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不能清偿到期债务</td>
+<td>债务人不能以财产、信用等方式清偿到期债务</td>
+</tr>
+<tr>
+<td>且</td>
+<td>需同时满足</td>
+</tr>
+<tr>
+<td>资产不足以清偿全部债务 或 明显缺乏清偿能力</td>
+<td>二者满足其一即可</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_10">3.2 破产撤销权（受理前1年内）</h3>
+<table>
+<thead>
+<tr>
+<th>可撤销行为</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无偿转让财产</td>
+<td>无对价的转让</td>
+</tr>
+<tr>
+<td>以明显不合理价格交易</td>
+<td>低价或高价交易</td>
+</tr>
+<tr>
+<td>对无担保债务提供担保</td>
+<td>事后追加担保</td>
+</tr>
+<tr>
+<td>对未到期债务提前清偿</td>
+<td>使债权人获得清偿</td>
+</tr>
+<tr>
+<td>放弃债权</td>
+<td>无偿放弃</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_11">3.3 债务人财产</h3>
+<table>
+<thead>
+<tr>
+<th>权利类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取回权</td>
+<td>取回不属于债务人的财产</td>
+</tr>
+<tr>
+<td>出卖人取回权</td>
+<td>在途标的物的取回</td>
+</tr>
+<tr>
+<td>抵销权</td>
+<td>债权人可主张抵销</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_12">3.4 清偿顺序</h3>
+<table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>破产费用和共益债务（随时清偿）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>职工债权（工资、社保、补偿金）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>税款和社保费用（除职工部分）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>普通破产债权</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_13">四、易混点对比</h2>
+<table>
+<thead>
+<tr>
+<th>易混点</th>
+<th>区别</th>
+<th>记忆技巧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>撤销权 vs 无效行为</td>
+<td>撤销权针对1年内行为；无效行为自始无效</td>
+<td>&quot;撤销&quot;有期限，&quot;无效&quot;无期限</td>
+</tr>
+<tr>
+<td>取回权 vs 追回权</td>
+<td>取回权是权利人自取；追回权是管理人追收</td>
+<td>&quot;取&quot;是权利人取，&quot;追&quot;是管理人追</td>
+</tr>
+<tr>
+<td>别除权 vs 普通债权</td>
+<td>别除权有担保，普通债权无担保</td>
+<td>&quot;别除&quot;是特殊&quot;普通&quot;是一般</td>
+</tr>
+<tr>
+<td>重整 vs 和解 vs 清算</td>
+<td>重整是挽救，和解是协商，清算是终结</td>
+<td>&quot;重整&quot;是救，&quot;和解&quot;是谈，&quot;清算&quot;是散</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_14">五、速记口诀</h2>
+<p><strong>撤销权口诀：</strong>
+&quot;1年内5种行为可撤销：无偿转、低价值、事后保、提前清、放弃债&quot;</p>
+<p><strong>清偿顺序口诀：</strong>
+&quot;费用共益随时清，职工第二税第三，普通最后&quot;</p>
+<p><strong>破产申请人口诀：</strong>
+&quot;债务人可自申，债权人可申，清算责任人可申&quot;</p>
+<p><strong>重整特点口诀：</strong>
+&quot;重整期间营业继续，担保暂停，债务人管理（特定条件下）&quot;</p>
+<h2 id="sec_15">自测清单</h2>
+<ul>
+<li>[ ] 我能判断破产界限的构成要件</li>
+<li>[ ] 我能识别破产撤销权的适用情形</li>
+<li>[ ] 我能理解取回权、抵销权的行使条件</li>
+<li>[ ] 我能掌握破产清偿顺序</li>
+<li>[ ] 我能区分重整、和解、清算程序</li>
+<li>[ ] 我能理解管理人的职责</li>
+</ul>
+</div>
+</div>
+</body></html>

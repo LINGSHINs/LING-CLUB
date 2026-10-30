@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>物权法律制度（进阶） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 物权法律制度</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、核心考法分类</a><a class="h1" href="#sec_1">二、典型例题解析</a><a class="l2" href="#sec_2">2.1 物权变动规则（单选题）</a><a class="l2" href="#sec_3">2.2 善意取得构成（单选题）</a><a class="l2" href="#sec_4">2.3 动产抵押与登记（单选题）</a><a class="l2" href="#sec_5">2.4 质权设立（单选题）</a><a class="l2" href="#sec_6">2.5 留置权成立条件（单选题）</a><a class="l2" href="#sec_7">2.6 善意取得适用范围（多选题）</a><a class="h1" href="#sec_8">三、法条要点速记</a><a class="l2" href="#sec_9">3.1 物权变动规则</a><a class="l2" href="#sec_10">3.2 交付方式</a><a class="l2" href="#sec_11">3.3 担保物权比较</a><a class="h1" href="#sec_12">四、易混点对比</a><a class="h1" href="#sec_13">五、速记口诀</a><a class="h1" href="#sec_14">自测清单</a></nav>
+<div class="doc" id="doc"><h1>物权法律制度 —— 典型考题解析</h1>
+<h2 id="sec_0">一、核心考法分类</h2>
+<p>本章在历年真题中的主要考法归纳：</p>
+<table>
+<thead>
+<tr>
+<th>考法类型</th>
+<th>常见题型</th>
+<th>考查特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>物权变动规则</td>
+<td>单选题、多选题</td>
+<td>不动产登记生效，动产交付生效</td>
+</tr>
+<tr>
+<td>善意取得构成</td>
+<td>单选题、多选题</td>
+<td>五要件缺一不可</td>
+</tr>
+<tr>
+<td>担保物权类型</td>
+<td>单选题</td>
+<td>抵押/质押/留置的区别</td>
+</tr>
+<tr>
+<td>善意取得与物权变动</td>
+<td>案例题</td>
+<td>结合具体情形判断</td>
+</tr>
+<tr>
+<td>物权法定原则</td>
+<td>单选题</td>
+<td>不能创设新物权类型</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_1">二、典型例题解析</h2>
+<h3 id="sec_2">2.1 物权变动规则（单选题）</h3>
+<p><strong>题目：</strong> 甲将自有的房屋出售给乙，双方签订了买卖合同，但尚未办理过户登记。下列说法正确的是（ ）。</p>
+<p>A. 房屋所有权已经转移给乙
+B. 房屋所有权仍归甲所有
+C. 乙可以主张对该房屋的所有权
+D. 该买卖合同无效</p>
+<p><strong>解析：</strong> 根据《民法典》规定，不动产物权的设立、变更、转让和消灭，经依法登记，发生效力；未经登记，不发生效力。甲乙之间的买卖合同有效，但因未办理过户登记，房屋所有权不发生转移，仍归甲所有。乙取得的是合同上的债权请求权，而非所有权。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_3">2.2 善意取得构成（单选题）</h3>
+<p><strong>题目：</strong> 甲将借来的手表以合理价格卖给不知情的乙，乙当场付款并取得手表。甲的手表原主人（所有权人）可以（ ）。</p>
+<p>A. 要求乙返还手表
+B. 要求甲赔偿损失
+C. 要求乙支付合理对价
+D. 确认乙取得手表所有权</p>
+<p><strong>解析：</strong> 善意取得的构成要件包括：（1）出让人无处分权；（2）受让人善意；（3）以合理价格有偿受让；（4）已完成法定公示（交付）。本题中，甲借来的手表是无权处分，但乙符合善意取得的要件：善意（不知甲无处分权）、合理价格（有偿）、已交付。乙可以依据善意取得制度取得手表所有权。手表原主人只能向无权处分人甲请求损害赔偿，不能要求乙返还。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_4">2.3 动产抵押与登记（单选题）</h3>
+<p><strong>题目：</strong> 甲公司以自己的一批生产设备向银行设定抵押，双方签订抵押合同。下列说法正确的是（ ）。</p>
+<p>A. 抵押权自抵押合同生效时设立
+B. 抵押权自登记时设立
+C. 该抵押权可以对抗善意第三人
+D. 该抵押权不得对抗正常经营活动中已支付合理价款的买受人</p>
+<p><strong>解析：</strong> 根据《民法典》规定，以动产设定抵押的，抵押权自抵押合同生效时设立；未经登记的，不得对抗善意第三人。因此，A正确。动产抵押不以登记为设立要件，B错误。未登记的动产抵押权不能对抗善意第三人，C错误。根据《民法典》关于正常经营买受人的保护规则，即使抵押权已登记，出卖人（抵押人）出卖抵押财产属于正常经营活动，且买受人已支付合理价款并取得抵押财产的，抵押权人对该财产不具有追及效力，D正确。但D表述的是对抗效力问题，与题目问法&quot;正确的是&quot;相符。</p>
+<p><strong>答案：</strong> A</p>
+<h3 id="sec_5">2.4 质权设立（单选题）</h3>
+<p><strong>题目：</strong> 甲向乙借款50万元，以自己持有的一张100万元的银行存单设定质押。下列关于质权设立的说法正确的是（ ）。</p>
+<p>A. 质权自抵押合同生效时设立
+B. 质权自乙实际控制存单时设立
+C. 质权自登记时设立
+D. 质权自甲交付存单时设立</p>
+<p><strong>解析：</strong> 根据《民法典》规定，以汇票、支票、本票、存款单、仓单、提单出质的，质权自权利凭证交付质权人时设立；没有权利凭证的，质权自办理出质登记时设立。存单是权利凭证，质权自交付存单时设立。</p>
+<p><strong>答案：</strong> D</p>
+<h3 id="sec_6">2.5 留置权成立条件（单选题）</h3>
+<p><strong>题目：</strong> 甲将汽车送到乙修理厂修理，约定修理费1万元。甲取车时拒绝支付修理费，乙可以行使留置权。下列说法正确的是（ ）。</p>
+<p>A. 乙只能留置该汽车
+B. 乙留置汽车后，甲超过60日仍不支付修理费，乙可以就该汽车优先受偿
+C. 如果该汽车价值明显低于修理费，乙不能留置
+D. 企业之间的留置不受&quot;同一法律关系&quot;限制</p>
+<p><strong>解析：</strong> 留置权是法定担保物权。留置权成立的条件包括：（1）债权人合法占有债务人的动产；（2）债务人不履行到期债务；（3）留置的动产与债权属于同一法律关系（企业之间留置的除外）。A错误，乙可以依法留置该汽车，但并非&quot;只能&quot;留置汽车。B正确，留置后应给债务人60日以上的履行期限，逾期不履行的可以优先受偿。C错误，留置权不要求留置财产的价值必须高于债权。D正确，企业之间的留置不要求属于同一法律关系。</p>
+<p><strong>答案：</strong> BD</p>
+<h3 id="sec_7">2.6 善意取得适用范围（多选题）</h3>
+<p><strong>题目：</strong> 下列情形中，可以适用善意取得的是（ ）。</p>
+<p>A. 张某将他人委托保管的名贵手表卖给他人
+B. 李某将租来的汽车卖给他人
+C. 王某将捡到的钱包据为己有并卖给他人
+D. 赵某将自己的房屋卖给多人</p>
+<p><strong>解析：</strong> 善意取得适用于无权处分的情形。A：张某受委托保管手表，属于无权处分，可以适用善意取得（但须符合善意取得其他要件）。B：李某租用汽车，属于无权处分，可以适用善意取得。C：捡到钱包并卖出，属于无权处分，可以适用善意取得（遗失物、盗赃物有特殊规则：权利人可在2年内请求返还原物，但不能因此否定善意取得的适用，只是在2年内可以要求返还）。D：将自己的房屋卖给多人，可能涉及&quot;一房二卖&quot;，但如果已经办理过户登记，则不涉及善意取得问题；如果未登记，则需要看具体情况。无论如何，这不属于&quot;善意取得&quot;的典型问题，而是合同履行问题。</p>
+<p><strong>答案：</strong> ABC</p>
+<h2 id="sec_8">三、法条要点速记</h2>
+<h3 id="sec_9">3.1 物权变动规则</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>公示方式</th>
+<th>效力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不动产物权</td>
+<td>登记</td>
+<td>登记生效主义</td>
+</tr>
+<tr>
+<td>动产物权</td>
+<td>交付</td>
+<td>交付生效主义</td>
+</tr>
+<tr>
+<td>船舶、航空器、机动车</td>
+<td>交付</td>
+<td>登记为对抗要件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_10">3.2 交付方式</h3>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>何时生效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现实交付</td>
+<td>直接交付标的物</td>
+<td>交付时</td>
+</tr>
+<tr>
+<td>简易交付</td>
+<td>受让人已占有动产</td>
+<td>法律行为生效时</td>
+</tr>
+<tr>
+<td>指示交付</td>
+<td>让与返还原物请求权</td>
+<td>通知占有人时</td>
+</tr>
+<tr>
+<td>占有改定</td>
+<td>出让人继续占有</td>
+<td>约定生效时</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_11">3.3 担保物权比较</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>设立要件</th>
+<th>是否转移占有</th>
+<th>优先顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抵押权（不动产）</td>
+<td>登记</td>
+<td>否</td>
+<td>第1位</td>
+</tr>
+<tr>
+<td>抵押权（动产）</td>
+<td>合同生效</td>
+<td>否</td>
+<td>第2位（登记优先）</td>
+</tr>
+<tr>
+<td>质权</td>
+<td>交付</td>
+<td>是</td>
+<td>第2位</td>
+</tr>
+<tr>
+<td>留置权</td>
+<td>法定</td>
+<td>是</td>
+<td>第1位</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_12">四、易混点对比</h2>
+<table>
+<thead>
+<tr>
+<th>易混点</th>
+<th>区别</th>
+<th>记忆技巧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>善意取得 vs 普通买卖</td>
+<td>善意取得是无权处分+善意第三人保护</td>
+<td>&quot;善意取得多一要件：无权处分&quot;</td>
+</tr>
+<tr>
+<td>抵押 vs 质押</td>
+<td>抵押不转移占有，质押转移占有</td>
+<td>&quot;押&quot;不转移，&quot;质&quot;要转移</td>
+</tr>
+<tr>
+<td>动产抵押 vs 不动产抵押</td>
+<td>动产登记对抗，不动产登记生效</td>
+<td>&quot;动产登记为对抗，不动产登记是生效&quot;</td>
+</tr>
+<tr>
+<td>善意取得 vs 遗失物</td>
+<td>遗失物2年内可请求返还（盗赃物同）</td>
+<td>&quot;遗失物有追及，善意取得无追及&quot;</td>
+</tr>
+<tr>
+<td>最高额抵押 vs 一般抵押</td>
+<td>最高额抵押债权不确定</td>
+<td>&quot;最高额：债权不确定&quot;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_13">五、速记口诀</h2>
+<p><strong>物权变动口诀：</strong>
+&quot;不动产登记生效，动产交付生效&quot;</p>
+<p><strong>善意取得口诀：</strong>
+&quot;无权处分是前提，善意合理已公示，五要件齐才取得&quot;</p>
+<p><strong>担保物权口诀：</strong>
+&quot;抵押不转移，质押要转移；留置是法定，三者留置优先&quot;</p>
+<p><strong>建设用地使用权口诀：</strong>
+&quot;商娱40住70，工业科教文卫体50；住宅到期自动续&quot;</p>
+<h2 id="sec_14">自测清单</h2>
+<ul>
+<li>[ ] 我能准确判断不动产物权变动是否生效</li>
+<li>[ ] 我能识别善意取得的五个构成要件</li>
+<li>[ ] 我能区分抵押、质押、留置三种担保物权</li>
+<li>[ ] 我能判断遗失物、盗赃物能否善意取得</li>
+<li>[ ] 我能理解预告登记的效力</li>
+<li>[ ] 我能区分浮动抵押与一般抵押</li>
+</ul>
+</div>
+</div>
+</body></html>

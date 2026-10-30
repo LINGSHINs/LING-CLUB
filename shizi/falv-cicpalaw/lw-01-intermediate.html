@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>法律基本原理（进阶） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 法律基本原理</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、核心考法分类</a><a class="h1" href="#sec_1">二、典型例题解析</a><a class="l2" href="#sec_2">2.1 法律渊源效力等级（单选题）</a><a class="l2" href="#sec_3">2.2 民事行为能力判定（单选题）</a><a class="l2" href="#sec_4">2.3 法律事实分类（单选题）</a><a class="l2" href="#sec_5">2.4 法律关系主体类型（多选题）</a><a class="l2" href="#sec_6">2.5 习近平法治思想（多选题）</a><a class="h1" href="#sec_7">三、法条要点速记</a><a class="l2" href="#sec_8">3.1 法律渊源效力层级</a><a class="l2" href="#sec_9">3.2 法律规范三要素</a><a class="l2" href="#sec_10">3.3 行为能力年龄标准</a><a class="h1" href="#sec_11">四、易混点对比</a><a class="h1" href="#sec_12">五、速记口诀</a><a class="h1" href="#sec_13">自测清单</a></nav>
+<div class="doc" id="doc"><h1>法律基本原理 —— 典型考题解析</h1>
+<h2 id="sec_0">一、核心考法分类</h2>
+<p>本章在历年真题中的主要考法归纳：</p>
+<table>
+<thead>
+<tr>
+<th>考法类型</th>
+<th>常见题型</th>
+<th>考查特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法律渊源效力排序</td>
+<td>单选题、多选题</td>
+<td>记忆型，需准确排序</td>
+</tr>
+<tr>
+<td>法律关系三要素</td>
+<td>单选题、多选题</td>
+<td>识别主体、客体、内容</td>
+</tr>
+<tr>
+<td>民事行为能力判定</td>
+<td>单选题</td>
+<td>数字记忆（年龄标准）</td>
+</tr>
+<tr>
+<td>法律事实分类</td>
+<td>单选题</td>
+<td>区分事件与行为</td>
+</tr>
+<tr>
+<td>习近平法治思想</td>
+<td>多选题</td>
+<td>关键词记忆</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_1">二、典型例题解析</h2>
+<h3 id="sec_2">2.1 法律渊源效力等级（单选题）</h3>
+<p><strong>题目：</strong> 下列法律渊源中，效力最高的是（ ）。</p>
+<p>A. 行政法规
+B. 部门规章
+C. 宪法
+D. 地方性法规</p>
+<p><strong>解析：</strong> 根据法律渊源效力等级，宪法由全国人民代表大会制定，效力最高。行政法规由国务院制定，效力低于宪法但高于部门规章和地方性法规。部门规章由国务院各部委制定，效力低于行政法规。地方性法规由地方人大及其常委会制定，效力低于行政法规和部门规章。</p>
+<p><strong>答案：</strong> C</p>
+<h3 id="sec_3">2.2 民事行为能力判定（单选题）</h3>
+<p><strong>题目：</strong> 张某17周岁，以自己的劳动收入为主要生活来源。根据《民法典》规定，张某的民事行为能力属于（ ）。</p>
+<p>A. 完全民事行为能力人
+B. 限制民事行为能力人
+C. 无民事行为能力人
+D. 视为完全民事行为能力人</p>
+<p><strong>解析：</strong> 根据《民法典》规定，16周岁以上不满18周岁的未成年人，以自己的劳动收入为主要生活来源的，视为完全民事行为能力人。张某17周岁且以自己劳动收入为主要生活来源，符合视为完全民事行为能力人的条件。</p>
+<p><strong>答案：</strong> D</p>
+<h3 id="sec_4">2.3 法律事实分类（单选题）</h3>
+<p><strong>题目：</strong> 下列法律事实中，属于法律事件的是（ ）。</p>
+<p>A. 甲乙签订买卖合同
+B. 丙丁结婚
+C. 地震导致房屋倒塌
+D. 戊立遗嘱</p>
+<p><strong>解析：</strong> 法律事实分为法律事件和法律行为。法律事件是不以当事人意志为转移的客观情况，包括绝对事件（自然现象）和相对事件（社会现象）。法律行为是以当事人意志为转移的行为。地震属于自然现象，不以人的意志为转移，属于绝对事件。签订合同、结婚、立遗嘱都是当事人的有意识行为，属于法律行为。</p>
+<p><strong>答案：</strong> C</p>
+<h3 id="sec_5">2.4 法律关系主体类型（多选题）</h3>
+<p><strong>题目：</strong> 下列可以作为法律关系主体的有（ ）。</p>
+<p>A. 自然人
+B. 法人
+C. 非法人组织
+D. 国家</p>
+<p><strong>解析：</strong> 法律关系主体是法律关系的参与者，包括自然人、法人、非法人组织和国家。自然人基于出生获得主体资格；法人是具有民事权利能力和行为能力的组织；非法人组织如合伙企业、个人独资企业等也可成为法律关系主体；国家作为特殊主体，在特定情况下（如发行国债）也可成为法律关系主体。</p>
+<p><strong>答案：</strong> ABCD</p>
+<h3 id="sec_6">2.5 习近平法治思想（多选题）</h3>
+<p><strong>题目：</strong> 习近平法治思想的核心要义包括（ ）。</p>
+<p>A. 坚持党对全面依法治国的领导
+B. 坚持以人民为中心
+C. 坚持依法治国与以德治国相结合
+D. 坚持在法治轨道上推进国家治理体系和治理能力现代化</p>
+<p><strong>解析：</strong> 习近平法治思想包括十一个坚持，其中核心要义包括：坚持党对全面依法治国的领导、坚持以人民为中心、坚持中国特色社会主义法治道路、坚持依宪治国依宪执政、坚持在法治轨道上推进国家治理体系和治理能力现代化等。&quot;依法治国与以德治国相结合&quot;虽是正确的治国理念，但不是习近平法治思想&quot;十一个坚持&quot;的原文表述。</p>
+<p><strong>答案：</strong> ABD</p>
+<h2 id="sec_7">三、法条要点速记</h2>
+<h3 id="sec_8">3.1 法律渊源效力层级</h3>
+<pre><code>宪法 &gt; 法律 &gt; 行政法规 &gt; 地方性法规/部门规章
+                    &gt; 地方政府规章
+</code></pre>
+<h3 id="sec_9">3.2 法律规范三要素</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>别称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>假定</td>
+<td>条件</td>
+<td>规范适用的条件</td>
+</tr>
+<tr>
+<td>模式</td>
+<td>处理</td>
+<td>允许、禁止或要求的行为</td>
+</tr>
+<tr>
+<td>后果</td>
+<td>制裁</td>
+<td>违反或遵守的法律后果</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_10">3.3 行为能力年龄标准</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>年龄标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完全民事行为能力人</td>
+<td>≥18周岁</td>
+</tr>
+<tr>
+<td>视为完全民事行为能力人</td>
+<td>16-18周岁+劳动收入为主要生活来源</td>
+</tr>
+<tr>
+<td>限制民事行为能力人</td>
+<td>8-18周岁</td>
+</tr>
+<tr>
+<td>无民事行为能力人</td>
+<td>&lt;8周岁</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_11">四、易混点对比</h2>
+<table>
+<thead>
+<tr>
+<th>易混点</th>
+<th>区别</th>
+<th>记忆技巧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>强行性规范 vs 任意性规范</td>
+<td>强行性不可协商排除，任意性可约定</td>
+<td>&quot;强行&quot;就是&quot;霸道&quot;</td>
+</tr>
+<tr>
+<td>授权性规范 vs 义务性规范</td>
+<td>授权是&quot;可以&quot;，义务是&quot;应当/不得&quot;</td>
+<td>权利vs义务</td>
+</tr>
+<tr>
+<td>法律事件 vs 法律行为</td>
+<td>不以意志为转移 vs 以意志为转移</td>
+<td>天灾vs人为</td>
+</tr>
+<tr>
+<td>民法调整对象 vs 行政法调整对象</td>
+<td>平等主体间 vs 行政管理关系</td>
+<td>平等vs上下级</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_12">五、速记口诀</h2>
+<p><strong>法律渊源效力排序口诀：</strong>
+&quot;宪法律行地部规&quot;</p>
+<p>解读：宪法 &gt; 法律 &gt; 行政法规 &gt; 地方性法规/部门规章</p>
+<p><strong>法律关系三要素口诀：</strong>
+&quot;主客内&quot;
+解读：主体、客体、内容</p>
+<p><strong>民事行为能力口诀：</strong>
+&quot;8岁限制18完全，16劳动收入视为全&quot;
+解读：&lt;8岁无行为能力，8-18岁限制，≥18岁完全，16-18岁以劳动收入为生的视为完全</p>
+<h2 id="sec_13">自测清单</h2>
+<ul>
+<li>[ ] 我能默写出法律渊源效力等级排序</li>
+<li>[ ] 我能准确判断不同年龄的自然人属于何种行为能力</li>
+<li>[ ] 我能区分法律事件和法律行为</li>
+<li>[ ] 我能识别法律关系的主体、客体和内容</li>
+<li>[ ] 我能区分强行性规范和任意性规范</li>
+<li>[ ] 我能准确记忆习近平法治思想的关键词</li>
+</ul>
+</div>
+</div>
+</body></html>

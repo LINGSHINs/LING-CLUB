@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>法律基本原理（基础） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 法律基本原理</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、法律基本概念</a><a class="l2" href="#sec_1">1.1 法律的概念与特征</a><a class="l2" href="#sec_2">1.2 法律体系</a><a class="l2" href="#sec_3">1.3 法律渊源</a><a class="l2" href="#sec_4">1.4 法律规范</a><a class="h1" href="#sec_5">二、法律关系</a><a class="l2" href="#sec_6">2.1 法律关系的概念与特征</a><a class="l2" href="#sec_7">2.2 法律关系的种类</a><a class="l2" href="#sec_8">2.3 法律关系的基本构成（三要素）</a><a class="l2" href="#sec_12">2.4 法律关系的变动原因——法律事实</a><a class="h1" href="#sec_13">三、习近平法治思想</a><a class="l2" href="#sec_14">3.1 核心要义</a><a class="l2" href="#sec_15">3.2 法治与市场经济的关系</a><a class="h1" href="#sec_16">四、市场经济法律调整</a><a class="l2" href="#sec_17">4.1 市场经济与法律的关系</a><a class="l2" href="#sec_18">4.2 市场经济法律调整的基本原则</a><a class="l2" href="#sec_19">4.3 民法调整的对象</a><a class="h1" href="#sec_20">考试要点总结</a></nav>
+<div class="doc" id="doc"><h1>法律基本原理 —— 第一性原理教程</h1>
+<blockquote>
+<p>从最基础的法律概念出发，逐步构建对法律体系的完整认知，覆盖注会考试全部考点。</p>
+</blockquote>
+<hr />
+<h2 id="sec_0">一、法律基本概念</h2>
+<h3 id="sec_1">1.1 法律的概念与特征</h3>
+<p><strong>什么是法律？</strong></p>
+<p>法律是由国家制定或认可，由国家强制力保证实施的行为规范体系。它通过对权利与义务的规定，确认、保护和发展有利于统治阶级的社会关系和社会秩序。</p>
+<p><strong>法律的特征（五大特征）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>规范性</strong></td>
+<td>法律为人们的行为提供模式、标准或方向</td>
+</tr>
+<tr>
+<td><strong>国家意志性</strong></td>
+<td>法律是由国家制定或认可的，体现国家意志</td>
+</tr>
+<tr>
+<td><strong>国家强制性</strong></td>
+<td>法律由国家强制力（军队、警察、法庭、监狱等）保证实施</td>
+</tr>
+<tr>
+<td><strong>普遍性</strong></td>
+<td>法律在国家主权范围内普遍有效，对一切主体适用</td>
+</tr>
+<tr>
+<td><strong>程序性</strong></td>
+<td>法律的制定、执行和遵守都有严格的程序规定</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心原理：</strong> 法律的本质是统治阶级意志的体现，但这种意志的内容是由统治阶级的物质生活条件决定的。</p>
+<h3 id="sec_2">1.2 法律体系</h3>
+<p><strong>法律体系的概念：</strong></p>
+<p>法律体系是指一国现行全部法律规范按照一定标准分类组合为不同法律部门而形成的有机联系的整体。</p>
+<p><strong>中国特色社会主义法律体系的七大部门法：</strong></p>
+<ol>
+<li><strong>宪法及宪法相关法</strong> —— 国家的根本大法及相关组织法</li>
+<li><strong>民法商法</strong> —— 调整平等主体之间的人身关系和财产关系（注会考试核心）</li>
+<li><strong>行政法</strong> —— 调整行政管理活动中的社会关系</li>
+<li><strong>经济法</strong> —— 国家对市场经济进行宏观调控和规制的法律</li>
+<li><strong>社会法</strong> —— 保护弱势群体、维护社会保障的法律</li>
+<li><strong>刑法</strong> —— 规定犯罪与刑罚的法律</li>
+<li><strong>诉讼与非诉讼程序法</strong> —— 规定解决纠纷程序的法律</li>
+</ol>
+<blockquote>
+<p><strong>理解要点：</strong> 法律体系是&quot;现行&quot;法律构成的&quot;有机&quot;整体，不包括已废止的法律，也不包括国际法。</p>
+</blockquote>
+<h3 id="sec_3">1.3 法律渊源</h3>
+<p><strong>法律渊源的概念：</strong></p>
+<p>法律渊源是指法律规范的具体表现形式，即法律出自哪些机关、通过什么方式表现出来。</p>
+<p><strong>我国法律渊源（按效力等级排列）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>渊源</th>
+<th>制定机关</th>
+<th>效力等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>宪法</strong></td>
+<td>全国人民代表大会</td>
+<td>最高</td>
+</tr>
+<tr>
+<td><strong>法律</strong></td>
+<td>全国人大及其常委会</td>
+<td>仅次于宪法</td>
+</tr>
+<tr>
+<td><strong>行政法规</strong></td>
+<td>国务院</td>
+<td>低于法律</td>
+</tr>
+<tr>
+<td><strong>地方性法规</strong></td>
+<td>地方人大及其常委会</td>
+<td>低于行政法规</td>
+</tr>
+<tr>
+<td><strong>部门规章</strong></td>
+<td>国务院各部委</td>
+<td>低于行政法规</td>
+</tr>
+<tr>
+<td><strong>地方政府规章</strong></td>
+<td>省/市政府</td>
+<td>低于地方性法规</td>
+</tr>
+<tr>
+<td><strong>司法解释</strong></td>
+<td>最高人民法院/最高检察院</td>
+<td>配套法律适用</td>
+</tr>
+<tr>
+<td><strong>国际条约和协定</strong></td>
+<td>国家间缔结</td>
+<td>另有规定者除外</td>
+</tr>
+</tbody>
+</table>
+<p><strong>效力冲突解决规则：</strong></p>
+<ul>
+<li>上位法优于下位法</li>
+<li>特别法优于一般法（同一机关制定）</li>
+<li>新法优于旧法（同一机关制定）</li>
+<li>无法判断时报请有权机关裁决</li>
+</ul>
+<h3 id="sec_4">1.4 法律规范</h3>
+<p><strong>法律规范的概念：</strong></p>
+<p>法律规范是组成法律的最基本单元，是国家制定或认可的、以规定权利义务为内容、具有国家强制性的行为规则。</p>
+<p><strong>法律规范的三要素（逻辑结构）：</strong></p>
+<ol>
+<li><strong>假定（条件）</strong> —— 规范适用的条件或情形</li>
+<li><strong>模式（处理）</strong> —— 允许、禁止或要求的行为
+<ul>
+<li>可为模式（授权性规范）：可以……</li>
+<li>勿为模式（禁止性规范）：不得……</li>
+<li>应为模式（命令性规范）：应当……</li>
+</ul>
+</li>
+<li><strong>后果（制裁/奖励）</strong> —— 违反或遵守规范的法律后果</li>
+</ol>
+<p><strong>法律规范的分类：</strong></p>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td>授权性规范</td>
+<td>赋予主体某种权利</td>
+</tr>
+<tr>
+<td></td>
+<td>义务性规范（命令性/禁止性）</td>
+<td>规定主体必须做或不做的事</td>
+</tr>
+<tr>
+<td>强制性</td>
+<td>强行性规范</td>
+<td>不得以个人意志变更</td>
+</tr>
+<tr>
+<td></td>
+<td>任意性规范</td>
+<td>允许当事人协商确定</td>
+</tr>
+<tr>
+<td>确定性</td>
+<td>确定性规范</td>
+<td>明确规定了行为规则</td>
+</tr>
+<tr>
+<td></td>
+<td>委任性规范</td>
+<td>委托其他机关制定具体规则</td>
+</tr>
+<tr>
+<td></td>
+<td>准用性规范</td>
+<td>参照适用其他规范</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>考试技巧：</strong> 区分强行性规范与任意性规范是常考知识点——强行性规范不可协商排除，任意性规范可由当事人约定。</p>
+</blockquote>
+<hr />
+<h2 id="sec_5">二、法律关系</h2>
+<h3 id="sec_6">2.1 法律关系的概念与特征</h3>
+<p><strong>什么是法律关系？</strong></p>
+<p>法律关系是法律规范在调整人们行为过程中形成的权利和义务关系。</p>
+<p><strong>三大特征：</strong></p>
+<ol>
+<li><strong>以法律规范为前提</strong> —— 没有法律规范就没有法律关系</li>
+<li><strong>以权利义务为内容</strong> —— 法律关系本质上是权利义务关系</li>
+<li><strong>以国家强制力为保障</strong> —— 法律关系受法律保护</li>
+</ol>
+<p><strong>法律关系与一般社会关系的区别：</strong></p>
+<p>并非所有的社会关系都是法律关系。朋友关系、恋爱关系一般不属于法律关系，只有法律加以调整的社会关系才是法律关系。</p>
+<h3 id="sec_7">2.2 法律关系的种类</h3>
+<table>
+<thead>
+<tr>
+<th>分类标准</th>
+<th>类型</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产生依据</td>
+<td>调整性法律关系（合法行为产生）</td>
+<td>买卖合同关系</td>
+</tr>
+<tr>
+<td></td>
+<td>保护性法律关系（违法行为产生）</td>
+<td>侵权赔偿关系</td>
+</tr>
+<tr>
+<td>主体数量</td>
+<td>双方法律关系</td>
+<td>买卖关系</td>
+</tr>
+<tr>
+<td></td>
+<td>多方法律关系</td>
+<td>合伙关系</td>
+</tr>
+<tr>
+<td>权利义务</td>
+<td>双务法律关系</td>
+<td>买卖关系（双方互有权利义务）</td>
+</tr>
+<tr>
+<td></td>
+<td>单务法律关系</td>
+<td>赠与关系（仅一方承担义务）</td>
+</tr>
+<tr>
+<td>对应程度</td>
+<td>第一性法律关系（主法律关系）</td>
+<td>买卖合同关系</td>
+</tr>
+<tr>
+<td></td>
+<td>第二性法律关系（从法律关系）</td>
+<td>担保合同关系</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_8">2.3 法律关系的基本构成（三要素）</h3>
+<p>法律关系由<strong>主体、客体、内容</strong>三大要素构成。</p>
+<h4 id="sec_9">（一）法律关系主体</h4>
+<p>法律关系的参与者，即享有权利、承担义务的人。</p>
+<p><strong>主体类型：</strong></p>
+<ol>
+<li><strong>自然人</strong> —— 基于出生而获得主体资格</li>
+<li><strong>法人</strong> —— 具有民事权利能力和行为能力的组织</li>
+<li><strong>非法人组织</strong> —— 合伙企业、个人独资企业等</li>
+<li><strong>国家</strong> —— 特殊主体（如发行国债时）</li>
+</ol>
+<p><strong>重要概念：</strong></p>
+<ul>
+<li><strong>权利能力</strong>：主体享有权利和承担义务的资格（自然人的权利能力始于出生、终于死亡）</li>
+<li><strong>行为能力</strong>：主体通过自己的行为取得权利、承担义务的资格
+<ul>
+<li>完全民事行为能力人：≥18周岁，或16-18周岁以自己劳动收入为主要生活来源</li>
+<li>限制民事行为能力人：8-18周岁的未成年人，或不能完全辨认自己行为的成年人</li>
+<li>无民事行为能力人：&lt;8周岁，或完全不能辨认自己行为的成年人</li>
+</ul>
+</li>
+</ul>
+<h4 id="sec_10">（二）法律关系客体</h4>
+<p>法律关系主体享有权利和承担义务所指向的对象。</p>
+<p><strong>客体类型：</strong></p>
+<ol>
+<li><strong>物</strong> —— 物权关系的客体（如房屋、汽车）</li>
+<li><strong>行为</strong> —— 债权关系的客体（如交付货物、提供服务）</li>
+<li><strong>人格利益</strong> —— 人身权的客体（如生命、健康、名誉）</li>
+<li><strong>智力成果</strong> —— 知识产权的客体（如发明、作品）</li>
+</ol>
+<h4 id="sec_11">（三）法律关系内容</h4>
+<p>法律关系主体所享有的权利和承担的义务。</p>
+<ul>
+<li><strong>法律权利</strong>：主体依法享有的某种利益和自由</li>
+<li><strong>法律义务</strong>：主体依法必须为或不为某种行为的责任</li>
+</ul>
+<blockquote>
+<p>权利与义务具有对应性，一方的权利往往是他方的义务。</p>
+</blockquote>
+<h3 id="sec_12">2.4 法律关系的变动原因——法律事实</h3>
+<p><strong>什么是法律事实？</strong></p>
+<p>法律事实是法律规范规定的、能够引起法律关系产生、变更或消灭的客观情况。</p>
+<p><strong>分类：</strong></p>
+<pre><code>法律事实
+├── 法律事件（不以当事人意志为转移）
+│   ├── 绝对事件（自然现象）：地震、洪水、人的出生死亡
+│   └── 相对事件（社会现象）：战争、罢工、政策变化
+└── 法律行为（以当事人意志为转移）
+    ├── 合法行为：签订合同、立遗嘱
+    └── 违法行为：侵权、违约
+</code></pre>
+<p><strong>判断方法：</strong> 关键看该事实是否以当事人的意志为转移——不以意志为转移的是事件，以意志为转移的是行为。</p>
+<hr />
+<h2 id="sec_13">三、习近平法治思想</h2>
+<h3 id="sec_14">3.1 核心要义</h3>
+<p>习近平法治思想是全面依法治国的根本遵循和行动指南，核心要义包括：</p>
+<ol>
+<li><strong>坚持党对全面依法治国的领导</strong> —— 党的领导是推进全面依法治国的根本保证</li>
+<li><strong>坚持以人民为中心</strong> —— 人民是依法治国的主体和力量源泉</li>
+<li><strong>坚持中国特色社会主义法治道路</strong> —— 坚定不移走中国特色社会主义法治道路</li>
+<li><strong>坚持依宪治国、依宪执政</strong> —— 宪法是国家的根本法</li>
+<li><strong>坚持在法治轨道上推进国家治理体系和治理能力现代化</strong></li>
+<li><strong>坚持建设中国特色社会主义法治体系</strong> —— 包括法律规范体系、法治实施体系、法治监督体系、法治保障体系、党内法规体系</li>
+<li><strong>坚持依法治国、依法执政、依法行政共同推进</strong></li>
+<li><strong>坚持全面推进科学立法、严格执法、公正司法、全民守法</strong></li>
+<li><strong>坚持统筹推进国内法治和涉外法治</strong></li>
+<li><strong>坚持建设德才兼备的高素质法治工作队伍</strong></li>
+<li><strong>坚持抓住领导干部这个&quot;关键少数&quot;</strong></li>
+</ol>
+<h3 id="sec_15">3.2 法治与市场经济的关系</h3>
+<ul>
+<li>市场经济本质上是<strong>法治经济</strong></li>
+<li>法治是最好的<strong>营商环境</strong></li>
+<li>以法治保障<strong>市场在资源配置中起决定性作用</strong>和更好发挥政府作用</li>
+</ul>
+<hr />
+<h2 id="sec_16">四、市场经济法律调整</h2>
+<h3 id="sec_17">4.1 市场经济与法律的关系</h3>
+<p><strong>基本原理：</strong> 市场经济需要法律来规范和调整，法律为市场经济提供运行规则和制度保障。</p>
+<p><strong>市场经济法律调整的三大维度：</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>功能</th>
+<th>典型法律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>民商法</strong></td>
+<td>确立市场主体的平等地位和交易规则</td>
+<td>民法典、公司法、合伙企业法</td>
+</tr>
+<tr>
+<td><strong>经济法</strong></td>
+<td>国家对市场经济进行宏观调控和规制</td>
+<td>反垄断法、税法、企业国有资产法</td>
+</tr>
+<tr>
+<td><strong>社会法</strong></td>
+<td>保护劳动者等弱势群体</td>
+<td>劳动法、劳动合同法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_18">4.2 市场经济法律调整的基本原则</h3>
+<ol>
+<li><strong>意思自治原则</strong> —— 市场主体在法定范围内自由表达意志</li>
+<li><strong>公平竞争原则</strong> —— 反对垄断和不正当竞争</li>
+<li><strong>诚实信用原则</strong> —— 市场主体应诚实守信</li>
+<li><strong>等价有偿原则</strong> —— 交易应遵循价值规律</li>
+<li><strong>守法原则</strong> —— 经营活动不得违反法律强制性规定</li>
+</ol>
+<h3 id="sec_19">4.3 民法调整的对象</h3>
+<p>根据《民法典》第2条，民法调整的是<strong>平等主体</strong>之间的<strong>人身关系</strong>和<strong>财产关系</strong>。</p>
+<ul>
+<li><strong>平等主体</strong>：自然人与自然人、法人与法人、自然人与法人之间地位平等</li>
+<li><strong>财产关系</strong>：基于财产的归属和流转形成的社会关系（物权、债权）</li>
+<li><strong>人身关系</strong>：基于人格和身份形成的社会关系（人格权、婚姻家庭等）</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong> 行政管理关系、刑事关系不属于民法调整范围。</p>
+</blockquote>
+<hr />
+<h2 id="sec_20">考试要点总结</h2>
+<table>
+<thead>
+<tr>
+<th>考点</th>
+<th>核心记忆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法律特征</td>
+<td>规范性、国家意志性、国家强制性、普遍性、程序性</td>
+</tr>
+<tr>
+<td>法律渊源</td>
+<td>宪法 &gt; 法律 &gt; 行政法规 &gt; 地方性法规/部门规章</td>
+</tr>
+<tr>
+<td>法律规范三要素</td>
+<td>假定、模式、后果</td>
+</tr>
+<tr>
+<td>法律关系三要素</td>
+<td>主体、客体、内容</td>
+</tr>
+<tr>
+<td>行为能力分类</td>
+<td>完全（≥18）、限制（8-18）、无（&lt;8）</td>
+</tr>
+<tr>
+<td>法律事实分类</td>
+<td>事件（不依意志）vs 行为（依意志）</td>
+</tr>
+<tr>
+<td>习近平法治思想</td>
+<td>十一个坚持</td>
+</tr>
+<tr>
+<td>民法调整对象</td>
+<td>平等主体间的人身关系和财产关系</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body></html>

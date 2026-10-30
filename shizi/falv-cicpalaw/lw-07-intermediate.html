@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>证券法律制度（进阶） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 证券法律制度</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、核心考法分类</a><a class="h1" href="#sec_1">二、典型例题解析</a><a class="l2" href="#sec_2">2.1 注册制核心（单选题）—— P0重点</a><a class="l2" href="#sec_3">2.2 IPO基本条件（单选题）</a><a class="l2" href="#sec_4">2.3 要约收购（单选题）—— P0重点</a><a class="l2" href="#sec_5">2.4 权益披露（单选题）</a><a class="l2" href="#sec_6">2.5 证券欺诈类型（多选题）—— P0重点</a><a class="l2" href="#sec_7">2.6 持续信息披露（单选题）</a><a class="h1" href="#sec_8">三、法条要点速记</a><a class="l2" href="#sec_9">3.1 股票发行制度</a><a class="l2" href="#sec_10">3.2 上市公司收购</a><a class="l2" href="#sec_11">3.3 证券欺诈类型</a><a class="l2" href="#sec_12">3.4 持续信息披露</a><a class="h1" href="#sec_13">四、易混点对比</a><a class="h1" href="#sec_14">五、速记口诀</a><a class="h1" href="#sec_15">自测清单</a></nav>
+<div class="doc" id="doc"><h1>证券法律制度 —— 典型考题解析</h1>
+<h2 id="sec_0">一、核心考法分类</h2>
+<p>本章是P0高优先级章节，案例题高发，在历年真题中的主要考法归纳：</p>
+<table>
+<thead>
+<tr>
+<th>考法类型</th>
+<th>常见题型</th>
+<th>考查特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注册制核心</td>
+<td>单选题</td>
+<td>信息披露为核心</td>
+</tr>
+<tr>
+<td>IPO条件</td>
+<td>单选题</td>
+<td>持续经营、盈利要求等</td>
+</tr>
+<tr>
+<td>要约收购</td>
+<td>单选题、多选题、案例题</td>
+<td>30%触发点</td>
+</tr>
+<tr>
+<td>权益披露</td>
+<td>单选题</td>
+<td>5%起每变动5%</td>
+</tr>
+<tr>
+<td>证券欺诈</td>
+<td>单选题、多选题</td>
+<td>虚假陈述/内幕交易/操纵市场</td>
+</tr>
+<tr>
+<td>持续信息披露</td>
+<td>单选题</td>
+<td>年报、中报、临时报告</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_1">二、典型例题解析</h2>
+<h3 id="sec_2">2.1 注册制核心（单选题）—— P0重点</h3>
+<p><strong>题目：</strong> 关于股票发行注册制的说法，正确的是（ ）。</p>
+<p>A. 注册制下，监管机构对发行人披露信息的真实性进行全面实质性审查
+B. 注册制以信息披露为核心
+C. 注册制下，公司发行股票不再需要符合法定条件
+D. 注册制消除了股票投资的风险</p>
+<p><strong>解析：</strong> A选项错误。注册制下，监管机构对发行人披露的信息进行&quot;形式审查&quot;，而非&quot;实质性审查&quot;，不对投资价值作出判断。B选项正确。注册制的核心是以信息披露为中心，发行人应当真实、准确、完整地披露信息，投资者自主判断投资价值。C选项错误。注册制不等于没有门槛，发行人仍须符合相关发行条件。D选项错误。注册制不消除投资风险，投资者仍须自行判断投资价值。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_3">2.2 IPO基本条件（单选题）</h3>
+<p><strong>题目：</strong> 股份有限公司首次公开发行股票（IPO），应当具备的条件不包括（ ）。</p>
+<p>A. 持续经营3年以上
+B. 最近3年连续盈利
+C. 最近3年财务会计报告被出具无保留意见审计报告
+D. 发行后股本总额不少于3000万元</p>
+<p><strong>解析：</strong> 根据《证券法》和相关规定，IPO的基本条件包括：（1）持续经营3年以上；（2）最近3年净利润均为正且累计超过3000万元（或其他财务指标达标）；（3）最近3年财务会计报告被出具无保留意见审计报告；（4）发行后股本总额不少于3000万元（创业板、科创板有不同规定）。A、B、C、D四个选项均属于IPO条件，但本题要求选择&quot;不包括&quot;，需要仔细核对。</p>
+<p><strong>答案：</strong> D（股本总额要求：主板发行后≥3000万元，创业板≥3000万元，科创板无明确要求）</p>
+<h3 id="sec_4">2.3 要约收购（单选题）—— P0重点</h3>
+<p><strong>题目：</strong> 投资者持有某上市公司已发行股份的35%时，继续增持股份。关于要约收购的说法，正确的是（ ）。</p>
+<p>A. 该投资者应当向全体股东发出全面要约收购
+B. 该投资者可以选择发出部分要约收购
+C. 该投资者可以免于发出要约
+D. 该投资者须在30日内降至30%以下</p>
+<p><strong>解析：</strong> 根据《证券法》规定，通过证券交易所的证券交易，投资者持有或通过协议、其他安排与他人共同持有一个上市公司已发行的股份达到30%时，继续增持股份的，应当依法向该上市公司所有股东发出收购上市公司全部或部分股份的要约。但投资者可以选择发出全面要约或部分要约。收购上市公司部分股份的收购人应当向上市公司其他股东发出全面要约；收购人可选择发出全面要约。</p>
+<p>A选项：可以发出部分要约，而非必须全面要约。
+B选项正确。投资者可以选择发出部分要约收购。
+C选项错误。继续增持达到30%必须发出要约，不能免于。
+D选项错误。投资者可以选择继续增持并发出部分要约，不强制要求降至30%以下。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_5">2.4 权益披露（单选题）</h3>
+<p><strong>题目：</strong> 通过证券交易所的证券交易，投资者持有一个上市公司已发行的股份达到5%时，应当（ ）。</p>
+<p>A. 立即公告
+B. 在3日内公告
+C. 在5日内公告
+D. 在10日内公告</p>
+<p><strong>解析：</strong> 根据《证券法》规定，通过证券交易所的证券交易，投资者持有或通过协议、其他安排与他人共同持有一个上市公司已发行的股份达到5%时，应当在该事实发生之日起3日内，向国务院证券监督管理机构、证券交易所作出书面报告，通知该上市公司，并予公告。</p>
+<p><strong>答案：</strong> B</p>
+<h3 id="sec_6">2.5 证券欺诈类型（多选题）—— P0重点</h3>
+<p><strong>题目：</strong> 下列行为中，属于证券欺诈行为的有（ ）。</p>
+<p>A. 发行人披露的财务报告存在虚假记载
+B. 某机构投资者利用其获取的内幕信息买卖证券
+C. 某大户通过连续买卖操纵股票价格
+D. 证券公司未向客户如实告知投资风险</p>
+<p><strong>解析：</strong> 证券欺诈行为包括虚假陈述、内幕交易、操纵市场等。</p>
+<p>A选项：虚假记载属于虚假陈述，是证券欺诈行为。
+B选项：利用内幕信息买卖证券属于内幕交易，是证券欺诈行为。
+C选项：连续买卖操纵股价属于操纵市场，是证券欺诈行为。
+D选项：未向客户如实告知投资风险属于违反投资者适当性管理规定的行为，虽属于违规，但不直接属于&quot;证券欺诈&quot;范畴（欺诈通常指虚假陈述、内幕交易、操纵市场）。</p>
+<p><strong>答案：</strong> ABC</p>
+<h3 id="sec_7">2.6 持续信息披露（单选题）</h3>
+<p><strong>题目：</strong> 某上市公司拟发布临时报告。下列情形中，必须发布临时报告的是（ ）。</p>
+<p>A. 董事长健康状况不佳
+B. 重大仲裁事项涉及金额5000万元
+C. 总经理辞职
+D. 公司计划进行利润分配</p>
+<p><strong>解析：</strong> 根据《证券法》规定，临时报告应当披露可能对股票交易价格产生较大影响的重大事件，包括：（1）公司的经营方针和经营范围的重大变化；（2）公司的重大投资行为，公司在一年内购买、出售重大资产超过公司资产总额30%，或公司营业用主要资产的抵押、质押、出售或者报废一次超过该资产的30%；（3）订立重要合同，可能对公司的资产、负债、权益和经营成果产生重要影响；（4）公司发生重大债务和未能清偿到期重大债务的违约情况；（5）公司发生重大亏损或者重大损失；（6）公司的控股股东、实际控制人涉嫌犯罪被依法采取强制措施；（7）公司分配股利、作出增加注册资本的决定；（8）公司减资、合并、分立、解散及申请破产的决定；（9）涉及公司的重大诉讼、仲裁，股东大会、董事会决议被依法撤销或宣告无效。</p>
+<p>A选项：董事长健康状况不佳一般不构成必须披露的重大事件（除非影响公司正常经营）。
+B选项：重大仲裁涉及金额5000万元，属于重大诉讼、仲裁，可能对股价产生重大影响。
+C选项：总经理辞职属于重要人员变动，可能构成临时报告事项。
+D选项：公司计划进行利润分配属于重大事项，须披露。</p>
+<p><strong>答案：</strong> BCD</p>
+<h2 id="sec_8">三、法条要点速记</h2>
+<h3 id="sec_9">3.1 股票发行制度</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注册制核心</td>
+<td>以信息披露为核心，监管机构形式审查</td>
+</tr>
+<tr>
+<td>IPO基本条件</td>
+<td>持续经营3年+盈利要求+规范运行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_10">3.2 上市公司收购</h3>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>权益披露</td>
+<td>5%时3日内公告，此后每增减5%须公告</td>
+</tr>
+<tr>
+<td>要约收购触发点</td>
+<td>持有或共同持有30%后继续增持</td>
+</tr>
+<tr>
+<td>要约方式</td>
+<td>可选择全面要约或部分要约</td>
+</tr>
+<tr>
+<td>收购期限</td>
+<td>不少于30日，不超过60日</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_11">3.3 证券欺诈类型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>行为</th>
+<th>责任</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>虚假陈述</td>
+<td>虚假记载、误导性陈述、重大遗漏</td>
+<td>民事赔偿+行政处罚+刑事</td>
+</tr>
+<tr>
+<td>内幕交易</td>
+<td>利用内幕信息买卖证券</td>
+<td>没收违法所得+罚款+刑事</td>
+</tr>
+<tr>
+<td>操纵市场</td>
+<td>自买自卖、连续买卖、蛊惑交易</td>
+<td>没收违法所得+罚款+刑事</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec_12">3.4 持续信息披露</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>时间要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年度报告</td>
+<td>财务报告、经营情况等</td>
+<td>年度结束4个月内</td>
+</tr>
+<tr>
+<td>半年度报告</td>
+<td>财务报告、经营情况等</td>
+<td>半年度结束2个月内</td>
+</tr>
+<tr>
+<td>临时报告</td>
+<td>重大事件</td>
+<td>发生后立即披露</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_13">四、易混点对比</h2>
+<table>
+<thead>
+<tr>
+<th>易混点</th>
+<th>区别</th>
+<th>记忆技巧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注册制 vs 核准制</td>
+<td>注册制形式审查，核准制实质审查</td>
+<td>&quot;注册&quot;轻形式，&quot;核准&quot;重实质</td>
+</tr>
+<tr>
+<td>虚假陈述 vs 内幕交易</td>
+<td>虚假陈述是披露违规，内幕交易是利用信息优势</td>
+<td>&quot;虚假&quot;是骗人，&quot;内幕&quot;是偷跑</td>
+</tr>
+<tr>
+<td>全面要约 vs 部分要约</td>
+<td>全面收购全部股份，部分收购部分股份</td>
+<td>&quot;全面&quot;vs&quot;部分&quot;</td>
+</tr>
+<tr>
+<td>5%披露 vs 30%要约</td>
+<td>5%是权益披露，30%是要约收购触发点</td>
+<td>&quot;5%告知，30%要约&quot;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec_14">五、速记口诀</h2>
+<p><strong>权益披露口诀：</strong>
+&quot;5%起3日公告，此后每增5%公告&quot;</p>
+<p><strong>要约收购口诀：</strong>
+&quot;30%触发要约，可选全面或部分&quot;</p>
+<p><strong>证券欺诈口诀：</strong>
+&quot;虚假陈述骗人，内幕交易偷跑，操纵市场坐庄&quot;</p>
+<p><strong>持续披露口诀：</strong>
+&quot;年报4月半报2月，临时报告即时发&quot;</p>
+<h2 id="sec_15">自测清单</h2>
+<ul>
+<li>[ ] 我能理解注册制的核心是以信息披露为中心</li>
+<li>[ ] 我能掌握IPO的基本条件</li>
+<li>[ ] 我能判断要约收购的触发点和方式</li>
+<li>[ ] 我能识别权益披露的规则</li>
+<li>[ ] 我能区分虚假陈述、内幕交易、操纵市场</li>
+<li>[ ] 我能理解持续信息披露的要求</li>
+<li>[ ] 我能了解投资者保护的相关制度</li>
+</ul>
+</div>
+</div>
+</body></html>

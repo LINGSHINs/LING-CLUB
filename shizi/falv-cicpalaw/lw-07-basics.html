@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>证券法律制度（基础） · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>法律基础·拓展</b> <span class="crumb">注会经济法 · 证券法律制度</span></div>
+<a href="../falv.html">&larr; 法律基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">一、概述</a><a class="l2" href="#sec_1">1.1 监管体制</a><a class="l2" href="#sec_2">1.2 强制信息披露</a><a class="l2" href="#sec_3">1.3 投资者保护</a><a class="h1" href="#sec_4">二、股票的发行</a><a class="l2" href="#sec_5">2.1 注册制</a><a class="l2" href="#sec_6">2.2 首次公开发行（IPO）</a><a class="l2" href="#sec_7">2.3 上市公司发行新股</a><a class="h1" href="#sec_8">三、公司债券的发行与交易</a><a class="l2" href="#sec_9">3.1 发行条件</a><a class="l2" href="#sec_10">3.2 交易</a><a class="h1" href="#sec_11">四、股票的公开交易</a><a class="l2" href="#sec_12">4.1 上市与退市</a><a class="l2" href="#sec_13">4.2 场内交易和结算</a><a class="h1" href="#sec_14">五、上市公司收购和重组</a><a class="l2" href="#sec_15">5.1 要约收购</a><a class="l2" href="#sec_16">5.2 协议收购</a><a class="l2" href="#sec_17">5.3 权益披露</a><a class="h1" href="#sec_18">六、证券欺诈的法律责任</a><a class="h1" href="#sec_19">考试要点</a></nav>
+<div class="doc" id="doc"><h1>证券法律制度 —— 第一性原理教程</h1>
+<h2 id="sec_0">一、概述</h2>
+<h3 id="sec_1">1.1 监管体制</h3>
+<ul>
+<li><strong>证监会</strong>：证券市场监管机构</li>
+<li><strong>证券交易所</strong>：提供证券交易场所</li>
+<li><strong>证券业协会</strong>：行业自律组织</li>
+</ul>
+<h3 id="sec_2">1.2 强制信息披露</h3>
+<ul>
+<li><strong>首次公开发行</strong>：招股说明书</li>
+<li><strong>持续披露</strong>：年度报告、半年度报告、临时报告</li>
+<li><strong>内幕信息</strong>：对证券价格有重大影响的未公开信息</li>
+</ul>
+<h3 id="sec_3">1.3 投资者保护</h3>
+<ul>
+<li>投资者适当性管理制度</li>
+<li>投资者保护基金</li>
+<li>集体诉讼制度</li>
+</ul>
+<hr />
+<h2 id="sec_4">二、股票的发行</h2>
+<h3 id="sec_5">2.1 注册制</h3>
+<p><strong>核心变化：</strong> 从核准制到注册制，以信息披露为核心，发行条件更加市场化。</p>
+<h3 id="sec_6">2.2 首次公开发行（IPO）</h3>
+<p><strong>基本条件：</strong></p>
+<ul>
+<li>持续经营3年以上</li>
+<li>最近3年连续盈利（或营业收入、现金流等指标达标）</li>
+<li>注册资本已足额缴纳</li>
+<li>公司治理规范</li>
+</ul>
+<h3 id="sec_7">2.3 上市公司发行新股</h3>
+<ul>
+<li>配股：向原股东按比例配售</li>
+<li>增发：向不特定对象公开发行</li>
+</ul>
+<hr />
+<h2 id="sec_8">三、公司债券的发行与交易</h2>
+<h3 id="sec_9">3.1 发行条件</h3>
+<ul>
+<li>股份有限公司净资产≥3000万/有限责任公司≥6000万</li>
+<li>累计债券余额不超过净资产40%</li>
+</ul>
+<h3 id="sec_10">3.2 交易</h3>
+<ul>
+<li>在证券交易所或银行间市场交易</li>
+</ul>
+<hr />
+<h2 id="sec_11">四、股票的公开交易</h2>
+<h3 id="sec_12">4.1 上市与退市</h3>
+<p><strong>上市条件：</strong> 股本总额、社会公众持股比例、盈利要求等。</p>
+<p><strong>退市：</strong> 连续亏损、重大违法、股价低于面值等。</p>
+<h3 id="sec_13">4.2 场内交易和结算</h3>
+<ul>
+<li>集中竞价交易</li>
+<li>T+1交割制度</li>
+</ul>
+<hr />
+<h2 id="sec_14">五、上市公司收购和重组</h2>
+<h3 id="sec_15">5.1 要约收购</h3>
+<p><strong>触发点：</strong> 持有一个上市公司已发行股份达到**30%**时，继续增持→应当向全体股东发出要约。</p>
+<h3 id="sec_16">5.2 协议收购</h3>
+<ul>
+<li>通过协议方式收购上市公司股份</li>
+</ul>
+<h3 id="sec_17">5.3 权益披露</h3>
+<ul>
+<li>达到5%时→3日内公告</li>
+<li>每增减5%→3日内公告</li>
+</ul>
+<hr />
+<h2 id="sec_18">六、证券欺诈的法律责任</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>行为</th>
+<th>责任</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>虚假陈述</strong></td>
+<td>虚假记载、误导性陈述、重大遗漏</td>
+<td>民事赔偿+行政处罚+刑事</td>
+</tr>
+<tr>
+<td><strong>内幕交易</strong></td>
+<td>利用内幕信息买卖证券</td>
+<td>没收违法所得+罚款+刑事</td>
+</tr>
+<tr>
+<td><strong>操纵市场</strong></td>
+<td>自买自卖、连续买卖、蛊惑交易</td>
+<td>没收违法所得+罚款+刑事</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sec_19">考试要点</h2>
+<ol>
+<li><strong>注册制</strong>：以信息披露为核心</li>
+<li><strong>IPO条件</strong>：持续经营+盈利要求</li>
+<li><strong>要约收购</strong>：持股30%触发</li>
+<li><strong>权益披露</strong>：5%起每变动5%披露</li>
+<li><strong>三种欺诈</strong>：虚假陈述/内幕交易/操纵市场</li>
+</ol>
+</div>
+</div>
+</body></html>
