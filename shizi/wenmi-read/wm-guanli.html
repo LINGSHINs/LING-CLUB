@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>管理学要点 · LING CLUB</title>
+<style>:root{--bg:#fbfafa;--card:#fff;--bg2:#f3f1f1;--line:#eae2e2;--tx:#2a2626;--tx2:#6b6060;--tx3:#a89898;--ac:#d63a2e;--blue:#2563eb;--navy:#1e2a5e;--r:16px;--shadow:0 4px 20px rgba(160,40,30,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;font-size:15.5px;line-height:1.85}
+.top{position:sticky;top:0;background:rgba(251,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.top-in{max-width:860px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.top b{font-size:15px;color:var(--navy)}
+.top .crumb{font-size:12px;color:var(--tx3)}
+.top a{color:var(--blue);text-decoration:none;font-size:13px;white-space:nowrap}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 60px}
+@media(min-width:768px){.wrap{padding:30px 24px 70px}}
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:0;padding:0 18px 60px}
+@media(min-width:1080px){.layout{grid-template-columns:230px 1fr;gap:30px;padding:30px 24px 70px}}
+.toc{display:none}
+@media(min-width:1080px){.toc{display:block;position:sticky;top:70px;align-self:start;max-height:80vh;overflow-y:auto;font-size:12.5px}}
+.toc a{display:block;padding:4px 10px;color:var(--tx2);text-decoration:none;border-left:2px solid transparent;border-radius:0 8px 8px 0}
+.toc a.l2{padding-left:22px}
+.toc a:hover{color:var(--blue);background:#f3f7ff}
+.toc a.h1{font-weight:700;color:var(--navy);margin-top:6px}
+.doc{background:var(--card);border-radius:var(--r);padding:22px 20px;box-shadow:var(--shadow);min-width:0}
+@media(min-width:768px){.doc{padding:34px 38px}}
+.doc h1{font-size:23px;color:var(--navy);margin-bottom:16px;letter-spacing:.02em;line-height:1.4}
+.doc h2{font-size:19px;color:var(--ac);margin:28px 0 10px;padding-left:10px;border-left:4px solid var(--ac);line-height:1.5}
+.doc h3{font-size:16.5px;color:var(--navy);margin:20px 0 8px}
+.doc h4{font-size:15px;color:var(--tx);margin:16px 0 6px}
+.doc p{margin:8px 0}
+.doc ul,.doc ol{padding-left:24px;margin:8px 0}
+.doc li{margin:4px 0}
+.doc strong{color:var(--navy)}
+.doc blockquote{border-left:3px solid var(--blue);background:#f3f7ff;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;color:var(--tx2);font-size:14px}
+.doc blockquote p{margin:2px 0}
+.doc code{background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:13.5px;color:var(--ac)}
+.doc pre{background:#232b5c;color:#e8edf2;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:12px 0}
+.doc pre code{background:none;color:inherit;padding:0}
+.doc table{border-collapse:collapse;margin:12px auto;width:100%;font-size:13.5px}
+.doc th{background:#eaf1fe;color:var(--navy);font-weight:700}
+.doc th,.doc td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+.doc hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.doc img{max-width:100%;border-radius:10px;margin:8px 0}
+/* 索引页 */
+.idx a.item{display:block;background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);text-decoration:none;color:var(--tx);transition:.15s;font-size:15px;font-weight:600}
+.idx a.item:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(160,40,30,.14);color:var(--ac)}
+.idx a.item small{display:block;font-weight:400;font-size:12px;color:var(--tx3);margin-top:2px}
+</style>
+<script></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(window.katex&&renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}
+});
+</script>
+</head><body>
+<div class="top"><div class="top-in">
+<div><b>文秘基础·拓展</b> <span class="crumb">管理职能·组织</span></div>
+<a href="../wenmi.html">&larr; 文秘基础·拓展首页</a>
+</div></div>
+<div class="layout">
+<nav class="toc"><a class="h1" href="#sec_0">《管理学》</a><a class="l2" href="#sec_1">管理学工具</a><a class="l2" href="#sec_2">史前积累</a><a class="l2" href="#sec_3">古典管理理论</a><a class="l2" href="#sec_8">企业环境</a><a class="l2" href="#sec_9">市场和计划</a><a class="l2" href="#sec_10">经营资源</a><a class="l2" href="#sec_11">多元化战略</a><a class="l2" href="#sec_12">资源配置的战略</a><a class="l2" href="#sec_13">国际化</a><a class="l2" href="#sec_14">外部关系</a><a class="l2" href="#sec_15">组织管理</a><a class="l2" href="#sec_16">其它</a></nav>
+<div class="doc" id="doc"><h2 id="sec_0">《管理学》</h2>
+<h3 id="sec_1">管理学工具</h3>
+<p>Swot<br />
+PDCA:plan,do,check,action<br />
+6w2h:what  why  who  when  which  how    how much<br />
+SMART:specific  attainable  measurable relevant  time-based</p>
+<h3 id="sec_2">史前积累</h3>
+<h3 id="sec_3">古典管理理论</h3>
+<h4 id="sec_4">泰罗</h4>
+<ul>
+<li>科学管理的中心问题是提高劳动生产率</li>
+<li>需要挑选一流的工人。（所谓一流的工人，是适合某种工作，并且愿意努力的人</li>
+<li>标准化</li>
+<li>刺激性报酬</li>
+<li>“精神革命”：双方合作，共同“把蛋糕做大”</li>
+<li>计划职能和执行职能分开。科学方法代替经验方法</li>
+<li>职能工长制，细化生产过程</li>
+<li>例外原则。日常事务授权部下负责，管理人员只对例外（重大）事项保留处置权</li>
+</ul>
+<h4 id="sec_5">法约尔</h4>
+<p>六种经营活动：</p>
+<ol>
+<li>技术活动（生产）</li>
+<li>商业活动（交换）</li>
+<li>财务活动</li>
+<li>安全活动</li>
+<li>会计活动</li>
+<li>管理活动</li>
+</ol>
+<p>五大管理职能：</p>
+<ul>
+<li>计划</li>
+<li>组织</li>
+<li>指挥</li>
+<li>协调</li>
+<li>控制</li>
+</ul>
+<p>14个原则：</p>
+<ul>
+<li>劳动分工原则</li>
+<li>权力与责任对等原则</li>
+<li>纪律原则</li>
+<li>统一指挥原则</li>
+<li>统一领导原则</li>
+<li>个人利益服从整体利益原则</li>
+<li>员工报酬原则</li>
+<li>集权原则</li>
+<li>等级系列原则</li>
+<li>秩序原则</li>
+<li>公平原则</li>
+<li>人员稳定</li>
+<li>首创精神</li>
+</ul>
+<h4 id="sec_6">马克斯</h4>
+<ul>
+<li>规定每个岗位的权力与责任</li>
+<li>按照不同职位的权力大小，形成有序的等级系统，以制度巩固下来</li>
+<li>明确规定职位特性</li>
+<li>权力从属于地位，服从于制度，而不是某个人</li>
+<li>每人都拥有执行自己职能所必要的权力。权力严格限制</li>
+<li>管理者的职务是他的职业，忠于职守，而不是忠于某个人</li>
+</ul>
+<p>行为和学习是个体的两个基本特征</p>
+<p>行为 ↔️ 学习</p>
+<ul>
+<li>行为
+<ul>
+<li>决策
+<ul>
+<li>目标</li>
+<li>知识</li>
+<li>思维方式</li>
+</ul>
+</li>
+<li>心理基础
+<ul>
+<li>心理</li>
+<li>生理</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>学习
+<ul>
+<li>理论学习、训练</li>
+<li>间接经验</li>
+<li>直接经验：经历、技能、见识、人际、企业文化</li>
+</ul>
+</li>
+</ul>
+<h4 id="sec_7">现代观点</h4>
+<ol>
+<li>管理是组织的特殊器官</li>
+<li>管理的实质是协调</li>
+<li>是有意识的协调</li>
+<li>是维持机体协作延续发展的行为</li>
+</ol>
+<p>正式组织的三要素：</p>
+<ol>
+<li>协作意愿</li>
+<li>共同目标<em>是吗？现代社会表示怀疑</em></li>
+<li>信息沟通</li>
+</ol>
+<h3 id="sec_8">企业环境</h3>
+<p>能动性：</p>
+<ol>
+<li>一定范围内选择行业、地区</li>
+<li>创造与影响环境</li>
+</ol>
+<p>什么是环境：</p>
+<ol>
+<li>顾客</li>
+<li>资金供应者</li>
+<li>劳动者</li>
+<li>原材料、设备、商品供应者</li>
+<li>政府</li>
+<li>竞争对手</li>
+</ol>
+<ul>
+<li>
+<p>企业不仅仅是一个经济组织，也是一个由人组成的集团。无论企业家还是员工，除了利润最大化，还有事业、感情、自我追求、理想等。经济利益并非全部。</p>
+</li>
+<li>
+<p>企业的目的：发展、生存
+企业面对的问题：企业战略、企业制度</p>
+</li>
+<li>
+<p>企业的目标：利润，所有者、管理者、职工的要求</p>
+<ul>
+<li>企业目标反映一个组织的价值</li>
+<li>为各方面活动提供方向</li>
+<li>是企业与环境的动态平衡</li>
+</ul>
+</li>
+<li>
+<p>企业战略</p>
+<ul>
+<li>根据发展需要而制定的</li>
+<li>要点不在于内部管理，而在于环境对企业的要求
+<ul>
+<li>经营范围</li>
+<li>资源配置</li>
+<li>竞争优势</li>
+<li>协同优势</li>
+</ul>
+</li>
+<li>长期</li>
+<li>与行动和现实结合</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_9">市场和计划</h3>
+<p>社会主要是市场起作用，企业内部主要是计划起作用</p>
+<ul>
+<li>市场的优点
+<ul>
+<li>企业自主性</li>
+<li>分配资源</li>
+<li>积极性、主动性</li>
+</ul>
+</li>
+<li>市场的缺点
+<ul>
+<li>不确定性、盲目性</li>
+<li>不公平竞争</li>
+<li>资源浪费（交易费用、信息费用）</li>
+<li>机会主义、不择手段</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_10">经营资源</h3>
+<ul>
+<li>资金</li>
+<li>物质资源</li>
+<li>人力资源
+<ul>
+<li>非熟练工通用性高</li>
+<li>熟练工通用性低</li>
+</ul>
+</li>
+<li>信息
+<ul>
+<li>商业秘密</li>
+<li>技术、顾客、市场情报</li>
+<li>企业形象</li>
+<li>企业文化</li>
+<li>职工到的</li>
+</ul>
+</li>
+</ul>
+<p>企业的核心能力
+:    有用性、不可替代性、不可模仿性</p>
+<p>企业的产出
+:    资金、信息、人。其中，人是企业最重要的额资源</p>
+<h3 id="sec_11">多元化战略</h3>
+<ul>
+<li>有效利用资源，包括 信息、技术、专利、商标</li>
+<li>优化成本结构（因为新员工的工资低）</li>
+<li>激发员工的士气
+<ul>
+<li>发展时期员工热情高涨</li>
+<li>更多的晋升机会</li>
+</ul>
+</li>
+<li>范围经济</li>
+<li>分散风险</li>
+</ul>
+<h3 id="sec_12">资源配置的战略</h3>
+<ul>
+<li>预算式（更接近计划）</li>
+<li>分散式（更接近市场）
+<ul>
+<li>缺点：
+<ul>
+<li>资金不足与闲置，造成浪费</li>
+<li>受短期影响较大的项目，长远难以获得足够的投资</li>
+</ul>
+</li>
+<li>方法
+<ul>
+<li>减少总公司对下级的直接控制</li>
+<li>允许经营单位有自有资金，累积盈利，以作为今后的投资资本</li>
+<li>总公司有类似银行的功能，对子公司提供贷款</li>
+<li>以企业整体战略为方针</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_13">国际化</h3>
+<p>原因：</p>
+<ul>
+<li>市场与资源在不同的国家</li>
+<li>政治：规避贸易壁垒</li>
+<li>经济：规避金融风险</li>
+<li>提高效率：生产地和经营地的物流等成本</li>
+</ul>
+<p>是否国际化的分析：</p>
+<ul>
+<li>政治环境
+<ul>
+<li>政府体制、政党制度、国家利益</li>
+<li>政治稳定性</li>
+<li>对待外资的态度</li>
+</ul>
+</li>
+<li>法律环境
+<ul>
+<li>国际法</li>
+<li>对方国家的国内法</li>
+</ul>
+</li>
+<li>社会文化
+<ul>
+<li>事实性知识、语言、宗教、物质文化、审美、教育</li>
+<li>人生态度、对权威态度、价值观</li>
+</ul>
+</li>
+<li>经济环境
+<ul>
+<li>经济水平</li>
+<li>市场完善与开放程度</li>
+<li>基建、金融、文教、通讯、能源</li>
+<li>稳定</li>
+<li>经济政策</li>
+<li>技术环境</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_14">外部关系</h3>
+<ul>
+<li>社会责任</li>
+<li>股东
+<ul>
+<li>小股东</li>
+<li>投资机构</li>
+<li>金融舆论专家</li>
+</ul>
+</li>
+<li>消费者</li>
+<li>交易伙伴
+<ul>
+<li>供应商</li>
+<li>经销商</li>
+</ul>
+</li>
+<li>政府关系
+<ul>
+<li>宏微观调控、利益分配、信息导向、资金来源与客户</li>
+</ul>
+</li>
+<li>媒体</li>
+</ul>
+<h3 id="sec_15">组织管理</h3>
+<p>领导的职能：</p>
+<ul>
+<li>奋斗目标、方向
+<ul>
+<li>明确or方向性</li>
+<li>唯一or多元</li>
+<li>挑战or现实</li>
+</ul>
+</li>
+<li>企业文化
+<ul>
+<li>气场是稳定or创新</li>
+</ul>
+</li>
+<li>外部关系
+<ul>
+<li>沟通时，坚持or折中</li>
+</ul>
+</li>
+<li>分解任务、激励
+<ul>
+<li>用人时，生产优先or人际优先？</li>
+</ul>
+</li>
+</ul>
+<h3 id="sec_16">其它</h3>
+<p>发展
+:    不断破坏原有均衡的过程</p>
+</div>
+</div>
+</body></html>
